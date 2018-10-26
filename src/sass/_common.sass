@@ -1,0 +1,52 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('pt400', 15)
+   line-height: 1.2
+   color: $color1
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+
+.container
+   position: relative
+   max-width: 1246px
+   margin: 0 auto
+   &_md
+      max-width: 1028px
+   
+.row
+   display: flex
+   margin: 0 -15px
+   
+.col
+   padding: 0 15px
+
+.main
+   display: block
+   overflow: hidden
+   
+.title
+   line-height: 1.2
+   color: $color1
+   +f('pt700')
+   &_lg
+      font-size: 50px
+      
+   &_md
+      font-size: 42px
+      
+   &_sm
+      font-size: 33px
+      
+   &_xs
+      font-size: 21px
+   &_gray
+      color: $color7
+   &_white
+      color: $white

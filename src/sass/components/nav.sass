@@ -1,0 +1,135 @@
+.nav
+   $parent: &
+   height: 50px
+   background-color: #13203f
+   +sm
+      flex-direction: column
+      justify-content: center
+      position: absolute
+      top: 80px
+      left: 0
+      width: 100%
+      height: 100vh
+      z-index: 10
+      padding-bottom: 80px
+      overflow: auto
+      opacity: 0
+      border: 0
+      visibility: hidden
+      transform: translate3d(0, 100px, 0)
+      transition: transform .4s ease, opacity .4s ease, visibility 0s .4s, -webkit-transform .4s ease
+      background: #fff
+      text-align: center
+      box-shadow: inset 0 0 25px rgba($color1, .3)
+   +xs
+      top: 65px
+      padding-bottom: 65px
+      box-shadow: inset 0 5px 10px rgba(207,0,15,.3)
+   &.is-active
+      opacity: 1
+      visibility: visible
+      transform: translate3d(0, 0, 0)
+      transition: transform .4s ease, opacity .4s ease, visibility 0s 0s, -webkit-transform .4s ease
+   
+   &__body
+      height: 100%
+      @extend .container
+      
+   &__list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      height: 100%
+      +sm
+         flex-direction: column
+         justify-content: center
+         align-items: center
+         overflow: auto
+         height: 100%
+         padding: 0
+      &-item
+         position: relative
+         +sm
+            width: 100%
+            opacity: 0
+            transform: translateY(20px)
+            transition: .3s ease-in-out
+            
+         $elements: 8
+         @for $i from 0 to $elements
+            &:nth-child(#{$i + 1})
+               +sm
+                  transition-delay: #{$i * 0.1s}
+                  
+      &-link
+         display: block
+         color: $color8
+         transition: .3s ease-in-out
+         +sm
+            position: relative
+            z-index: 1
+            display: inline-block
+            padding: 0 15px
+            color: $color1
+            font-size: 16px
+            background: $white
+         &:hover
+            color: $color2
+               
+.nav-btn
+   $parent: &
+   display: none
+   position: relative
+   top: -5px
+   border: 0
+   outline: 0
+   padding: 0
+   z-index: 11
+   +sm
+      display: block
+   
+   &.is-active span
+      color: $color1
+   
+   &__burger
+      display: block
+      margin: auto
+      width: 40px
+      height: 40px
+      cursor: pointer
+   &__lines
+      display: block
+      width: 40px
+      height: 3px
+      &:after, &:before
+         width: 40px
+         height: 3px
+      position: relative
+      transform: translateY(25px)
+      background-color: $color1
+      transition: all .3s
+      #{$parent}.is-active &
+         background: rgba(255, 255, 255, 0)
+      &:before
+         content: ""
+         position: absolute
+         left: 0
+         bottom: 10px
+         background-color: $color1
+         transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+      &:after
+         content: ""
+         position: absolute
+         left: 0
+         top: 10px
+         background-color: $color1
+         transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+      #{$parent}.is-active &
+         &:after
+            top: 0
+            transform: rotate(45deg)
+            transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+         &:before
+            bottom: 0
+            transform: rotate(-45deg)
+            transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)

@@ -1,0 +1,28 @@
+mixin btn(classMod, text, popup)
+	+b.BUTTON.btn(class= classMod data-popup-target= popup)&attributes(attributes)= text
+
+mixin sectTitle(classMod, text, descr)
+	+b.section-title(class= classMod || '')
+		+e.H2.text= text
+		if descr
+			+e.P.descr= descr
+
+mixin checkBox(classMod, text, radio)
+	+b.check-box(class= classMod)
+		+e.LABEL.label
+			if radio
+				+e.INPUT.input(type='radio' name='radio')&attributes(attributes)
+			else
+				+e.INPUT.input(type='checkbox' name='')&attributes(attributes)
+			+e.square: +i('check', 'check-box__icon')
+			+e.SPAN.text= text
+
+mixin formField(classMod, text, icon, textarea)
+	+b.LABEL.form-field(class= classMod)
+		if icon
+			+e.DIV.icon
+				+i(`${icon}`)
+		if !textarea
+			+e.INPUT.input(type='text' name='' placeholder=`${text}` required)&attributes(attributes)
+		else
+			+e.TEXTAREA.textarea.textarea(placeholder=`${text}`)

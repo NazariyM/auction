@@ -1,0 +1,53 @@
+// *** begin info-block *** //
+.info-block
+   &_home
+      margin-top: -90px
+   &__slider
+      padding: 0 170px
+      .slider-btn
+         top: calc(50% - 20px)
+   &__item
+      $parent: &
+      margin: 0 10px
+      &_1
+         background-color: #7ae4e6
+      &_2
+         color: $white
+         background-color: #444a59
+      &_3
+         background-color: #ffe987
+      &-header
+         +flexCenter
+         padding: 20px 25px
+         #{$parent}_1 &
+            background-color: #6ed6d7
+         #{$parent}_2 &
+            background-color: #393f4d
+         #{$parent}_3 &
+            background-color: #ffe469
+            
+      &-icon
+         margin-right: 10px
+      &-title
+      
+      &-content
+         position: relative
+         padding: 20px 25px
+         &-img
+            position: absolute
+            top: 0
+            right: 0
+         &-text
+            margin-bottom: 40px
+         &-title
+            margin-bottom: 10px
+            font-size: 25px
+         
+      &-link
+         font-size: 15px
+   &__help-btn
+      position: absolute
+      right: 0
+      bottom: 0
+      z-index: 1
+// end info-block //

@@ -1,0 +1,74 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	//begin main
+	main.main
+
+		//begin screen
+		+b.SECTION.screen._full
+			+e.container.container
+				+e.content
+					+e.A.logo(href='#!')
+						+e.IMG(src='img/other/logo_1.png' alt='image')
+					+e.H1.title.title._lg._gray Доступное искусство со всего мира
+					+e.P.sub-title Теперь покупать стало проще и безопаснее
+					+e.A.link.link(href='#!') Подробнее
+						.link__icon.icon-arrow-r
+				+e.img-wrap
+					+e.IMG(src='img/content/screen_img.png' alt='image')
+		//end screen
+
+		//begin info-block
+		+b.SECTION.info-block._home
+			.container.container_md
+				+e.slider.slider
+					-i = 0
+					while i < 2
+						+e.item._1
+							+e.item-header
+								+e.item-icon
+								+e.H3.item-title.title.title_xs Живопись
+							+e.item-content
+								+e.item-content-img
+									+e.IMG(src='img/content/info-block_1.png' alt='image')
+								+e.item-content-text
+									+e.H4.item-content-title.title Это
+									+e.P вид изобразительного искусства, связанный с передачей...
+								+e.A.item-link.link._bold(href='#!') Подробнее
+									.link__icon.icon-arrow-r
+
+						+e.item._2
+							+e.item-header
+								+e.item-icon
+								+e.H3.item-title.title.title_xs._white Графика
+							+e.item-content
+								+e.item-content-img
+									+e.IMG(src='img/content/info-block_2.png' alt='image')
+								+e.item-content-text
+									+e.H4.item-content-title.title._white Это
+									+e.P вид изобразительного искусства, использующий в качестве основных...
+								+e.A.item-link.link._bold(href='#!') Подробнее
+									.link__icon.icon-arrow-r
+
+						+e.item._3
+							+e.item-header
+								+e.item-icon
+									+e.item-content-img
+										+e.IMG(src='img/content/info-block_3.png' alt='image')
+								+e.H3.item-title.title.title_xs Скульптура
+							+e.item-content
+								+e.item-content-text
+									+e.H4.item-content-title.title Это
+									+e.P вид изобразительного искусства, произведения которого имеют...
+								+e.A.item-link.link._bold(href='#!') Подробнее
+									.link__icon.icon-arrow-r
+						-i++
+
+				+e.BUTTON.help-btn.help-btn
+		//end info-block
+
+	//end main

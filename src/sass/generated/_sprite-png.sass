@@ -1,0 +1,96 @@
+$icons: (0:0)
+$icons: map-merge($icons,('arrow-r': (X: -30px, Y:-82px, W: 16px, H: 12px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('beg': (X: -110px, Y:-32px, W: 22px, H: 21px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('hammer': (X: -110px, Y:0px, W: 22px, H: 22px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('help': (X: 0px, Y:-39px, W: 27px, H: 33px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('location': (X: -81px, Y:0px, W: 19px, H: 27px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('lock': (X: -81px, Y:-37px, W: 15px, H: 21px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('paint': (X: -41px, Y:0px, W: 30px, H: 28px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('pen': (X: -41px, Y:-38px, W: 28px, H: 28px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('search': (X: 0px, Y:-82px, W: 20px, H: 20px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('shovel': (X: 0px, Y:0px, W: 31px, H: 29px, TW: 132px, TH: 102px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)
+
+.icon-arrow-r
+   width: 16px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: -30px -82px
+.icon-beg
+   width: 22px
+   height: 21px
+   background-image: url('../img/sprite.png')
+   background-position: -110px -32px
+.icon-hammer
+   width: 22px
+   height: 22px
+   background-image: url('../img/sprite.png')
+   background-position: -110px 0px
+.icon-help
+   width: 27px
+   height: 33px
+   background-image: url('../img/sprite.png')
+   background-position: 0px -39px
+.icon-location
+   width: 19px
+   height: 27px
+   background-image: url('../img/sprite.png')
+   background-position: -81px 0px
+.icon-lock
+   width: 15px
+   height: 21px
+   background-image: url('../img/sprite.png')
+   background-position: -81px -37px
+.icon-paint
+   width: 30px
+   height: 28px
+   background-image: url('../img/sprite.png')
+   background-position: -41px 0px
+.icon-pen
+   width: 28px
+   height: 28px
+   background-image: url('../img/sprite.png')
+   background-position: -41px -38px
+.icon-search
+   width: 20px
+   height: 20px
+   background-image: url('../img/sprite.png')
+   background-position: 0px -82px
+.icon-shovel
+   width: 31px
+   height: 29px
+   background-image: url('../img/sprite.png')
+   background-position: 0px 0px
