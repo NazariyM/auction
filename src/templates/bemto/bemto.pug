@@ -9,7 +9,6 @@
 //- Block
 mixin b(options)
   - var settings = get_bemto_settings()
-  //- TODO: should we make it generic way for other settings too?
   if options && options.prefix !== undefined
     - settings.prefix = options.prefix
 
@@ -48,7 +47,6 @@ mixin b(options)
 
       //- If the class is a modifier, add it to the previous object
       - var modifier_class = klass.match(new RegExp('^(?!' + settings['element'] + '[A-Za-z0-9])' + settings['modifier'] + "(.+)$"))
-      //- FIXME: `+b._mod._mod` — raw classes should be treated as raw ones
       if modifier_class && prev_object && prev_object.name
         if !prev_object['modifiers']
           - prev_object['modifiers'] = []

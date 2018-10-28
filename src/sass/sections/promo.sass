@@ -1,0 +1,127 @@
+.promo
+   $parent: &
+   &__container
+   &__row
+      display: flex
+      flex-direction: row
+      &_column
+         flex-direction: column
+         flex-wrap: wrap
+         justify-content: flex-start
+         height: 780px
+      
+   &__item
+      $parent: &
+      position: relative
+      .icon-star
+         margin-right: 4px
+         fill: #000
+         font-size: 12px
+         
+      &-content
+         position: absolute
+         top: 60px
+         left: 60px
+         right: 60px
+         bottom: 60px
+      &-img
+         +cover-img
+         +coverdiv
+         
+      &-info
+         margin-bottom: 50px
+         
+      &-title
+         margin-bottom: 10px
+         #{$parent}_text-white &
+            color: $white
+      &-data
+         display: flex
+         margin-bottom: 10px
+         &-descr
+            margin-right: 30px
+         &-user
+            display: flex
+            align-items: center
+            span
+               &:not(:last-child)
+                  margin-right: 4px
+            
+      &-time
+         font-size: 17px
+         span
+            +boldFont
+            
+      &-price
+         margin-bottom: 50px
+         +f('pt700', 25)
+         
+      &-bids
+         width: 90px
+         height: 90px
+         display: flex
+         align-items: center
+         flex-direction: column
+         justify-content: center
+         color: $color1
+         span
+            display: block
+            +f('pt700', 17)
+         #{$parent}_color-1 &
+            background-color: #ffe469
+         #{$parent}_color-2 &
+            background-color: #ff99ff
+         #{$parent}_color-3 &
+            background-color: #7ae4e6
+         #{$parent}_color-4 &
+            background-color: #ed2a26
+         #{$parent}_color-5 &
+            background-color: #ffdf45
+         #{$parent}_color-6 &
+            background-color: #ffa996
+         #{$parent}_color-7 &
+            background-color: #6600cc
+         &_text-white
+            color: #fff
+   
+      &_sm
+         width: 50%
+         padding-top: percentage(390 / 1028)
+      &_md
+         width: 50%
+         padding-top: percentage(780 / 1028)
+      &_lg
+         width: 100%
+         padding-top: percentage(390 / 1028)
+      &_color-1
+         background-color: #ffe469
+      &_color-2
+         background-color: #ff99ff
+      &_color-3
+         background-color: #7ae4e6
+      &_color-4
+         background-color: #ed2a26
+      &_color-5
+         background-color: #ffdf45
+      &_color-6
+         background-color: #ffa996
+      &_color-7
+         background-color: #6600cc
+      &_text-white
+         color: $white
+         .icon-star
+            fill: $white
+            
+   &__section
+      #{$parent}_text-white &
+         color: $white
+      &_gray
+         background-color: #f0f0f0
+      &-descr
+         max-width: 250px
+      &-title
+         margin-bottom: 20px
+         #{$parent}_text-white &
+            color: $white
+      &-sub-title
+         font-size: 21px

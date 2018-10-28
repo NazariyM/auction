@@ -31,7 +31,7 @@ block content
 						+e.item._1
 							+e.item-header
 								+e.item-icon
-								+e.H3.item-title.title.title_xs Живопись
+								+e.H3.item-title.title._xs Живопись
 							+e.item-content
 								+e.item-content-img
 									+e.IMG(src='img/content/info-block_1.png' alt='image')
@@ -44,7 +44,7 @@ block content
 						+e.item._2
 							+e.item-header
 								+e.item-icon
-								+e.H3.item-title.title.title_xs._white Графика
+								+e.H3.item-title.title._xs Графика
 							+e.item-content
 								+e.item-content-img
 									+e.IMG(src='img/content/info-block_2.png' alt='image')
@@ -57,10 +57,10 @@ block content
 						+e.item._3
 							+e.item-header
 								+e.item-icon
-									+e.item-content-img
-										+e.IMG(src='img/content/info-block_3.png' alt='image')
-								+e.H3.item-title.title.title_xs Скульптура
+								+e.H3.item-title.title._xs Скульптура
 							+e.item-content
+								+e.item-content-img
+									+e.IMG(src='img/content/info-block_3.png' alt='image')
 								+e.item-content-text
 									+e.H4.item-content-title.title Это
 									+e.P вид изобразительного искусства, произведения которого имеют...
@@ -70,5 +70,220 @@ block content
 
 				+e.BUTTON.help-btn.help-btn
 		//end info-block
+
+		//begin promo
+		+b.SECTION.promo
+			+e.section
+				+e.container.container._md
+
+					+e.row._column
+						+e.item._sm._color-1
+							+e.item-content
+								+e.section-descr
+									+e.H2.section-title.title._md Горящие лоты
+									+e.P.section-sub-title Какое-то более детальное описание раздела
+
+						+e.item._sm._color-2._text-white
+							+e.IMG.item-img(src='img/content/promo/promo_2.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids
+									span 50
+									| ставок
+
+						+e.item._md._color-1
+							+e.IMG.item-img(src='img/content/promo/promo_1.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids
+									span 50
+									| ставок
+
+
+
+					+e.item._lg._color-3
+						+e.IMG.item-img(src='img/content/promo/promo_3.jpg' alt='image')
+						+e.item-content
+							+e.item-info
+								+e.H5.item-title.title._xs Мишки в лесу
+								+e.item-data
+									+e.SPAN.item-data-descr (холст, масло)
+									+e.SPAN.item-data-user
+										span Шишкин И.
+										span (
+											+i('star')
+											| 5 347)
+								+e.item-time Осталось:
+									= ' '
+									span 3 дня
+
+							+e.item-price 150 000 руб.
+
+							+e.item-bids
+								span 50
+								| ставок
+
+					+e.row
+						+e.item._sm._color-4._text-white
+							+e.IMG.item-img(src='img/content/promo/promo_4.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids._text-white
+									span 50
+									| ставок
+
+						+e.item._sm._color-3
+							+e.item-content
+								+e.section-descr
+									+e.H2.section-title.title._md Горящие лоты
+									+e.P.section-sub-title Какое-то более детальное описание раздела
+			+e.section._gray
+				+e.container.container._md
+
+					+e.row._column
+						+e.item._sm._color-5
+							+e.item-content
+								+e.section-descr
+									+e.H2.section-title.title._md Новинки
+									+e.P.section-sub-title Рекомендуем
+										br
+										| Вам
+
+						+e.item._sm._color-3._text-white
+							+e.IMG.item-img(src='img/content/promo/promo_2.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids
+									span 50
+									| ставок
+
+						+e.item._md._color-5
+							+e.IMG.item-img(src='img/content/promo/promo_5.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids
+									span 50
+									| ставок
+
+					+e.item._lg._color-1._text-white
+						+e.IMG.item-img(src='img/content/promo/promo_6.jpg' alt='image')
+						+e.item-content
+							+e.item-info
+								+e.H5.item-title.title._xs Мишки в лесу
+								+e.item-data
+									+e.SPAN.item-data-descr (холст, масло)
+									+e.SPAN.item-data-user
+										span Шишкин И.
+										span (
+											+i('star')
+											| 5 347)
+								+e.item-time Осталось:
+									= ' '
+									span 3 дня
+
+							+e.item-price 150 000 руб.
+
+							+e.item-bids
+								span 50
+								| ставок
+
+					+e.row
+						+e.item._sm._color-6._text-white
+							+e.IMG.item-img(src='img/content/promo/promo_7.jpg' alt='image')
+							+e.item-content
+								+e.item-info
+									+e.H5.item-title.title._xs Мишки в лесу
+									+e.item-data
+										+e.SPAN.item-data-descr (холст, масло)
+										+e.SPAN.item-data-user
+											span Шишкин И.
+											span (
+												+i('star')
+												| 5 347)
+									+e.item-time Осталось:
+										= ' '
+										span 3 дня
+
+								+e.item-price 150 000 руб.
+
+								+e.item-bids._text-white
+									span 50
+									| ставок
+
+						+e.item._sm._color-7._text-white
+							+e.item-content
+								+e.section-descr
+									+e.H2.section-title.title._md Смотреть дальше
+		//end promo
 
 	//end main

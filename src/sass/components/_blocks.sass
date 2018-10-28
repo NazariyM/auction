@@ -1,7 +1,7 @@
 // *** begin info-block *** //
 .info-block
    &_home
-      margin-top: -90px
+      margin: -90px 0 75px
    &__slider
       padding: 0 170px
       .slider-btn
@@ -9,6 +9,7 @@
    &__item
       $parent: &
       margin: 0 10px
+      // TODO: ask for items height
       &_1
          background-color: #7ae4e6
       &_2
@@ -25,7 +26,6 @@
             background-color: #393f4d
          #{$parent}_3 &
             background-color: #ffe469
-            
       &-icon
          margin-right: 10px
       &-title
@@ -33,17 +33,21 @@
       &-content
          position: relative
          padding: 20px 25px
+         height: 100%
          &-img
             position: absolute
             top: 0
             right: 0
          &-text
+            position: relative
+            z-index: 1
             margin-bottom: 40px
          &-title
             margin-bottom: 10px
             font-size: 25px
          
       &-link
+         margin-top: auto
          font-size: 15px
    &__help-btn
       position: absolute
