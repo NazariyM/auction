@@ -55,3 +55,37 @@
       bottom: 0
       z-index: 1
 // end info-block //
+
+// *** begin socials *** //
+.socials
+   display: flex
+   align-items: center
+   a
+      display: flex
+      align-items: center
+      margin-left: 17px
+      &:hover
+         svg
+            fill: $color1
+      svg
+         fill: #acafbd
+         transition: .3s ease-in-out
+// end socials //
+
+// *** begin subscribe *** //
+.subscribe
+   &__form
+      display: flex
+      margin: 0 -1px
+      &-field
+         flex: 1 1 50%
+         width: 50%
+         padding: 0 1px
+      &-submit-btn
+         width: 100%
+         padding: 11px 15px 12px
+         color: $color1
+         +f('pt400', 15)
+         border: 2px solid $color1
+         text-align: center
+// end subscribe //

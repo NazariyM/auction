@@ -1,1 +1,54 @@
 .footer
+   padding: 50px 0
+   color: $color7
+   &__container
+      display: flex
+   &__block
+      flex: 1 1 auto
+      margin-right: 60px
+      &-line
+         display: flex
+         margin-bottom: 50px
+      &-row
+         display: flex
+         justify-content: space-between
+         
+      &-col
+   &__logo
+      margin-right: 30px
+      
+   &__rights
+      font-size: 14px
+      &-text
+         margin-bottom: 50px
+      &-links
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         a
+            color: $color1
+            &:not(:last-child)
+               margin-bottom: 10px
+               
+   &__menu
+      display: flex
+      align-items: center
+      margin-top: auto
+      &-item
+         &:not(:last-child)
+            margin-right: 30px
+         &_has-select
+            display: flex
+            align-items: center
+      &-link
+         color: $color1
+      &-select
+      
+   &__title
+      margin-bottom: 40px
+   &__subscribe
+      margin-top: 40px
+
+   &__social-block
+      flex: 0 0 265px
+      // TODO: how many place this block will take?

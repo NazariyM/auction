@@ -1,3 +1,81 @@
 //begin footer
 +b.FOOTER.footer
+	+e.container.container
+		+e.block
+			+e.block-line
+				+e.A.logo(href='#!')
+					+e.IMG(src='img/other/logo_1.png' alt='image')
+				+e.menu
+					+e.menu-item
+						+e.A.menu-link(href='#!')
+							//+i('')
+							span Мои ставки
+					+e.menu-item
+						+e.A.menu-link(href='#!')
+							//+i('')
+							span Текущие лоты
+					+e.menu-item
+						+e.A.menu-link(href='#!')
+							//+i('')
+							span Войти/Регистрация
+					+e.menu-item._has-select
+						+e.P Доставка в
+						+e.SELECT.menu-select
+							option Самару
+							option Москву
+							option Кемерово
+
+			+e.block-row
+				+e.block-col.footer__rights
+					+e.rights-text
+						+e.P © 2010-2018 Интернет-аукцион
+						+e.P Все права защищены
+					+e.rights-links
+						+b.A.link._decor(href='#!')
+							span Пользовательское соглашение
+						+b.A.link._decor(href='#!')
+							span Защита конфиденциальности
+				+e.block-col
+					+e.H4.title.title._xs Как покупать
+					+e.UL.list
+						li: a(href='#!') Гид участникам
+						li: a(href='#!') Зарегистрироваться
+						li: a(href='#!') Защита сделок
+						li: a(href='#!') Бонус
+						li: a(href='#!') Бонус
+						li: a(href='#!') Защита сделок
+				+e.block-col
+					+e.H4.title.title._xs Как покупать
+					+e.UL.list
+						li: a(href='#!') Гид участникам
+						li: a(href='#!') Зарегистрироваться
+						li: a(href='#!') Защита сделок
+						li: a(href='#!') Бонус
+						li: a(href='#!') Бонус
+						li: a(href='#!') Защита сделок
+				+e.block-col
+					+e.H4.title.title._xs Верни часть средств*
+					+e.block-row
+						+b.socials.footer__socials
+							-
+								socList = [
+								'fb',
+								'vk',
+								'inst'
+								]
+							for icon in socList
+								+e.A(href='#!' target='_blank'): +i(`${icon}`)
+
+						+e.A.link.link(href='#!') Подробнее
+							.link__icon.icon-arrow-r
+
+					+b.subscribe.footer__subscribe
+						+e.FORM.form(action='#!' method='POST')
+							+b.form-field.subscribe__form-field
+								+e.INPUT.input(type='email' name='' placeholder='E-mail' required)
+							+b.form-field.subscribe__form-field
+								+b.BUTTON.subscribe__form-submit-btn(type='submit') Подписаться
+
+		+e.social-block
+			+e.IMG(src='img/other/vk-block.jpg' alt='image')
 //end footer

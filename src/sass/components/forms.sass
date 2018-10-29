@@ -4,44 +4,22 @@
    display: block
    &__input
       width: 100%
-      height: 60px
-      padding: 0 20px 0 54px
-      +f('pn400', 20, 28)
+      height: 46px
+      padding: 0 16px
+      +f('pt400', 15)
       background-color: $white
-      border-radius: 30px
-      border: 2px solid $color4
-      +placeholder-color($color5)
+      border-radius: 0
+      border: 2px solid #e4e3e1
+      +placeholder-color($color7)
       color: $color1
       transition: .3s ease-in-out
       +xs
          padding: 0 20px 0 37px
-         height: 50px
       &:focus
          box-shadow: 0 0 6px $color2
          border-color: transparent
       //#{$parent}.has-error &
          border-color: #cf0110
-      #{$parent}_bg-color &
-         background-color: $color6
-   &__icon
-      position: absolute
-      top: 0
-      left: 0
-      width: 40px
-      height: 60px
-      display: flex
-      align-items: center
-      justify-content: flex-end
-      +xs
-         width: 30px
-         height: 50px
-      svg
-         fill: $color3
-         .icon-phone-call
-            font-size: 24px
-            
-      //#{$parent}.has-error &
-         color: rgba(213, 29, 72, 1)
    &__textarea
       $parent: &
       display: block
@@ -124,24 +102,3 @@
       &:checked ~ #{$parent}__square::after
          opacity: 1
          transform: scale(1)
-
-.form-agreement
-   $parent: &
-   font-size: 13px
-   line-height: 28px
-   text-align: center
-   &_white
-      color: $white
-   &__link
-      border-bottom: 1px solid
-      transition: .3s ease-in-out
-      #{$parent}_white &
-         border-bottom-color: rgba($white, .5)
-         color: $white
-         &:hover
-            border-bottom-color: $white
-      #{$parent}_black &
-         border-bottom-color: rgba($color1, .5)
-         &:hover
-            color: $color2
-            border-bottom-color: rgba($color2, .5)

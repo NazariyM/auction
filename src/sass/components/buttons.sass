@@ -19,9 +19,18 @@
 .link
    display: inline-flex
    align-items: center
+   color: $color1
    $parent: &
    &_bold
       +f('pt700')
+   &_decor
+      display: inline
+      span
+         border-bottom: 1px solid currentColor
+         transition: .3s ease-in-out
+      &:hover
+         span
+            border-bottom-color: transparent
    &__icon
       margin-left: 7px
       #{$parent}_bold &
