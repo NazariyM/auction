@@ -11,64 +11,6 @@
    transition: .3s ease-in-out
 // end moving-line //
 
-// *** begin info-block *** //
-.info-block
-   &_home
-      margin: -90px 0 75px
-   &__slider
-      padding: 0 170px
-      .slider-btn
-         top: calc(50% - 20px)
-   &__item
-      $parent: &
-      margin: 0 10px
-      // TODO: ask for items height
-      &_1
-         background-color: #7ae4e6
-      &_2
-         color: $white
-         background-color: #444a59
-      &_3
-         background-color: #ffe987
-      &-header
-         +flexCenter
-         padding: 20px 25px
-         #{$parent}_1 &
-            background-color: #6ed6d7
-         #{$parent}_2 &
-            background-color: #393f4d
-         #{$parent}_3 &
-            background-color: #ffe469
-      &-icon
-         margin-right: 10px
-      &-title
-      
-      &-content
-         position: relative
-         padding: 20px 25px
-         height: 100%
-         &-img
-            position: absolute
-            top: 0
-            right: 0
-         &-text
-            position: relative
-            z-index: 1
-            margin-bottom: 40px
-         &-title
-            margin-bottom: 10px
-            font-size: 25px
-         
-      &-link
-         margin-top: auto
-         font-size: 15px
-   &__help-btn
-      position: absolute
-      right: 0
-      bottom: 0
-      z-index: 1
-// end info-block //
-
 // *** begin socials *** //
 .socials
    display: flex
@@ -125,8 +67,6 @@
          position: absolute
          z-index: 1
          top: 50%
-         left: 100%
-         transform: translate3d(15px, -50%, 0)
          opacity: 0
          display: flex
          align-items: center
@@ -139,14 +79,30 @@
          text-align: left
          transition: .2s ease-in-out
          pointer-events: none
-         #{$parent}__btn:hover &
+         #{$parent}_vertical-l &
+            right: 100%
+            transform: translate3d(-15px, -50%, 0)
+            &::before
+               left: 100%
+               +arr(6, 16, #f6f6f6, r)
+               
+         #{$parent}_vertical-r &
+            left: 100%
+            transform: translate3d(15px, -50%, 0)
+            &::before
+               right: 100%
+               +arr(6, 16, #f6f6f6, l)
+            
+         #{$parent}_vertical-r #{$parent}__btn:hover &
             transform: translate3d(0, -50%, 0)
             opacity: 1
+         #{$parent}_vertical-l #{$parent}__btn:hover &
+            transform: translate3d(0, -50%, 0)
+            opacity: 1
+            
          &::before
             position: absolute
             top: calc(50% - 8px)
-            right: 100%
-            +arr(6, 16, #f6f6f6, l)
             content: ''
       &_view
       &_more
@@ -155,4 +111,8 @@
          background-color: #80838f
       &_add
          background-color: #b7bac7
+      svg
+         fill: #e7e8ec
+      .icon-view
+         fill: $color1
 // end control-panel //

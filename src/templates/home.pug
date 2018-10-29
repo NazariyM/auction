@@ -13,7 +13,7 @@ block content
 			+e.container.container
 				+e.content
 					+e.A.logo(href='#!')
-						+e.IMG(src='img/other/logo_1.png' alt='image')
+						+e.IMG(src='img/other/logo-blue.svg' alt='image')
 					+e.H1.title.title._lg._gray Доступное искусство со всего мира
 					+e.P.sub-title Теперь покупать стало проще и безопаснее
 					+e.A.link.link(href='#!') Подробнее
@@ -51,7 +51,7 @@ block content
 								+e.item-content-text
 									+e.H4.item-content-title.title._white Это
 									+e.P вид изобразительного искусства, использующий в качестве основных...
-								+e.A.item-link.link._bold(href='#!') Подробнее
+								+e.A.item-link.link._bold._white(href='#!') Подробнее
 									.link__icon.icon-arrow-r
 
 						+e.item._3
@@ -69,6 +69,7 @@ block content
 						-i++
 
 				+e.BUTTON.help-btn.help-btn
+					+i('help')
 		//end info-block
 
 		//begin promo
@@ -78,12 +79,16 @@ block content
 					+e.item._md._color-1
 						+b.control-panel._vertical._vertical-r
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -118,12 +123,16 @@ block content
 					+e.item._sm._color-2._text-white
 						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -151,12 +160,16 @@ block content
 					+e.item._lg._color-3
 						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -190,12 +203,16 @@ block content
 					+e.item._sm._color-4._text-white
 						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -224,14 +241,18 @@ block content
 				+e.container.container._md
 
 					+e.item._md._color-5
-						+b.control-panel._vertical
+						+b.control-panel._vertical._vertical-r
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -265,14 +286,18 @@ block content
 									| Вам
 
 					+e.item._sm._color-3._text-white
-						+b.control-panel._vertical
+						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -298,14 +323,18 @@ block content
 								| ставок
 
 					+e.item._lg._color-1._text-white
-						+b.control-panel._vertical
+						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -336,14 +365,18 @@ block content
 								+e.H2.section-title.title._md Смотреть дальше
 
 					+e.item._sm._color-6._text-white
-						+b.control-panel._vertical
+						+b.control-panel._vertical._vertical-l
 							+e.A.btn._view(href='#!')
+								+i('view')
 								+e.btn-tip Быстрый просмотр
 							+e.A.btn._more(href='#!')
+								+i('list')
 								+e.btn-tip Подробнее
 							+e.A.btn._bid(href='#!')
+								+i('hammer')
 								+e.btn-tip Сделать ставку
 							+e.A.btn._add(href='#!')
+								+i('beg')
 								+e.btn-tip Добавить
 									br
 									| в лоты
@@ -368,5 +401,58 @@ block content
 								span 50
 								| ставок
 		//end promo
+			
+		//begin benefits
+		+b.SECTION.benefits
+			+e.container.container
+				+e.A.help-btn.help-btn(href='#!')
+					+i('help')
+					span.help-btn__text Помощь 24/7
+
+				+e.block
+					+e.item._1
+						+e.item-logo
+							+e.IMG(src='img/other/logo-blue.svg' alt='image')
+					+e.item._2
+						+e.P Защита покупателей
+
+				+e.block
+					+e.item._3
+						+e.item-img
+							+e.IMG(src='img/other/van.png' alt='image')
+						+e.P Надежная доставка
+
+				+e.block
+					+e.item._4
+						+e.P Защита покупателей
+					+e.item._5
+						+e.item-bg(style='background-image: url(img/bg/benefits_item-bg.jpg)')
+						+e.P Защита покупателей
+		//end benefits
+
+		//begin partners
+		+b.SECTION.partners
+			+e.container.container
+				+e.H2.title.title._md Наши партнеры
+				+e.slider.slider
+					-i = 0
+					while i < 2
+						+e.A.item(href='#!' target='_blank')
+							+e.item-inner
+								+e.IMG(src='img/content/partners/partners_1.png' alt='image')
+						+e.A.item(href='#!' target='_blank')
+							+e.item-inner
+								+e.IMG(src='img/content/partners/partners_2.png' alt='image')
+						+e.A.item(href='#!' target='_blank')
+							+e.item-inner
+								+e.IMG(src='img/content/partners/partners_3.png' alt='image')
+						+e.A.item(href='#!' target='_blank')
+							+e.item-inner
+								+e.IMG(src='img/content/partners/partners_4.png' alt='image')
+						+e.A.item(href='#!' target='_blank')
+							+e.item-inner
+								+e.IMG(src='img/content/partners/partners_5.png' alt='image')
+						-i++
+		//end partners
 
 	//end main

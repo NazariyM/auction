@@ -1,0 +1,129 @@
+// *** begin info-block *** //
+.info-block
+   &_home
+      margin: -90px 0 75px
+   &__slider
+      padding: 0 170px
+      .slider-btn
+         top: calc(50% - 20px)
+   &__item
+      $parent: &
+      margin: 0 10px
+      &_1
+         background-color: #7ae4e6
+      &_2
+         color: $white
+         background-color: #444a59
+      &_3
+         background-color: #ffe987
+      &-header
+         +flexCenter
+         padding: 20px 25px
+         #{$parent}_1 &
+            background-color: #6ed6d7
+         #{$parent}_2 &
+            background-color: #393f4d
+         #{$parent}_3 &
+            background-color: #ffe469
+      &-icon
+         margin-right: 10px
+      &-title
+      
+      &-content
+         position: relative
+         padding: 20px 25px
+         height: 100%
+         p
+            max-height: 50px
+         &-img
+            position: absolute
+            top: 0
+            right: 0
+            pointer-events: none
+         &-text
+            position: relative
+            z-index: 1
+            margin-bottom: 40px
+         &-title
+            margin-bottom: 10px
+            font-size: 25px
+      
+      &-link
+         margin-top: auto
+         font-size: 15px
+   &__help-btn
+      position: absolute
+      right: 0
+      bottom: 0
+      z-index: 1
+// end info-block //
+
+// *** begin benefits *** //
+.benefits
+   padding: 197px 0 40px
+   &__container
+      max-width: 974px
+      display: flex
+      justify-content: center
+   &__help-btn
+      position: absolute
+      left: 0
+      bottom: 0
+   &__block
+      &:not(:first-of-type)
+         margin-top: 194px
+      &:nth-of-type(3)
+         margin-left: auto
+   &__item
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      width: 194px
+      height: 194px
+      padding: 30px
+      +cover
+      &_1
+         background-color: #aff1f2
+      &_2
+         background-color: #f6f6f6
+         color: $color9
+      &_3
+         width: 390px
+         background-color: #ffe469
+      &_4
+         background-color: #bf37e8
+         color: #fff
+      &_5
+         background-color: #393f4d
+         color: #fff
+      &-logo
+         flex: 0 0 198px
+         width: 198px
+         margin-left: -150px
+      &-bg
+         +coverdiv
+         opacity: .15
+      p
+         position: relative
+         z-index: 1
+         +boldFont
+         font-size: 21px
+// end benefits //
+
+// *** begin partners *** //
+.partners
+   &__container
+      max-width: 1218px
+   &__title
+      margin-bottom: 40px
+   &__slider
+      padding: 0 124px
+   &__item
+      transition: .3s ease-in-out
+      &:hover
+         background-color: #e2e1df
+      &-inner
+         +flexCenter
+         height: 194px
+// end partners //

@@ -73,3 +73,20 @@ const infoBlockSld = new Slider({
     }
   ]
 });
+
+const partnersSld = new Slider({
+  el: '.partners__slider',
+  slidesToShow: 5,
+  ease: 'cubic-bezier(0.74, 0.1, 0.32, 0.98)',
+  arrows: true,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        speed: 800
+      }
+    }
+  ]
+});
+
