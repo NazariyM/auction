@@ -1,7 +1,5 @@
 .nav
    $parent: &
-   height: 50px
-   background-color: #13203f
    +sm
       flex-direction: column
       justify-content: center
@@ -30,10 +28,6 @@
       visibility: visible
       transform: translate3d(0, 0, 0)
       transition: transform .4s ease, opacity .4s ease, visibility 0s 0s, -webkit-transform .4s ease
-   
-   &__body
-      height: 100%
-      @extend .container
       
    &__list
       display: flex
@@ -48,12 +42,13 @@
          height: 100%
          padding: 0
       &-item
-         position: relative
-         +sm
-            width: 100%
-            opacity: 0
-            transform: translateY(20px)
-            transition: .3s ease-in-out
+         &:not(:last-child)
+            margin-right: 30px
+         //+sm
+         //   width: 100%
+         //   opacity: 0
+         //   transform: translateY(20px)
+         //   transition: .3s ease-in-out
             
          $elements: 8
          @for $i from 0 to $elements
@@ -62,20 +57,36 @@
                   transition-delay: #{$i * 0.1s}
                   
       &-link
+         position: relative
          display: block
-         color: $color8
-         transition: .3s ease-in-out
+         color: $color1
          +sm
             position: relative
             z-index: 1
             display: inline-block
             padding: 0 15px
             color: $color1
-            font-size: 16px
             background: $white
          &:hover
-            color: $color2
-               
+            span
+               &:nth-child(1)
+                  opacity: 0
+               &:nth-child(2)
+                  opacity: 1
+         span
+            transition: .3s ease-in-out
+            &:nth-child(2)
+               position: absolute
+               top: 0
+               left: 0
+               right: 0
+               width: calc(100% + 4px)
+               opacity: 0
+               +f('pt700')
+   &__line
+      #{$parent}:hover &
+         opacity: 1
+         
 .nav-btn
    $parent: &
    display: none
@@ -133,3 +144,5 @@
             bottom: 0
             transform: rotate(-45deg)
             transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+

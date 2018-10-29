@@ -1,17 +1,83 @@
 .header
-   display: none
    $parent: &
    position: fixed
    top: 0
    left: 0
    width: 100%
    z-index: 100
-   &__logo
-      flex: 0 0 217px
-   &__info
-      &-container
-         display: flex
-         justify-content: space-between
-         padding: 20px 0 18px
-         max-width: 1140px
-         border-bottom: 1px solid rgba($white, .15)
+   background-color: #fff
+   transition: .3s ease-in-out
+   &.is-fixed
+      box-shadow: 0 0 10px rgba($color1, .3)
+   &__container
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 60px
+   &__controls
+      $parent: &
+      position: relative
+      display: flex
+      &-item
+         background: #fff
+         &:first-of-type
+            border-left: 1px solid #f0f0f0
+         &:not(:last-of-type)
+            border-right: 1px solid #f0f0f0
+      &-btn
+         position: relative
+         +flexCenter
+         width: 78px
+         height: 60px
+         z-index: 1
+         &-icon
+            fill: #acafbd
+            &.icon-loupe
+               font-size: 30px
+            &.icon-location
+               font-size: 30px
+      &-line
+         #{$parent}:hover &
+            opacity: 1
+         &::before, &::after
+            position: absolute
+            width: 33.33333%
+            height: 100%
+            background: #fff
+            content: ''
+         &::before
+            left: 0
+         &::after
+            right: 0
+      &-form
+         $parent: &
+         pointer-events: none
+         position: absolute
+         top: 0
+         bottom: 0
+         right: calc(100% - 1px)
+         width: 0
+         will-change: width
+         border-left: 1px solid #f0f0f0
+         transition: .4s ease-in-out
+         .is-active &
+            pointer-events: auto
+            width: 265px
+         &-input
+            width: 100%
+            height: 100%
+            padding: 0 0 0 18px
+            +f('pt400', 15)
+            line-height: 1.2
+            +placeholder-color($color7)
+            &:valid + #{$parent}-btn
+               pointer-events: auto
+               z-index: 1
+         &-btn
+            pointer-events: none
+            position: absolute
+            top: 0
+            left: 100%
+            height: 100%
+            width: 78px
+            z-index: -1

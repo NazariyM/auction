@@ -1,7 +1,7 @@
 import objectFitImages from 'object-fit-images';
 import { $body, detectIE, $scrolledElements } from './_helpers';
 
-// import './components/Header';
+import './components/Header';
 import './components/Popups';
 import './components/Form';
 import './sections/Contacts';

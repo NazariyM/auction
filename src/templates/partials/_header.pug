@@ -1,32 +1,43 @@
 //begin header
 +b.HEADER.header(class= headerClass)
-	+b.nav
-		+e.NAV.body
+	+e.container.container
+		+b.NAV.nav
 			-
 				navList = [
-				['Что делаем', 'screen'],
-				['О нас', 'advantages'],
-				['Как работаем', 'faq'],
-				['Оплата и гарантии', 'solutions'],
-				['Отзывы', 'config'],
-				['Контакты', 'equip'],
-				['Сотрудники', 'contacts']]
+				'Все категории',
+				'Защита сделки',
+				'Помощь',
+				''
+				]
+
 			+e.UL.list
-				for navLink in navList
-					+e.LI.list-item: +e.A.list-link(href=`#${navLink[1]}`)= navLink[0]
-	+e.info
-		+e.info-container.container
-			+e.A.logo(href='#!')
-				+e.IMG(src='img/other/logo.svg' alt='Время поручений')
+				for navLink, i in navList
+					+e.LI.list-item(class= i === navList.length - 1 ? 'nav__line moving-line' : ''): +e.A.list-link(href=`#!`)
+						span= navLink
+						span= navLink
 
-			+b.contact-block.header__contact-block
-				+e.P.title Принимаем заявки в мессенджерах и по телефону
-				+e.socials
-					+e.A.socials-link._whatsapp(href='#!'): +i('whatsapp', 'contact-block__socials-icon')
-					+e.A.socials-link._tg(href='#!'): +i('tg', 'contact-block__socials-icon')
-				+e.A.tel(href='tel:89246959111') 8 (924) 695-91-11
+		+b.BUTTON.nav-btn(type='button')
+			+e.SPAN.burger
+				+e.SPAN.lines
 
-			+b.BUTTON.nav-btn(type='button')
-				+e.SPAN.burger
-					+e.SPAN.lines
+		+e.controls
+			+e.controls-item
+				+e.A.controls-btn.js-controls-btn(href='#!')
+					+i('loupe', 'header__controls-btn-icon')
+				+e.FORM.controls-form(action='#!', method='POST')
+					+e.INPUT.controls-form-input(type='text' name='' placeholder='Поиск' required)
+					+e.BUTTON.controls-form-btn(type='submit')
+			+e.controls-item
+				+e.A.controls-btn.js-controls-btn(href='#!')
+					+i('location', 'header__controls-btn-icon')
+			+e.controls-item
+				+e.A.controls-btn(href='#!')
+					+i('hammer', 'header__controls-btn-icon')
+			+e.controls-item
+				+e.A.controls-btn(href='#!')
+					+i('beg', 'header__controls-btn-icon')
+			+e.controls-item
+				+e.A.controls-btn(href='#!')
+					+i('lock', 'header__controls-btn-icon')
+			+e.controls-line.moving-line
 //end header

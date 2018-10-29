@@ -1,19 +1,12 @@
 .promo
    $parent: &
    &__container
-   &__row
-      display: flex
-      flex-direction: row
-      &_column
-         flex-direction: column
-         flex-wrap: wrap
-         justify-content: flex-start
-         height: 780px
-         // TODO: fix col widths & height in resp
+      +clr
       
    &__item
       $parent: &
       position: relative
+      float: right
       .icon-star
          margin-right: 4px
          fill: #000
@@ -88,26 +81,45 @@
       &_sm
          width: 50%
          padding-top: percentage(390 / 1028)
+         
       &_md
          width: 50%
+         margin-left: -0.06%
          padding-top: percentage(780 / 1028)
+         
       &_lg
+         clear: both
          width: 100%
          padding-top: percentage(390 / 1028)
+         
       &_color-1
          background-color: #ffe469
+         .control-panel__btn_view
+            background-color: #ffe469
       &_color-2
          background-color: #ff99ff
+         .control-panel__btn_view
+            background-color: #ff99ff
       &_color-3
          background-color: #7ae4e6
+         .control-panel__btn_view
+            background-color: #7ae4e6
       &_color-4
          background-color: #ed2a26
+         .control-panel__btn_view
+            background-color: #ed2a26
       &_color-5
          background-color: #ffdf45
+         .control-panel__btn_view
+            background-color: #ffdf45
       &_color-6
          background-color: #ffa996
+         .control-panel__btn_view
+            background-color: #ffa996
       &_color-7
          background-color: #6600cc
+         .control-panel__btn_view
+            background-color: #6600cc
       &_text-white
          color: $white
          .icon-star

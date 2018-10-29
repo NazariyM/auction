@@ -12,29 +12,34 @@
   <body>
     <!--begin header-->
     <header class="header">
-      <div class="nav">
-        <nav class="nav__body">
+      <div class="header__container container">
+        <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__list-item"><a class="nav__list-link" href="#screen">Что делаем</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#advantages">О нас</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#faq">Как работаем</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#solutions">Оплата и гарантии</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#config">Отзывы</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#equip">Контакты</a></li>
-            <li class="nav__list-item"><a class="nav__list-link" href="#contacts">Сотрудники</a></li>
+            <li class="nav__list-item"><a class="nav__list-link" href="#!"><span>Все категории</span><span>Все категории</span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link" href="#!"><span>Защита сделки</span><span>Защита сделки</span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link" href="#!"><span>Помощь</span><span>Помощь</span></a></li>
+            <li class="nav__list-item nav__line moving-line"><a class="nav__list-link" href="#!"><span></span><span></span></a></li>
           </ul>
-        </nav>
-      </div>
-      <div class="header__info">
-        <div class="header__info-container container"><a class="header__logo" href="#!"><img src="img/other/logo.svg" alt="Время поручений" title="" /></a>
-          <div class="contact-block header__contact-block">
-            <p class="contact-block__title">Принимаем заявки в мессенджерах и по телефону</p>
-            <div class="contact-block__socials"><a class="contact-block__socials-link contact-block__socials-link_whatsapp" href="#!"><svg class="icon-whatsapp contact-block__socials-icon">
-                  <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
-                </svg></a><a class="contact-block__socials-link contact-block__socials-link_tg" href="#!"><svg class="icon-tg contact-block__socials-icon">
-                  <use xlink:href="img/sprite.svg#icon-tg"></use>
-                </svg></a></div><a class="contact-block__tel" href="tel:89246959111">8 (924) 695-91-11</a>
-          </div><button class="nav-btn" type="button"><span class="nav-btn__burger"><span class="nav-btn__lines"></span></span></button>
+        </nav><button class="nav-btn" type="button"><span class="nav-btn__burger"><span class="nav-btn__lines"></span></span></button>
+        <div class="header__controls">
+          <div class="header__controls-item"><a class="header__controls-btn js-controls-btn" href="#!"><svg class="icon-loupe header__controls-btn-icon">
+                <use xlink:href="img/sprite.svg#icon-loupe"></use>
+              </svg></a>
+            <form class="header__controls-form" action="#!" method="POST"><input class="header__controls-form-input" type="text" name="" placeholder="Поиск" required="required" /><button class="header__controls-form-btn" type="submit"></button></form>
+          </div>
+          <div class="header__controls-item"><a class="header__controls-btn js-controls-btn" href="#!"><svg class="icon-location header__controls-btn-icon">
+                <use xlink:href="img/sprite.svg#icon-location"></use>
+              </svg></a></div>
+          <div class="header__controls-item"><a class="header__controls-btn" href="#!"><svg class="icon-hammer header__controls-btn-icon">
+                <use xlink:href="img/sprite.svg#icon-hammer"></use>
+              </svg></a></div>
+          <div class="header__controls-item"><a class="header__controls-btn" href="#!"><svg class="icon-beg header__controls-btn-icon">
+                <use xlink:href="img/sprite.svg#icon-beg"></use>
+              </svg></a></div>
+          <div class="header__controls-item"><a class="header__controls-btn" href="#!"><svg class="icon-lock header__controls-btn-icon">
+                <use xlink:href="img/sprite.svg#icon-lock"></use>
+              </svg></a></div>
+          <div class="header__controls-line moving-line"></div>
         </div>
       </div>
     </header>
@@ -142,43 +147,8 @@
       <section class="promo">
         <div class="promo__section">
           <div class="promo__container container container_md">
-            <div class="promo__row promo__row_column">
-              <div class="promo__item promo__item_sm promo__item_color-1">
-                <div class="promo__item-content">
-                  <div class="promo__section-descr">
-                    <h2 class="promo__section-title title title_md">Горящие лоты</h2>
-                    <p class="promo__section-sub-title">Какое-то более детальное описание раздела</p>
-                  </div>
-                </div>
-              </div>
-              <div class="promo__item promo__item_sm promo__item_color-2 promo__item_text-white"><img class="promo__item-img" src="img/content/promo/promo_2.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids"><span>50</span>ставок</div>
-                </div>
-              </div>
-              <div class="promo__item promo__item_md promo__item_color-1"><img class="promo__item-img" src="img/content/promo/promo_1.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids"><span>50</span>ставок</div>
-                </div>
-              </div>
-            </div>
-            <div class="promo__item promo__item_lg promo__item_color-3"><img class="promo__item-img" src="img/content/promo/promo_3.jpg" alt="image" title="" />
+            <div class="promo__item promo__item_md promo__item_color-1">
+              <div class="control-panel control-panel_vertical control-panel_vertical-r"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_1.jpg" alt="image" title="" />
               <div class="promo__item-content">
                 <div class="promo__item-info">
                   <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
@@ -191,70 +161,70 @@
                 <div class="promo__item-bids"><span>50</span>ставок</div>
               </div>
             </div>
-            <div class="promo__row">
-              <div class="promo__item promo__item_sm promo__item_color-4 promo__item_text-white"><img class="promo__item-img" src="img/content/promo/promo_4.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids promo__item-bids_text-white"><span>50</span>ставок</div>
+            <div class="promo__item promo__item_sm promo__item_color-1">
+              <div class="promo__item-content">
+                <div class="promo__section-descr">
+                  <h2 class="promo__section-title title title_md">Горящие лоты</h2>
+                  <p class="promo__section-sub-title">Какое-то более детальное описание раздела</p>
                 </div>
               </div>
-              <div class="promo__item promo__item_sm promo__item_color-3">
-                <div class="promo__item-content">
-                  <div class="promo__section-descr">
-                    <h2 class="promo__section-title title title_md">Горящие лоты</h2>
-                    <p class="promo__section-sub-title">Какое-то более детальное описание раздела</p>
-                  </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-2 promo__item_text-white">
+              <div class="control-panel control-panel_vertical control-panel_vertical-l"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_2.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
                 </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids"><span>50</span>ставок</div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_lg promo__item_color-3">
+              <div class="control-panel control-panel_vertical control-panel_vertical-l"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_3.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
+                </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids"><span>50</span>ставок</div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-3">
+              <div class="promo__item-content">
+                <div class="promo__section-descr">
+                  <h2 class="promo__section-title title title_md">Горящие лоты</h2>
+                  <p class="promo__section-sub-title">Какое-то более детальное описание раздела</p>
+                </div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-4 promo__item_text-white">
+              <div class="control-panel control-panel_vertical control-panel_vertical-l"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_4.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
+                </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids promo__item-bids_text-white"><span>50</span>ставок</div>
               </div>
             </div>
           </div>
         </div>
         <div class="promo__section promo__section_gray">
           <div class="promo__container container container_md">
-            <div class="promo__row promo__row_column">
-              <div class="promo__item promo__item_sm promo__item_color-5">
-                <div class="promo__item-content">
-                  <div class="promo__section-descr">
-                    <h2 class="promo__section-title title title_md">Новинки</h2>
-                    <p class="promo__section-sub-title">Рекомендуем<br>Вам</p>
-                  </div>
-                </div>
-              </div>
-              <div class="promo__item promo__item_sm promo__item_color-3 promo__item_text-white"><img class="promo__item-img" src="img/content/promo/promo_2.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids"><span>50</span>ставок</div>
-                </div>
-              </div>
-              <div class="promo__item promo__item_md promo__item_color-5"><img class="promo__item-img" src="img/content/promo/promo_5.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids"><span>50</span>ставок</div>
-                </div>
-              </div>
-            </div>
-            <div class="promo__item promo__item_lg promo__item_color-1 promo__item_text-white"><img class="promo__item-img" src="img/content/promo/promo_6.jpg" alt="image" title="" />
+            <div class="promo__item promo__item_md promo__item_color-5">
+              <div class="control-panel control-panel_vertical"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_5.jpg" alt="image" title="" />
               <div class="promo__item-content">
                 <div class="promo__item-info">
                   <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
@@ -267,26 +237,61 @@
                 <div class="promo__item-bids"><span>50</span>ставок</div>
               </div>
             </div>
-            <div class="promo__row">
-              <div class="promo__item promo__item_sm promo__item_color-6 promo__item_text-white"><img class="promo__item-img" src="img/content/promo/promo_7.jpg" alt="image" title="" />
-                <div class="promo__item-content">
-                  <div class="promo__item-info">
-                    <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
-                    <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                            <use xlink:href="img/sprite.svg#icon-star"></use>
-                          </svg>5 347)</span></span></div>
-                    <div class="promo__item-time">Осталось: <span>3 дня</span></div>
-                  </div>
-                  <div class="promo__item-price">150 000 руб.</div>
-                  <div class="promo__item-bids promo__item-bids_text-white"><span>50</span>ставок</div>
+            <div class="promo__item promo__item_sm promo__item_color-5">
+              <div class="promo__item-content">
+                <div class="promo__section-descr">
+                  <h2 class="promo__section-title title title_md">Новинки</h2>
+                  <p class="promo__section-sub-title">Рекомендуем<br>Вам</p>
                 </div>
               </div>
-              <div class="promo__item promo__item_sm promo__item_color-7 promo__item_text-white">
-                <div class="promo__item-content">
-                  <div class="promo__section-descr">
-                    <h2 class="promo__section-title title title_md">Смотреть дальше</h2>
-                  </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-3 promo__item_text-white">
+              <div class="control-panel control-panel_vertical"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_2.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
                 </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids"><span>50</span>ставок</div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_lg promo__item_color-1 promo__item_text-white">
+              <div class="control-panel control-panel_vertical"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_6.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
+                </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids"><span>50</span>ставок</div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-7 promo__item_text-white">
+              <div class="promo__item-content">
+                <div class="promo__section-descr">
+                  <h2 class="promo__section-title title title_md">Смотреть дальше</h2>
+                </div>
+              </div>
+            </div>
+            <div class="promo__item promo__item_sm promo__item_color-6 promo__item_text-white">
+              <div class="control-panel control-panel_vertical"><a class="control-panel__btn control-panel__btn_view" href="#!"><span class="control-panel__btn-tip">Быстрый просмотр</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><span class="control-panel__btn-tip">Подробнее</span></a><a class="control-panel__btn control-panel__btn_bid" href="#!"><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><span class="control-panel__btn-tip">Добавить<br>в лоты</span></a></div><img class="promo__item-img" src="img/content/promo/promo_7.jpg" alt="image" title="" />
+              <div class="promo__item-content">
+                <div class="promo__item-info">
+                  <h5 class="promo__item-title title title_xs">Мишки в лесу</h5>
+                  <div class="promo__item-data"><span class="promo__item-data-descr">(холст, масло)</span><span class="promo__item-data-user"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>5 347)</span></span></div>
+                  <div class="promo__item-time">Осталось: <span>3 дня</span></div>
+                </div>
+                <div class="promo__item-price">150 000 руб.</div>
+                <div class="promo__item-bids promo__item-bids_text-white"><span>50</span>ставок</div>
               </div>
             </div>
           </div>
