@@ -51,7 +51,7 @@
       height: 15px
       flex: 0 0 15px
       margin-right: 13px
-      border: 1px solid #808080
+      border: 1px solid #acafbd
       +xs
          margin-top: 5px
    &__icon
@@ -78,3 +78,51 @@
       &:checked ~ #{$parent}__square::after
          opacity: 1
          transform: scale(1)
+         
+
+// *** begin range-slider *** //
+.range-slider-double
+   &__result
+      display: inline-block
+      height: 20px
+      width: 100px
+      +f('pt700', 15, 15)
+      color: $color1
+      &_from
+      &_to
+
+// end range-slider //
+
+.irs
+   height: 20px
+
+.irs-bar
+   top: calc(50% - 2px)
+   height: 3px
+   background: #6600cc
+   border: 0
+   
+.irs-line
+   top: calc(50% - 2px)
+   height: 3px
+   border: 0
+   border-radius: 0
+   background: #e2e1df
+
+.irs-slider
+   top: calc(50% - 11px)
+   width: 20px
+   height: 20px
+   background: #6600cc
+   transition: background .3s ease-in-out
+   border: 3px solid $white
+   &.state_hover,
+   &:hover
+      background: darken(#6600cc, 12)
+   
+.irs-max, .irs-min,
+.irs-from, .irs-single, .irs-to
+   display: none
+   //padding: 5px 6px
+   //background: #6600cc
+   //+f('pt700', 12, 12)

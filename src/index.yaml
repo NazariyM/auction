@@ -1,5 +1,8 @@
-ProjectTitle: template
+ProjectTitle: Auction
 
 PageList:
 - file: home.html
+  ready: 100
+
+- file: categories.html
   ready: 100

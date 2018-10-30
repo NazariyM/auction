@@ -92,6 +92,7 @@
     "@babel/polyfill": "^7.0.0",
     "gsap": "^2.0.2",
     "inputmask": "^4.0.2",
+    "ion-rangeslider": "^2.2.0",
     "object-fit-images": "^3.2.4",
     "object-fit-videos": "^1.0.4",
     "select2": "^4.0.6-rc.1",

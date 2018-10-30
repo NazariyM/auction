@@ -1,91 +1,70 @@
-import Popup from 'vintage-popup';
-import Inputmask from 'inputmask';
-import { css } from '../_helpers';
+import 'ion-rangeslider';
 
-class Form {
-  constructor(formEl) {
-    this.$form = $(formEl);
-    this.$input = this.$form.find('.js-input');
-    this.$textarea = this.$form.find('.form-textarea');
-    this.$formSubmit = this.$form.find('.form-submit');
+class ChecbkoxGroup {
+  constructor(el) {
+    this.block = (el);
+    this.checkBoxes = this.block.querySelectorAll('.js-checkbox');
+    this.checkBoxAll = this.block.querySelector('.js-checkbox-all');
+
+    if (!this.block) return;
 
     this.init();
   }
 
   init() {
-    this.maskInput();
-    this.removeError();
-    this.validate();
-    this.initThanksPop();
-    this.checkFill();
+    this.checkAll();
+    this.checkBoxAll.addEventListener('change', this.checkAll.bind(this));
   }
 
-  maskInput() {
-    const $input = $('.js-tel-input');
-    const im = new Inputmask({
-      mask: '+7 (999) 999-99-99',
-      showMaskOnHover: false,
-      showMaskOnFocus: true
-    });
-    im.mask($input);
+  checkAll() {
+    if (this.checkBoxAll.checked === true) for (const checkBox of this.checkBoxes) checkBox.checked = true;
+    if (this.checkBoxAll.checked === false) for (const checkBox of this.checkBoxes) checkBox.checked = false;
+  }
+}
+
+const checkBoxGroups = document.querySelectorAll('.checkbox-group');
+for (const group of checkBoxGroups) new ChecbkoxGroup(group);
+
+class RangeSliderDouble {
+  constructor(el) {
+    this.$block = $(el);
+    this.$input = this.$block.find('.range-slider-double__input');
+    this.$resultFrom = this.$block.find('.range-slider-double__result_from');
+    this.$resultTo = this.$block.find('.range-slider-double__result_to');
+    this.$minVal = this.$input.data('min-value');
+    this.$maxVal = this.$input.data('max-value');
+    this.$defaultFrom = this.$input.data('default-val-to');
+    this.$defaultTo = this.$input.data('default-val-from');
+
+    if (this.$block.length) this.init();
   }
 
-  validate() {
+  init() {
+    this.createSlider();
+  }
+
+  createSlider() {
     const _this = this;
-    this.$formSubmit.on('click', function (e) {
-      _this.$input.each(function (i, $el) {
-        if ($($el).val() === '') {
-          $($el).closest('.form-field').addClass(css.error);
-        }
-      });
-    });
-  }
 
-  initThanksPop() {
-    const _this = this;
-
-    this.$form.on('submit', function (e) {
-      e.preventDefault();
-      const $this = $(this);
-
-      Popup.closeAllPopups();
-      const thanskPopInstance = $('.thanks-popup__btn').popup();
-      thanskPopInstance.open();
-
-      setTimeout(() => {
-        // thanskPopInstance.close();
-      }, 2000);
-
-      $this[0].reset();
-      _this.checkFill();
-    });
-  }
-
-  checkFill() {
-    this.$input.each(function () {
-      checkInput($(this));
-    });
-    this.$input.blur(function () {
-      checkInput($(this));
-    });
-
-    function checkInput(el) {
-      if (el.val() === '') {
-        el.addClass(css.error);
-      } else {
-        el.removeClass(css.error);
+    this.$input.ionRangeSlider({
+      type: 'double',
+      min: _this.$minVal,
+      max: _this.$maxVal,
+      from: _this.$defaultFrom,
+      to: _this.$defaultTo,
+      onStart: (data) => {
+        _this.$resultFrom.text(data.from_pretty);
+        _this.$resultTo.text(data.to_pretty);
+      },
+      onChange: (data) => {
+        _this.$resultFrom.text(data.from_pretty);
+        _this.$resultTo.text(data.to_pretty);
       }
-    }
-  }
-
-  removeError() {
-    this.$input.add(this.$textarea).on('click focus', (ev) => {
-      $(ev.currentTarget).closest('.form-field').removeClass(css.error);
     });
   }
 }
 
-const $form = $('.js-form');
-$form.each(function (i, el) {
-  new Form(el);
-});
+export default new RangeSliderDouble();
+
+const $rs = $('.range-slider-double');
+$rs.each((i, el) => new RangeSliderDouble(el));

@@ -27,6 +27,7 @@
          &:not(:last-of-type)
             border-right: 1px solid #f0f0f0
       &-btn
+         $btn: &
          position: relative
          +flexCenter
          width: 78px
@@ -35,6 +36,10 @@
          &-icon
             fill: #acafbd
             font-size: 18px
+            transition: .3s ease-in-out
+            #{$btn}:hover &,
+            .is-active &
+               fill: $color1
             &.icon-loupe
             &.icon-location
             &.icon-lock
