@@ -40,12 +40,29 @@
          &_has-select
             display: flex
             align-items: center
+            .icon-location
+               fill: $color7
+            p
+               display: flex
+               align-items: center
+               svg
+                  font-size: 28px
+                  margin: 0 7px
+                  z-index: 1
       &-link
          color: $color1
+         span
+            margin-left: 15px
       &-select
       
    &__title
       margin-bottom: 40px
+      
+   &__list
+      a
+         transition: .3s ease-in-out
+         &:hover
+            color: $color1
    &__subscribe
       margin-top: 40px
 

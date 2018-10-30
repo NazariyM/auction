@@ -17,7 +17,7 @@ block content
 					+e.H1.title.title._lg._gray Доступное искусство со всего мира
 					+e.P.sub-title Теперь покупать стало проще и безопаснее
 					+e.A.link.link(href='#!') Подробнее
-						.link__icon.icon-arrow-r
+						.link__icon.icon-arrow-r-gray
 				+e.img-wrap
 					+e.IMG(src='img/content/screen_img.png' alt='image')
 		//end screen
@@ -30,20 +30,22 @@ block content
 					while i < 2
 						+e.item._1
 							+e.item-header
-								+e.item-icon
+								+i('paint', 'info-block__item-icon')
 								+e.H3.item-title.title._xs Живопись
 							+e.item-content
 								+e.item-content-img
 									+e.IMG(src='img/content/info-block_1.png' alt='image')
 								+e.item-content-text
 									+e.H4.item-content-title.title Это
-									+e.P вид изобразительного искусства, связанный с передачей...
+									+e.P вид изобразительного искусства, связанный
+										br
+										| с передачей...
 								+e.A.item-link.link._bold(href='#!') Подробнее
-									.link__icon.icon-arrow-r
+									.link__icon.icon-arrow-r-black
 
 						+e.item._2
 							+e.item-header
-								+e.item-icon
+								+i('pen', 'info-block__item-icon')
 								+e.H3.item-title.title._xs._white Графика
 							+e.item-content
 								+e.item-content-img
@@ -52,11 +54,11 @@ block content
 									+e.H4.item-content-title.title._white Это
 									+e.P вид изобразительного искусства, использующий в качестве основных...
 								+e.A.item-link.link._bold._white(href='#!') Подробнее
-									.link__icon.icon-arrow-r
+									.link__icon.icon-arrow-r-white
 
 						+e.item._3
 							+e.item-header
-								+e.item-icon
+								+i('shovel', 'info-block__item-icon')
 								+e.H3.item-title.title._xs Скульптура
 							+e.item-content
 								+e.item-content-img
@@ -65,7 +67,7 @@ block content
 									+e.H4.item-content-title.title Это
 									+e.P вид изобразительного искусства, произведения которого имеют...
 								+e.A.item-link.link._bold(href='#!') Подробнее
-									.link__icon.icon-arrow-r
+									.link__icon.icon-arrow-r-black
 						-i++
 
 				+e.BUTTON.help-btn.help-btn
@@ -104,7 +106,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -114,9 +118,9 @@ block content
 								span 50
 								| ставок
 
-					+e.item._sm._color-1
-						+e.item-content
-							+e.section-descr
+					+e.A.item._sm._color-1._section(href='#!')
+						+e.DIV.item-content
+							+e.DIV.section-descr
 								+e.H2.section-title.title._md Горящие лоты
 								+e.P.section-sub-title Какое-то более детальное описание раздела
 
@@ -147,7 +151,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -184,7 +190,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -194,11 +202,11 @@ block content
 								span 50
 								| ставок
 
-					+e.item._sm._color-3
-						+e.item-content
-							+e.section-descr
-								+e.H2.section-title.title._md Горящие лоты
-								+e.P.section-sub-title Какое-то более детальное описание раздела
+					+e.A.item._sm._color-3(href='#!')
+						+e.DIV.item-content
+							+e.DIV.section-descr
+								+e.H2.section-title.title._md Смотреть дальше
+								+e.item-icon-arr.icon-arr-r-long-black
 
 					+e.item._sm._color-4._text-white
 						+b.control-panel._vertical._vertical-l
@@ -227,7 +235,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -267,7 +277,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -277,9 +289,9 @@ block content
 								span 50
 								| ставок
 
-					+e.item._sm._color-5
-						+e.item-content
-							+e.section-descr
+					+e.A.item._sm._color-5(href='#!')
+						+e.DIV.item-content
+							+e.DIV.section-descr
 								+e.H2.section-title.title._md Новинки
 								+e.P.section-sub-title Рекомендуем
 									br
@@ -312,7 +324,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -349,7 +363,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 
@@ -359,10 +375,11 @@ block content
 								span 50
 								| ставок
 
-					+e.item._sm._color-7._text-white
-						+e.item-content
-							+e.section-descr
+					+e.A.item._sm._color-7._text-white(href='#!')
+						+e.DIV.item-content
+							+e.DIV.section-descr
 								+e.H2.section-title.title._md Смотреть дальше
+								+e.item-icon-arr.icon-arr-r-long-white
 
 					+e.item._sm._color-6._text-white
 						+b.control-panel._vertical._vertical-l
@@ -391,7 +408,9 @@ block content
 										span (
 											+i('star')
 											| 5 347)
-								+e.item-time Осталось:
+								+e.item-time
+									+i('sand-clock')
+									| Осталось:
 									= ' '
 									span 3 дня
 

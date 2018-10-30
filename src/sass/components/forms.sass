@@ -16,10 +16,7 @@
       +xs
          padding: 0 20px 0 37px
       &:focus
-         box-shadow: 0 0 6px $color2
-         border-color: transparent
-      //#{$parent}.has-error &
-         border-color: #cf0110
+         border-color: $color1
    &__textarea
       $parent: &
       display: block
@@ -37,8 +34,7 @@
       +xs
          padding: 18px 20px 18px 37px
       &:focus
-         box-shadow: 0 0 6px $color2
-         border-color: transparent
+         border-color: $color1
 
 .check-box
    $parent: &
@@ -46,43 +42,23 @@
       pointer-events: none
    &__label
       display: inline-flex
-      align-items: flex-start
+      align-items: center
       cursor: pointer
       
    &__square
       position: relative
-      width: 12px
-      height: 12px
-      flex: 0 0 12px
-      margin-top: 7px
-      border-radius: 4px
+      width: 15px
+      height: 15px
+      flex: 0 0 15px
+      margin-right: 13px
       border: 1px solid #808080
       +xs
          margin-top: 5px
-      #{$parent}_type-1 &
-         margin-right: 20px
-      #{$parent}_type-2 &
-         margin-right: 10px
-      #{$parent}.is-disabled &
-         opacity: .3
-      #{$parent}_radio &
-         &::after
-            position: absolute
-            top: calc(50% - 3px)
-            left: calc(50% - 3px)
-            opacity: 0
-            transform: scale(0)
-            width: 6px
-            height: 6px
-            background-color: $color1
-            border-radius: 50%
-            transition: .3s ease-in-out
-            content: ''
    &__icon
       opacity: 0
       transform: scale(0)
       position: absolute
-      top: -1px
+      top: 2px
       left: 2px
       transition: .3s ease-in-out
       font-size: 10px

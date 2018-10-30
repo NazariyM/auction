@@ -27,9 +27,17 @@
 				+e.FORM.controls-form(action='#!', method='POST')
 					+e.INPUT.controls-form-input(type='text' name='' placeholder='Поиск' required)
 					+e.BUTTON.controls-form-btn(type='submit')
+
 			+e.controls-item
 				+e.A.controls-btn.js-controls-btn(href='#!')
 					+i('location', 'header__controls-btn-icon')
+				+e.controls-block
+					+e.H5.controls-block-title.title._xs Доставка в
+					+checkBox('header__controls-check', 'Москва')(checked)
+					+checkBox('header__controls-check', 'Санкт-Петербург')(checked)
+					+checkBox('header__controls-check', 'Самара')
+					+checkBox('header__controls-check', 'Оренбург')
+
 			+e.controls-item
 				+e.A.controls-btn(href='#!')
 					+i('hammer', 'header__controls-btn-icon')

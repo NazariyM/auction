@@ -1,6 +1,12 @@
 $icons: (0:0)
-$icons: map-merge($icons,('arrow-r': (X: -38px, Y:0px, W: 16px, H: 12px, TW: 54px, TH: 28px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('pen': (X: 0px, Y:0px, W: 28px, H: 28px, TW: 54px, TH: 28px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arr-r-long-black': (X: -58px, Y:0px, W: 38px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arr-r-long-white': (X: -58px, Y:-22px, W: 38px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-r-black': (X: 0px, Y:-44px, W: 16px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-r-gray': (X: -26px, Y:-44px, W: 16px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-r-white': (X: -52px, Y:-44px, W: 16px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('arrow-r': (X: -78px, Y:-44px, W: 16px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sld-arr-l': (X: 0px, Y:0px, W: 48px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('sld-arr-r': (X: 0px, Y:-22px, W: 48px, H: 12px, TW: 96px, TH: 56px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -36,13 +42,43 @@ $icons: map-merge($icons,('pen': (X: 0px, Y:0px, W: 28px, H: 28px, TW: 54px, TH:
 @mixin sr($i)
   +sprite-retina($i)
 
+.icon-arr-r-long-black
+   width: 38px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: -58px 0px
+.icon-arr-r-long-white
+   width: 38px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: -58px -22px
+.icon-arrow-r-black
+   width: 16px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: 0px -44px
+.icon-arrow-r-gray
+   width: 16px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: -26px -44px
+.icon-arrow-r-white
+   width: 16px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: -52px -44px
 .icon-arrow-r
    width: 16px
    height: 12px
    background-image: url('../img/sprite.png')
-   background-position: -38px 0px
-.icon-pen
-   width: 28px
-   height: 28px
+   background-position: -78px -44px
+.icon-sld-arr-l
+   width: 48px
+   height: 12px
    background-image: url('../img/sprite.png')
    background-position: 0px 0px
+.icon-sld-arr-r
+   width: 48px
+   height: 12px
+   background-image: url('../img/sprite.png')
+   background-position: 0px -22px

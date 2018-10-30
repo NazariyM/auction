@@ -21,10 +21,15 @@
 					+e.menu-item._has-select
 						+e.P Доставка в
 							+i('location')
-						+e.SELECT.menu-select
-							option Самару
-							option Москву
-							option Кемерово
+						.dropdown(onclick='')
+							ul
+								li
+									a(href='#!')
+										span Самару
+										+i('expand-button', 'dropdown__icon')
+									ul
+										li: a(href='#!') Москву
+										li: a(href='#!') Кемерово
 
 			+e.block-row
 				+e.block-col.footer__rights

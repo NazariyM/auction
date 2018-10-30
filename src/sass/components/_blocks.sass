@@ -115,4 +115,62 @@
          fill: #e7e8ec
       .icon-view
          fill: $color1
+      .icon-list
+         font-size: 14px
+      .icon-hammer
+         font-size: 21px
+      .icon-beg
+         font-size: 18px
 // end control-panel //
+
+// *** begin dropdown *** //
+.dropdown
+   $parent: &
+   position: relative
+   text-align: center
+   cursor: pointer
+   > ul
+      position: relative
+      cursor: pointer
+      &:hover ul
+         pointer-events: auto
+         opacity: 1
+         transform: scaleY(1)
+      &:hover #{$parent}__icon
+         animation: smallMoveDown .5s ease
+      > li > a
+         position: relative
+         z-index: 1
+         pointer-events: none
+         span
+            color: $color1
+      li
+         &:not(:last-child)
+            margin-bottom: 5px
+         a
+            display: flex
+            align-items: center
+            cursor: pointer
+            color: $color7
+            white-space: nowrap
+            &:hover
+               color: $color1
+      ul
+         pointer-events: none
+         position: absolute
+         top: -15px
+         left: -33px
+         right: 0
+         transform-origin: 0 0
+         opacity: 0
+         transform: scaleY(0)
+         display: table
+         padding: 40px 15px 10px 33px
+         min-width: 130px
+         background-color: #f6f6f6
+         transition: .3s ease-in-out
+   
+   &__icon
+      margin: 3px 0 0 6px
+      font-size: 9px
+// end dropdown //

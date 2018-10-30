@@ -7,31 +7,29 @@
       $parent: &
       position: relative
       float: right
-      .icon-star
-         margin-right: 4px
-         fill: #000
-         font-size: 12px
-         
+      
       &-content
          position: absolute
-         top: 60px
-         left: 60px
-         right: 60px
-         bottom: 60px
+         top: 56px
+         left: 58px
+         right: 58px
+         bottom: 50px
+         #{$parent}_section &
+            top: 50px
       &-img
          +cover-img
          +coverdiv
          
       &-info
-         margin-bottom: 50px
+         margin-bottom: 30px
          
       &-title
-         margin-bottom: 10px
+         margin-bottom: 14px
          #{$parent}_text-white &
             color: $white
       &-data
          display: flex
-         margin-bottom: 10px
+         margin-bottom: 5px
          &-descr
             margin-right: 30px
          &-user
@@ -40,14 +38,26 @@
             span
                &:not(:last-child)
                   margin-right: 4px
+            .icon-star
+               margin-right: 4px
+               fill: #000
+               font-size: 12px
             
       &-time
+         display: flex
+         align-items: center
          font-size: 17px
+         svg
+            font-size: 16px
+            margin-right: 12px
+            #{$parent}_text-white &
+               fill: $white
          span
+            margin-left: 4px
             +boldFont
             
       &-price
-         margin-bottom: 50px
+         margin-bottom: 42px
          +f('pt700', 25)
          
       &-bids
@@ -77,6 +87,10 @@
             background-color: #6600cc
          &_text-white
             color: #fff
+            
+      &-icon-arr
+         #{$parent}:hover &
+            animation: smallMoveRight .3s ease-in-out
    
       &_sm
          width: 50%
@@ -133,7 +147,7 @@
       &-descr
          max-width: 250px
       &-title
-         margin-bottom: 20px
+         margin-bottom: 25px
          #{$parent}_text-white &
             color: $white
       &-sub-title

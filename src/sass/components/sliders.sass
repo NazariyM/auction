@@ -32,16 +32,28 @@
          
 .slider-btn
    position: absolute
-   top: calc(50% - 10px)
+   top: calc(50% - 6px)
    transition: .3s ease-in-out
+   &::after
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 194px
+      height: 194px
+      background-color: transparent
+      transition: .3s ease-in-out
+      content: ''
    &:hover
-      opacity: .5
+      &::after
+         background-color: #ffe469
    &_prev
       left: 0
+      &::after
+         transform: translate(-48.5%, -50%)
    &_next
       right: 0
-   svg
-      font-size: 22px
-   &.slick-disabled
-      pointer-events: none
-      opacity: .15
+      &::after
+         transform: translate(-51.5%, -50%)
+   .icon
+      position: relative
+      z-index: 1

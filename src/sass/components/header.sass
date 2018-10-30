@@ -13,7 +13,9 @@
       display: flex
       align-items: center
       justify-content: space-between
+      max-width: 1316px
       height: 60px
+      padding-left: 32px
    &__controls
       $parent: &
       position: relative
@@ -32,10 +34,11 @@
          z-index: 1
          &-icon
             fill: #acafbd
+            font-size: 18px
             &.icon-loupe
-               font-size: 30px
             &.icon-location
-               font-size: 30px
+            &.icon-lock
+               font-size: 18px
       &-line
          #{$parent}:hover &
             opacity: 1
@@ -81,3 +84,20 @@
             height: 100%
             width: 78px
             z-index: -1
+      &-block
+         position: absolute
+         top: 100%
+         left: calc(50% - 120px)
+         z-index: -1
+         width: 240px
+         padding: 20px
+         background-color: #f6f6f6
+         opacity: 0
+         transform: translateY(-100%)
+         transition: .3s ease-in-out
+         .is-active &
+            opacity: 1
+            transform: translateY(0)
+            //max-height: 1000px
+         &-title
+            margin-bottom: 20px

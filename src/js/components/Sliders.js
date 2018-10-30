@@ -20,8 +20,8 @@ class Slider {
     this.onInit = opts.onInit || false;
     this.adaptiveHeight = opts.adaptiveHeight || false;
 
-    const iconLeft = svgIcon('sld-arr-l');
-    const iconRight = svgIcon('sld-arr-r');
+    const iconLeft = '<div class="icon icon-sld-arr-l"></div>';
+    const iconRight = '<div class="icon icon-sld-arr-r"></div>';
 
     this.defaultOptions = {
       slidesToShow: this.slidesToShow,

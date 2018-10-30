@@ -1,11 +1,13 @@
 // *** begin info-block *** //
 .info-block
    &_home
-      margin: -90px 0 75px
+      margin: -93px 0 73px
    &__slider
       padding: 0 170px
       .slider-btn
-         top: calc(50% - 20px)
+         &::after
+            width: 120px
+            height: 120px
    &__item
       $parent: &
       margin: 0 10px
@@ -17,8 +19,10 @@
       &_3
          background-color: #ffe987
       &-header
-         +flexCenter
-         padding: 20px 25px
+         display: flex
+         align-items: flex-start
+         justify-content: flex-start
+         padding: 37px 10px 30px 30px
          #{$parent}_1 &
             background-color: #6ed6d7
          #{$parent}_2 &
@@ -26,26 +30,40 @@
          #{$parent}_3 &
             background-color: #ffe469
       &-icon
-         margin-right: 10px
+         fill: $color1
+         margin: -3px 12px 0 0
+         flex-shrink: 0
+         font-size: 26px
+         #{$parent}_2 &
+            fill: $white
+         &.icon-shovel
+            font-size: 29px
       &-title
-      
       &-content
          position: relative
-         padding: 20px 25px
+         padding: 20px 14px 20px 27px
          height: 100%
          p
-            max-height: 50px
+            // TODO: enable dots.js
+            height: 52px
          &-img
             position: absolute
-            top: 0
-            right: 0
+            top: -40px
+            right: 12px
             pointer-events: none
+            #{$parent}_2 &
+               top: -33px
+               right: 9px
+            #{$parent}_3 &
+               top: -45px
+               right: 1px
+               
          &-text
             position: relative
             z-index: 1
-            margin-bottom: 40px
+            margin-bottom: 38px
          &-title
-            margin-bottom: 10px
+            margin-bottom: 3px
             font-size: 25px
       
       &-link
