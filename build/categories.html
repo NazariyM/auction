@@ -119,12 +119,36 @@
               </ul>
             </div>
             <h1 class="category__title title title_md">Картины Барокко</h1>
-            <div class="category__filter"><span class="category__filter-title">Цена:</span>
-              <div class="category__filter-price range-slider-double"><span class="range-slider-double__result range-slider-double__result_from"></span><input class="range-slider-double__input" type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-to="150000" data-default-val-from="200000"><span class="range-slider-double__result range-slider-double__result_to"></span></div>
-              <div class="category__filter-actions">
-                <div class="check-box category__fitler-actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked" /><span class="check-box__square"><svg class="icon-check check-box__icon">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
-                      </svg></span><span class="check-box__text">Бесплатная доставка</span></label></div>
+            <div class="product-filter">
+              <div class="product-filter__row product-filter__row_top"><span class="product-filter__title">Цена:</span>
+                <div class="product-filter__price range-slider-double"><span class="range-slider-double__result range-slider-double__result_from"></span>
+                  <div class="range-slider-double__input"><input type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-to="150000" data-default-val-from="200000" data-step="100"></div><span class="range-slider-double__result range-slider-double__result_to"></span>
+                </div>
+                <div class="product-filter__actions">
+                  <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked" /><span class="check-box__square"><svg class="icon-check check-box__icon">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg></span><span class="check-box__text">Бесплатная доставка</span></label></div>
+                  <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked"><span class="check-box__square"><svg class="icon-check check-box__icon">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg></span><span class="check-box__text">Более 4-х<svg class="icon-star ">
+                          <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>у автора</span></label></div>
+                </div>
+              </div>
+              <div class="product-filter__row product-filter__row_bot">
+                <div class="product-filter__sort"><select class="product-filter__sort-select js-select">
+                    <option>Мах рейтинг</option>
+                    <option>Мin рейтинг</option>
+                    <option>По популярности</option>
+                    <option>По просмотрам</option>
+                  </select></div>
+                <div class="product-filter__view-wrap"><span class="product-filter__title">Вид</span>
+                  <div class="product-filter__view"><button class="product-filter__view-btn product-filter__view-btn_list is-active"><svg class="icon-list product-filter__view-btn-icon">
+                        <use xlink:href="img/sprite.svg#icon-list"></use>
+                      </svg></button><button class="product-filter__view-btn product-filter__view-btn_cards"><svg class="icon-four-dots product-filter__view-btn-icon">
+                        <use xlink:href="img/sprite.svg#icon-four-dots"></use>
+                      </svg></button></div>
+                </div>
               </div>
             </div>
           </div>

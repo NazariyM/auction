@@ -66,12 +66,12 @@
       #{$parent}_radio &
          display: none
    &__text
-      +f('ub400', 14, 24)
-      +xs
-         line-height: 20px
-   
-      #{$parent}_type-2 &
-         color: $color5
+      +nosel
+      svg
+         margin: 0 4px
+         vertical-align: -1px
+         font-size: 13px
+         
    &__input
       display: none
       &:checked ~ #{$parent}__square #{$parent}__icon,
@@ -79,20 +79,60 @@
          opacity: 1
          transform: scale(1)
          
+// *** begin custom select *** //
+.select2-container .select2-selection--single
+   height: 45px
+   border: 1px solid #e2e1df
+   border-radius: 0
+   
+.select2-container--default .select2-selection--single .select2-selection__rendered
+   padding: 0 15px
+   line-height: 45px
+   color: $color1
+   
+.select2-container--default .select2-selection--single .select2-selection__arrow
+   height: 45px
+   width: 40px
+.select2-container--classic .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--single .select2-selection__arrow b
+   top: calc(50% - 2px)
+   background: url("../img/other/expand-button.svg") 50% 50% / cover
+   border: 0
+   width: 11px
+   height: 7px
+   transition: .15s ease-in-out
+.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b, .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
+   transform: scaleY(-1)
+   
+.select2-dropdown
+   border-radius: 0
+   border: 1px solid #e2e1df
+   
+.select2-results__option
+   padding: 13px 15px
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+   background: #7100d2
+
+// end custom select //
 
 // *** begin range-slider *** //
 .range-slider-double
+   display: flex
+   align-items: center
    &__result
-      display: inline-block
       height: 20px
       width: 100px
-      +f('pt700', 15, 15)
+      +f('pt700', 15, 20)
+      white-space: nowrap
       color: $color1
       &_from
       &_to
-
+   &__input
+      margin: 0 15px
+      flex: 0 0 258px
 // end range-slider //
 
+// ios plugin settings
 .irs
    height: 20px
 
@@ -123,6 +163,3 @@
 .irs-max, .irs-min,
 .irs-from, .irs-single, .irs-to
    display: none
-   //padding: 5px 6px
-   //background: #6600cc
-   //+f('pt700', 12, 12)

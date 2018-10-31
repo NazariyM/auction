@@ -2,12 +2,50 @@
    &__title
       margin-bottom: 45px
    &__filter
+      margin-bottom: 22px
+
+// *** begin product-filter *** //
+.product-filter
+   &__row
       display: flex
       align-items: center
-      border: 1px solid #e2e1df
-      &-title
-         color: $color7
-      &-price
-         flex: 0 0 400px
-      &-actions
-      
+      &_top
+         margin-bottom: 28px
+         padding: 15px
+         border: 1px solid #e2e1df
+      &_bot
+         justify-content: space-between
+   &__title
+      color: $color7
+   &__price
+      flex: 0 0 400px
+      margin: 0 20px
+   &__actions
+      display: flex
+      &-check
+         &:not(:last-child)
+            margin-right: 45px
+   &__sort
+   &__view
+      margin-left: 25px
+      &-wrap
+         display: flex
+         align-items: center
+      &-btn
+         display: inline-flex
+         align-items: center
+         justify-content: center
+         width: 44px
+         height: 44px
+         &.is-active
+            background-color: #f0f0f0
+         &_list
+            background-color: #f6f6f6
+         &_cards
+            background-color: #f6f6f6
+         &-icon
+            fill: #bcbecb
+            transition: .3s ease-in-out
+            .is-active &
+               fill: $color1
+// end product-filter //

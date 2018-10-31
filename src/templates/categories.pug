@@ -35,14 +35,39 @@ block content
 				+e.content
 					+breadcrumbs('Главная', 'Живопись', 'Картины Барокко')(class='category__breadcrumbs')
 					+b.H1.category__title.title._md Картины Барокко
-					+b.category__filter
-						+e.SPAN.filter-title Цена:
-						+e.filter-price.range-slider-double
-							+b.SPAN.range-slider-double__result._from
-							input.range-slider-double__input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-to='150000' data-default-val-from='200000')
-							+b.SPAN.range-slider-double__result._to
 
-						+e.filter-actions
-							+checkBox('category__fitler-actions-check', 'Бесплатная доставка')(checked)
+					+b.product-filter
+						+e.row._top
+							+e.SPAN.title Цена:
+							+e.price.range-slider-double
+								+b.SPAN.range-slider-double__result._from
+								+b.range-slider-double__input
+									input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-to='150000' data-default-val-from='200000' data-step='100')
+								+b.SPAN.range-slider-double__result._to
+
+							+e.actions
+								+checkBox('product-filter__actions-check', 'Бесплатная доставка')(checked)
+								.check-box.product-filter__actions-check
+									label.check-box__label
+										input.check-box__input(type='checkbox', name='', checked='checked')
+										span.check-box__square
+											+i('check', 'check-box__icon')
+										span.check-box__text Более 4-х
+											+i('star')
+											| у автора
+
+						+e.row._bot
+							+e.sort
+								+e.SELECT.sort-select.js-select
+									option Мах рейтинг
+									option Мin рейтинг
+									option По популярности
+									option По просмотрам
+
+							+e.view-wrap
+								+e.SPAN.title Вид
+								+e.view
+									+e.BUTTON.view-btn._list.is-active: +i('list', 'product-filter__view-btn-icon')
+									+e.BUTTON.view-btn._cards: +i('four-dots', 'product-filter__view-btn-icon')
 
 	//end main
