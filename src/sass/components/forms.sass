@@ -163,3 +163,13 @@
 .irs-max, .irs-min,
 .irs-from, .irs-single, .irs-to
    display: none
+
+// *** begin checkbox-group *** //
+.checkbox-group
+   $parent: &
+   &__check
+      &:not(:last-child)
+         padding-bottom: 5px
+      &:not(#{$parent}__check_all)
+         padding-left: 10px
+// end checkbox-group //
