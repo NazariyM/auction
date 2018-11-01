@@ -1,4 +1,5 @@
 import objectFitImages from 'object-fit-images';
+import '@fancyapps/fancybox';
 import { $body, detectIE, $scrolledElements } from './_helpers';
 
 import './components/Header';
@@ -6,7 +7,7 @@ import './components/Popups';
 import './components/Form';
 import './sections/Contacts';
 import './components/Sliders';
-import './components/CTabs';
+import './components/Tabs';
 
 export class Common {
   constructor() {

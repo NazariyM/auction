@@ -22,11 +22,20 @@ body
    
 .row
    display: flex
-   margin: 0 -15px
+   flex-wrap: wrap
+   margin: 0 -5px
    
 .col
-   padding: 0 15px
-
+   flex: 0 1 calc(33.33333% - 10px)
+   width: calc(33.33333% - 10px)
+   margin: 0 5px
+   &:nth-child(3) ~ &
+      margin-top: 10px
+      
+.block
+   &:not(:last-child)
+      margin-bottom: 10px
+      
 .main
    display: block
    overflow: hidden

@@ -32,11 +32,11 @@ block content
 								+checkBox('checkbox-group__check', 'Check me twice!')(class='js-checkbox')
 							-i++
 
-				+e.content
+				+e.content.tabs.is-anim
 					+breadcrumbs('Главная', 'Живопись', 'Картины Барокко')(class='category__breadcrumbs')
 					+b.H1.category__title.title._md Картины Барокко
 
-					+b.product-filter
+					+b.product-filter.category__filter
 						+e.row._top
 							+e.SPAN.title Цена:
 							+e.price.range-slider-double
@@ -67,7 +67,24 @@ block content
 							+e.view-wrap
 								+e.SPAN.title Вид
 								+e.view
-									+e.BUTTON.view-btn._list.is-active: +i('list', 'product-filter__view-btn-icon')
-									+e.BUTTON.view-btn._cards: +i('four-dots', 'product-filter__view-btn-icon')
+									+e.BUTTON.view-btn._list.is-active.tabs__btn: +i('list', 'product-filter__view-btn-icon')
+									+e.BUTTON.view-btn._cards.tabs__btn: +i('four-dots', 'product-filter__view-btn-icon')
+
+					.tabs__for
+						.tabs__tab
+							.category__row.row
+								-i = 0
+								while i < 6
+									+productItem('vertical', i + 1, 'col')
+									-i++
+
+						.tabs__tab
+							.category__block
+								-i = 0
+								while i < 3
+									+productItem('horizontal', i + 1, '_horiz block')
+									-i++
+
+					+pagination
 
 	//end main

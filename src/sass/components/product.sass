@@ -1,0 +1,281 @@
+// *** begin product-item *** //
+.product-item
+   $parent: &
+   border: 1px solid #e2e1df
+   transition: border-color .3s ease-in-out
+   &:hover
+      border-color: #7ae4e6
+      .control-panel_horiz-sm,
+      .control-panel_horiz-sm .control-panel__btn
+         border-color: #7ae4e6
+   &_horiz
+      display: flex
+      min-height: 230px
+   &__img
+      +cover-img
+      &-wrap
+         position: relative
+         display: block
+         padding: 4px 4px 0
+         height: 226px
+         #{$parent}_horiz &
+            flex: 0 0 percentage(300px / 934px)
+            width: percentage(300px / 934px)
+            padding: 4px 0 4px 4px
+            
+      &-zoom
+         position: absolute
+         top: calc(50% - 22px)
+         left: calc(50% - 22px)
+         +flexCenter
+         width: 44px
+         height: 44px
+         background-color: #ffe469
+         opacity: 0
+         transform: scale(.5)
+         transition: .3s ease-in-out
+         #{$parent}__img-wrap:hover &
+            opacity: 1
+            transform: scale(1)
+         &-icon
+            font-size: 16px
+            fill: $color1
+         
+   &__content
+      padding: 15px
+      #{$parent}_horiz &
+         flex: 0 1 percentage(350px / 934px)
+         padding: 20px
+   &__title
+      margin-bottom: 10px
+   &__data
+      display: flex
+      margin: 0 -10px 20px
+      font-size: 13px
+      &-col
+         flex: 0 1 50%
+         width: 50%
+         padding: 0 10px
+      svg
+         margin: 0 4px 0 2px
+         vertical-align: -1px
+         fill: $color1
+         font-size: 12px
+   &__time
+      margin-bottom: 10px
+      font-size: 17px
+      #{$parent}_horiz &
+         margin-bottom: 30px
+      svg
+         margin-right: 15px
+         font-size: 16px
+      span
+         +boldFont
+         #{$parent}_horiz &
+            margin-left: 4px
+   &__details
+      display: flex
+      align-items: center
+      #{$parent}_horiz &
+         flex: 1 1 percentage(225px / 934px)
+         padding: 20px
+         flex-direction: column
+         align-items: flex-start
+         border-left: 1px solid #e2e1df
+         border-right: 1px solid #e2e1df
+         transition: border-color .3s ease-in-out
+      #{$parent}:hover &
+         border-color: #7ae4e6
+         
+      &-item
+         display: flex
+         align-items: center
+         color: $color7
+         &:not(:last-child)
+            margin-bottom: 10px
+         span
+            margin-left: 4px
+            +boldFont
+            color: $color1
+         &_bid
+            font-size: 13px
+            span
+               +regFont
+            
+      &-icon
+         margin: 0 10px
+         &_visa
+            width: 41px
+            height: 13px
+         &_mc
+            width: 27px
+            height: 17px
+   &__price
+      margin-left: 53px
+      white-space: nowrap
+      +f('pt700', 25, 25)
+      #{$parent}_horiz &
+         margin: 0 0 30px
+         text-align: left
+         
+   &__bids
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 57px
+      height: 57px
+      background-color: #ffe469
+      span
+         +f('pt700', 17, 17)
+   &__actions
+   &__descr
+      max-height: 65px
+      margin-bottom: 30px
+   &__read-link
+   
+// end product-item //
+
+// *** begin control-panel *** //
+.control-panel
+   $parent: &
+   display: flex
+   &_vertical
+      position: absolute
+      top: 0
+      flex-direction: column
+      &-r
+         left: 100%
+      &-l
+         right: 100%
+   &_horiz-sm
+      border-top: 1px solid #e2e1df
+      transition: border-color .3s ease-in-out
+   &_vert-sm
+      flex-direction: column
+      flex: 0 0 56px
+      width: 56px
+      
+   &__btn
+      position: relative
+      +flexCenter
+      flex: 0 0 45px
+      width: 45px
+      height: 45px
+      #{$parent}_horiz-sm &
+         flex: 0 1 33.33333%
+         width: 33.33333%
+         background-color: #fff
+         transition: .3s ease-in-out
+         &:not(:last-child)
+            border-right: 1px solid #e2e1df
+         &:hover
+            background-color: #7ae4e6
+            svg
+               fill: #fff
+               
+      #{$parent}_vert-sm &
+         flex: 1 1 auto
+         width: 100%
+         height: 25%
+         background-color: #fff
+         transition: .3s ease-in-out
+         &:not(:last-child)
+            border-bottom: 1px solid #e2e1df
+         &:hover
+            background-color: #7ae4e6
+            svg
+               fill: #fff
+         
+      &-tip
+         position: absolute
+         z-index: 1
+         top: 50%
+         opacity: 0
+         display: flex
+         align-items: center
+         min-height: 45px
+         min-width: 95px
+         padding: 7px 5px 8px 12px
+         background-color: #f6f6f6
+         color: $color1
+         font-size: 13px
+         text-align: left
+         transition: .2s ease-in-out
+         pointer-events: none
+         #{$parent}_vertical-l &
+            right: 100%
+            transform: translate3d(-15px, -50%, 0)
+            &::before
+               left: 100%
+               +arr(6, 16, #f6f6f6, r)
+         
+         #{$parent}_vertical-r &
+            left: 100%
+            transform: translate3d(15px, -50%, 0)
+            &::before
+               right: 100%
+               +arr(6, 16, #f6f6f6, l)
+               
+         #{$parent}_vert-sm &,
+         #{$parent}_horiz-sm &
+            top: -100%
+            left: 50%
+            width: 100%
+            transform: translate3d(-50%, -15px, 0)
+            padding: 5px 10px
+            justify-content: center
+            text-align: center
+            &::before
+               top: 100%
+               left: calc(50% - 8px)
+               +arr(16, 6, #f6f6f6, b)
+               
+         #{$parent}_vert-sm &
+            top: calc(-100% + 16px)
+         
+         #{$parent}_vertical-r #{$parent}__btn:hover &
+            transform: translate3d(0, -50%, 0)
+            opacity: 1
+         #{$parent}_vertical-l #{$parent}__btn:hover &
+            transform: translate3d(0, -50%, 0)
+            opacity: 1
+            
+         #{$parent}_vert-sm #{$parent}__btn:hover &,
+         #{$parent}_horiz-sm #{$parent}__btn:hover &
+            transform: translate3d(-50%, 0, 0)
+            opacity: 1
+         
+         &::before
+            position: absolute
+            top: calc(50% - 8px)
+            content: ''
+            
+      &_view
+      &_more
+         background-color: #393f4d
+      &_bid
+         background-color: #80838f
+      &_add
+         background-color: #b7bac7
+      svg
+         fill: #e7e8ec
+         #{$parent}_vert-sm &,
+         #{$parent}_horiz-sm &
+            fill: #acafbd
+            transition: .3s ease-in-out
+         
+      .icon-view
+         fill: $color1
+      .icon-list
+         font-size: 14px
+      .icon-hammer
+         font-size: 21px
+      .icon-beg
+         font-size: 18px
+         
+   &__bids
+      @extend .product-item__bids
+      width: 100%
+      height: 25%
+// end control-panel //

@@ -90,6 +90,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/polyfill": "^7.0.0",
+    "@fancyapps/fancybox": "^3.5.2",
     "gsap": "^2.0.2",
     "inputmask": "^4.0.2",
     "ion-rangeslider": "^2.2.0",

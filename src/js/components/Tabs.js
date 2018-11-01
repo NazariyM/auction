@@ -1,10 +1,10 @@
-import { TimelineMax } from 'gsap';
+import { TweenMax } from 'gsap';
 import { css } from '../_helpers';
 
-class CTabs {
+class Tabs {
   constructor(el) {
     this.$block = $('.tabs');
-    this.$tabNav = el.find('.tabs__nav').find('.tabs__btn');
+    this.$tabNav = el.find('.tabs__btn');
     this.$tabItemContainer = el.find('.tabs__for');
     this.$tabItem = this.$tabItemContainer.find('.tabs__tab');
 
@@ -42,7 +42,7 @@ class CTabs {
 
   changeTab(currentIndex, nextIndex) {
     const _this = this;
-    const speed = 0.4;
+    const speed = 0.25;
     const $currentTabNav = this.$tabNav.eq(currentIndex);
     const $nextTabNav = this.$tabNav.eq(nextIndex);
     const $currentTab = this.$tabItem.eq(currentIndex);
@@ -50,26 +50,36 @@ class CTabs {
 
     $currentTabNav.removeClass(css.active);
     $nextTabNav.addClass(css.active);
+
+    if (_this.$block.hasClass('is-anim')) {
+      this.animate($currentTab, $nextTab, _this.$tabItemContainer, speed);
+    } else {
+      $currentTab.hide();
+      $nextTab.show();
+    }
+  }
+
+  animate($currentTab, $nextTab, container, speed) {
     TweenMax.to($currentTab, speed, {
       autoAlpha: 0,
-      x: 30,
+      y: 30,
       clearProps: 'transform',
       onComplete() {
-        const currentHeight = _this.$tabItemContainer.outerHeight();
-        TweenMax.set(_this.$tabItemContainer, { height: currentHeight });
+        const currentHeight = container.outerHeight();
+        TweenMax.set(container, { height: currentHeight });
         $(this.target).hide();
         TweenMax.set($nextTab, { autoAlpha: 1 });
         $nextTab.show();
 
-        TweenMax.staggerFromTo($nextTab.children(), speed, {
+        TweenMax.staggerFromTo($nextTab.children().children(), speed, {
           autoAlpha: 0,
-          x: 50
+          y: 50
         }, {
           autoAlpha: 1,
-          x: 0
+          y: 0
         }, speed / 2);
-        TweenMax.set(_this.$tabItemContainer, { height: 'auto' });
-        TweenMax.from(_this.$tabItemContainer, speed, { height: currentHeight });
+        TweenMax.set(container, { height: 'auto' });
+        TweenMax.from(container, speed, { height: currentHeight });
       }
     });
   }
@@ -78,5 +88,6 @@ class CTabs {
 /** tabs init */
 const $tabs = $('.tabs');
 $tabs.each((index, el) => {
-  new CTabs($(el));
+  new Tabs($(el));
 });
+
