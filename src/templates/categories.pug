@@ -12,7 +12,7 @@ block content
 		+b.SECTION.screen._small
 			+e.container.container
 				+e.A.logo(href='#!')
-					+e.IMG(src='img/other/logo-blue.svg' alt='Auction')
+					+e.IMG(src='img/logos/logo-blue.svg' alt='Auction')
 				+e.H2.title.title._lg._gray Доступное искусство со всего мира
 				+e.text-content
 					+e.P.sub-title Теперь покупать стало проще и безопаснее
@@ -32,59 +32,84 @@ block content
 								+checkBox('checkbox-group__check', 'Check me twice!')(class='js-checkbox')
 							-i++
 
-				+e.content.tabs.is-anim
+				+e.content
 					+breadcrumbs('Главная', 'Живопись', 'Картины Барокко')(class='category__breadcrumbs')
 					+b.H1.category__title.title._md Картины Барокко
 
-					+b.product-filter.category__filter
-						+e.row._top
-							+e.SPAN.title Цена:
-							+e.price.range-slider-double
-								+b.SPAN.range-slider-double__result._from
-								+b.range-slider-double__input
-									input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-to='150000' data-default-val-from='200000' data-step='100')
-								+b.SPAN.range-slider-double__result._to
+					//убрать класс is-anim, если надо переключение без анимации
+					.category__block.tabs.is-anim
+						+b.product-filter.category__filter
+							+e.row._top
+								+e.SPAN.title Цена:
+								+e.price.range-slider-double
+									+b.SPAN.range-slider-double__result._from
+									+b.range-slider-double__input
+										input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-to='150000' data-default-val-from='200000' data-step='100')
+									+b.SPAN.range-slider-double__result._to
 
-							+e.actions
-								+checkBox('product-filter__actions-check', 'Бесплатная доставка')(checked)
-								.check-box.product-filter__actions-check
-									label.check-box__label
-										input.check-box__input(type='checkbox', name='', checked='checked')
-										span.check-box__square
-											+i('check', 'check-box__icon')
-										span.check-box__text Более 4-х
-											+i('star')
-											| у автора
+								+e.actions
+									+checkBox('product-filter__actions-check', 'Бесплатная доставка')(checked)
+									.check-box.product-filter__actions-check
+										label.check-box__label
+											input.check-box__input(type='checkbox', name='', checked='checked')
+											span.check-box__square
+												+i('check', 'check-box__icon')
+											span.check-box__text Более 4-х
+												+i('star')
+												| у автора
 
-						+e.row._bot
-							+e.sort
-								+e.SELECT.sort-select.js-select
-									option Мах рейтинг
-									option Мin рейтинг
-									option По популярности
-									option По просмотрам
+							+e.row._bot
+								+e.sort
+									+e.SELECT.sort-select.js-select
+										option Мах рейтинг
+										option Мin рейтинг
+										option По популярности
+										option По просмотрам
 
-							+e.view-wrap
-								+e.SPAN.title Вид
-								+e.view
-									+e.BUTTON.view-btn._list.is-active.tabs__btn: +i('list', 'product-filter__view-btn-icon')
-									+e.BUTTON.view-btn._cards.tabs__btn: +i('four-dots', 'product-filter__view-btn-icon')
+								+e.view-wrap
+									+e.SPAN.title Вид
+									+e.view
+										+e.BUTTON.view-btn._list.is-active.tabs__btn: +i('list', 'product-filter__view-btn-icon')
+										+e.BUTTON.view-btn._cards.tabs__btn: +i('four-dots', 'product-filter__view-btn-icon')
 
-					.tabs__for
-						.tabs__tab
-							.category__row.row
-								-i = 0
-								while i < 6
-									+productItem('vertical', i + 1, 'col')
-									-i++
+						.tabs__for
+							.tabs__tab
+								.category__row.row
+									-i = 0
+									while i < 6
+										+productItem('vertical', i + 1, 'col')
+										-i++
 
-						.tabs__tab
-							.category__block
-								-i = 0
-								while i < 3
-									+productItem('horizontal', i + 1, '_horiz block')
-									-i++
+							.tabs__tab
+								.category__block
+									-i = 0
+									while i < 3
+										+productItem('horizontal', i + 1, '_horiz block')
+										-i++
 
-					+pagination
+						+pagination
 
+					//begin teaser
+					+b.SECTION.teaser
+						+e.inner
+							+e.text
+								+logo('white-blue')
+								+e.H3.title.title._md._white Доступное искусство со всего мира
+								+e.P.descr Теперь покупать стало проще и безопаснее
+								+e.A.link.link._blue(href='#!') Подробнее
+									.link__icon.icon-arrow-r-blue
+							+e.img-wrap
+								+e.IMG(src='img/other/van_right.png' alt='image')
+
+						+e.A.help-btn.help-btn._yellow(href='#!')
+							+i('help')
+							span.help-btn__text Помощь 24/7
+					//end teaser
+
+					.category__descr
+						h2.category__descr-title.title.title_md Картины Барокко
+						p Искусство (наряду с наукой) — один из способов познания, как в естественнонаучной, так и в религиозной картине восприятия мира. Понятие искусства крайне широко — оно может проявляться как чрезвычайно развитое мастерство в какой-то определённой области. Долгое время искусством считался вид культурной деятельности, удовлетворяющий любовь человека к прекрасному. Вместе с эволюцией социальных эстетических норм и оценок искусством получила право называться любая деятельность, направленная на создание эстетически-выразительных форм.
+						p В масштабах всего общества, искусство — особый способ познания и отражения действительности, одна из форм художественной деятельности общественного сознания и часть духовной культуры как человека, так и всего человечества, многообразный результат творческой деятельности всех поколений. В науке искусством называют как собственно творческую художественную деятельность, так и её результат — художественное произведение.
+
+		include components/partners
 	//end main

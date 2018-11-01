@@ -1,0 +1,27 @@
+if partners ? partners : partners = []
+if partners.title ? partners.title : partners.title = 'Наши партнеры'
+
+//begin partners
++b.SECTION.partners
+	+e.container.container
+		+e.H2.title.title._md= partners.title
+		+e.slider.slider
+			-i = 0
+			while i < 2
+				+e.A.item(href='#!' target='_blank')
+					+e.item-inner
+						+e.IMG(src='img/content/partners/partners_1.png' alt='image')
+				+e.A.item(href='#!' target='_blank')
+					+e.item-inner
+						+e.IMG(src='img/content/partners/partners_2.png' alt='image')
+				+e.A.item(href='#!' target='_blank')
+					+e.item-inner
+						+e.IMG(src='img/content/partners/partners_3.png' alt='image')
+				+e.A.item(href='#!' target='_blank')
+					+e.item-inner
+						+e.IMG(src='img/content/partners/partners_4.png' alt='image')
+				+e.A.item(href='#!' target='_blank')
+					+e.item-inner
+						+e.IMG(src='img/content/partners/partners_5.png' alt='image')
+				-i++
+//end partners

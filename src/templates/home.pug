@@ -14,7 +14,7 @@ block content
 				+e.container.container
 					+e.content
 						+e.A.logo(href='#!')
-							+e.IMG(src='img/other/logo-blue.svg' alt='Auction')
+							+e.IMG(src='img/logos/logo-blue.svg' alt='Auction')
 						+e.H1.title.title._lg._gray Доступное искусство со всего мира
 						+e.P.sub-title Теперь покупать стало проще и безопаснее
 						+e.A.link.link(href='#!') Подробнее
@@ -431,15 +431,15 @@ block content
 
 				+e.block
 					+e.item._1
-						+e.item-logo
-							+e.IMG(src='img/other/logo-blue.svg' alt='image')
+						+e.item-logo.logo
+							+e.IMG(src='img/logos/logo-blue.svg' alt='auction')
 					+e.item._2
 						+e.P Защита покупателей
 
 				+e.block
 					+e.item._3
 						+e.item-img
-							+e.IMG(src='img/other/van.png' alt='image')
+							+e.IMG(src='img/other/van_left.png' alt='image')
 						+e.P Надежная доставка
 
 				+e.block
@@ -450,29 +450,5 @@ block content
 						+e.P Защита покупателей
 		//end benefits
 
-		//begin partners
-		+b.SECTION.partners
-			+e.container.container
-				+e.H2.title.title._md Наши партнеры
-				+e.slider.slider
-					-i = 0
-					while i < 2
-						+e.A.item(href='#!' target='_blank')
-							+e.item-inner
-								+e.IMG(src='img/content/partners/partners_1.png' alt='image')
-						+e.A.item(href='#!' target='_blank')
-							+e.item-inner
-								+e.IMG(src='img/content/partners/partners_2.png' alt='image')
-						+e.A.item(href='#!' target='_blank')
-							+e.item-inner
-								+e.IMG(src='img/content/partners/partners_3.png' alt='image')
-						+e.A.item(href='#!' target='_blank')
-							+e.item-inner
-								+e.IMG(src='img/content/partners/partners_4.png' alt='image')
-						+e.A.item(href='#!' target='_blank')
-							+e.item-inner
-								+e.IMG(src='img/content/partners/partners_5.png' alt='image')
-						-i++
-		//end partners
-
+		include components/partners
 	//end main

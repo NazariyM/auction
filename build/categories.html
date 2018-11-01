@@ -63,7 +63,7 @@
     <main class="main">
       <!--begin screen-->
       <section class="screen screen_small">
-        <div class="screen__container container"><a class="screen__logo" href="#!"><img src="img/other/logo-blue.svg" alt="Auction" title="" /></a>
+        <div class="screen__container container"><a class="screen__logo" href="#!"><img src="img/logos/logo-blue.svg" alt="Auction" title="" /></a>
           <h2 class="screen__title title title_lg title_gray">Доступное искусство со всего мира</h2>
           <div class="screen__text-content">
             <p class="screen__sub-title">Теперь покупать стало проще и безопаснее</p><a class="screen__link link" href="#!">Подробнее<div class="link__icon icon-arrow-r-black"></div></a>
@@ -110,7 +110,7 @@
               </div>
             </div>
           </aside>
-          <div class="page__content tabs is-anim">
+          <div class="page__content">
             <div class="breadcrumbs category__breadcrumbs">
               <ul>
                 <li><a href="#!">Главная</a></li>
@@ -119,333 +119,366 @@
               </ul>
             </div>
             <h1 class="category__title title title_md">Картины Барокко</h1>
-            <div class="product-filter category__filter">
-              <div class="product-filter__row product-filter__row_top"><span class="product-filter__title">Цена:</span>
-                <div class="product-filter__price range-slider-double"><span class="range-slider-double__result range-slider-double__result_from"></span>
-                  <div class="range-slider-double__input"><input type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-to="150000" data-default-val-from="200000" data-step="100"></div><span class="range-slider-double__result range-slider-double__result_to"></span>
+            <!--убрать класс is-anim, если надо переключение без анимации-->
+            <div class="category__block tabs is-anim">
+              <div class="product-filter category__filter">
+                <div class="product-filter__row product-filter__row_top"><span class="product-filter__title">Цена:</span>
+                  <div class="product-filter__price range-slider-double"><span class="range-slider-double__result range-slider-double__result_from"></span>
+                    <div class="range-slider-double__input"><input type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-to="150000" data-default-val-from="200000" data-step="100"></div><span class="range-slider-double__result range-slider-double__result_to"></span>
+                  </div>
+                  <div class="product-filter__actions">
+                    <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked" /><span class="check-box__square"><svg class="icon-check check-box__icon">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg></span><span class="check-box__text">Бесплатная доставка</span></label></div>
+                    <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked"><span class="check-box__square"><svg class="icon-check check-box__icon">
+                            <use xlink:href="img/sprite.svg#icon-check"></use>
+                          </svg></span><span class="check-box__text">Более 4-х<svg class="icon-star ">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                          </svg>у автора</span></label></div>
+                  </div>
                 </div>
-                <div class="product-filter__actions">
-                  <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked" /><span class="check-box__square"><svg class="icon-check check-box__icon">
-                          <use xlink:href="img/sprite.svg#icon-check"></use>
-                        </svg></span><span class="check-box__text">Бесплатная доставка</span></label></div>
-                  <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked"><span class="check-box__square"><svg class="icon-check check-box__icon">
-                          <use xlink:href="img/sprite.svg#icon-check"></use>
-                        </svg></span><span class="check-box__text">Более 4-х<svg class="icon-star ">
-                          <use xlink:href="img/sprite.svg#icon-star"></use>
-                        </svg>у автора</span></label></div>
+                <div class="product-filter__row product-filter__row_bot">
+                  <div class="product-filter__sort"><select class="product-filter__sort-select js-select">
+                      <option>Мах рейтинг</option>
+                      <option>Мin рейтинг</option>
+                      <option>По популярности</option>
+                      <option>По просмотрам</option>
+                    </select></div>
+                  <div class="product-filter__view-wrap"><span class="product-filter__title">Вид</span>
+                    <div class="product-filter__view"><button class="product-filter__view-btn product-filter__view-btn_list is-active tabs__btn"><svg class="icon-list product-filter__view-btn-icon">
+                          <use xlink:href="img/sprite.svg#icon-list"></use>
+                        </svg></button><button class="product-filter__view-btn product-filter__view-btn_cards tabs__btn"><svg class="icon-four-dots product-filter__view-btn-icon">
+                          <use xlink:href="img/sprite.svg#icon-four-dots"></use>
+                        </svg></button></div>
+                  </div>
                 </div>
               </div>
-              <div class="product-filter__row product-filter__row_bot">
-                <div class="product-filter__sort"><select class="product-filter__sort-select js-select">
-                    <option>Мах рейтинг</option>
-                    <option>Мin рейтинг</option>
-                    <option>По популярности</option>
-                    <option>По просмотрам</option>
-                  </select></div>
-                <div class="product-filter__view-wrap"><span class="product-filter__title">Вид</span>
-                  <div class="product-filter__view"><button class="product-filter__view-btn product-filter__view-btn_list is-active tabs__btn"><svg class="icon-list product-filter__view-btn-icon">
-                        <use xlink:href="img/sprite.svg#icon-list"></use>
-                      </svg></button><button class="product-filter__view-btn product-filter__view-btn_cards tabs__btn"><svg class="icon-four-dots product-filter__view-btn-icon">
-                        <use xlink:href="img/sprite.svg#icon-four-dots"></use>
-                      </svg></button></div>
+              <div class="tabs__for">
+                <div class="tabs__tab">
+                  <div class="category__row row">
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_1.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_2.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_3.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_4.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_5.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                    <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_6.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <div class="product-item__time"><svg class="icon-sand-clock ">
+                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                          </svg>Осталось: <span>3 дня</span></div>
+                        <div class="product-item__details">
+                          <div class="product-item__bids"><span>50</span>ставок</div>
+                          <div class="product-item__price">150 000 руб.</div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                    </div>
+                  </div>
                 </div>
+                <div class="tabs__tab">
+                  <div class="category__block">
+                    <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_1.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
+                      </div>
+                      <div class="product-item__details">
+                        <div class="product-item__price">150 000 руб.</div>
+                        <div class="product-item__details-block">
+                          <div class="product-item__details-item">Доставка:<span>DHL</span></div>
+                          <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
+                              <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
+                              <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
+                              <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
+                              <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
+                              <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
+                            </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
+                              <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
+                              <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
+                              <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
+                            </svg></div>
+                          <div class="product-item__time"><svg class="icon-sand-clock ">
+                              <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                            </svg>Осталось:<span>3 дня</span></div>
+                          <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_vert-sm">
+                        <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                      </div>
+                    </div>
+                    <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_2.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
+                      </div>
+                      <div class="product-item__details">
+                        <div class="product-item__price">150 000 руб.</div>
+                        <div class="product-item__details-block">
+                          <div class="product-item__details-item">Доставка:<span>DHL</span></div>
+                          <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
+                              <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
+                              <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
+                              <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
+                              <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
+                              <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
+                            </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
+                              <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
+                              <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
+                              <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
+                            </svg></div>
+                          <div class="product-item__time"><svg class="icon-sand-clock ">
+                              <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                            </svg>Осталось:<span>3 дня</span></div>
+                          <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_vert-sm">
+                        <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                      </div>
+                    </div>
+                    <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
+                            <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                          </svg></span><img class="product-item__img" src="img/content/products/product_3.jpg" alt="image" title="" /></a>
+                      <div class="product-item__content">
+                        <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
+                        <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                              </svg>5 347)</span></span></div>
+                        <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
+                      </div>
+                      <div class="product-item__details">
+                        <div class="product-item__price">150 000 руб.</div>
+                        <div class="product-item__details-block">
+                          <div class="product-item__details-item">Доставка:<span>DHL</span></div>
+                          <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
+                              <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
+                              <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
+                              <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
+                              <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
+                              <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
+                            </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
+                              <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
+                              <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
+                              <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
+                            </svg></div>
+                          <div class="product-item__time"><svg class="icon-sand-clock ">
+                              <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
+                            </svg>Осталось:<span>3 дня</span></div>
+                          <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
+                        </div>
+                      </div>
+                      <div class="control-panel control-panel_vert-sm">
+                        <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
+                            <use xlink:href="img/sprite.svg#icon-hammer"></use>
+                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                            <use xlink:href="img/sprite.svg#icon-beg"></use>
+                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                            <use xlink:href="img/sprite.svg#icon-list"></use>
+                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination pagination_default">
+                <ul>
+                  <li><a href="#!">01</a></li>
+                  <li><a href="#!">02</a></li>
+                  <li><a href="#!"><svg class="icon-expand-button pagination__arr pagination__arr_l">
+                        <use xlink:href="img/sprite.svg#icon-expand-button"></use>
+                      </svg></a></li>
+                  <li class="is-active"><a href="#!">03</a></li>
+                  <li><a href="#!"><svg class="icon-expand-button pagination__arr pagination__arr_r">
+                        <use xlink:href="img/sprite.svg#icon-expand-button"></use>
+                      </svg></a></li>
+                  <li><a href="#!">04</a></li>
+                  <li><a href="#!">05</a></li>
+                </ul>
               </div>
             </div>
-            <div class="tabs__for">
-              <div class="tabs__tab">
-                <div class="category__row row">
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_1.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_2.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_3.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_4.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_5.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
-                  <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_6.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <div class="product-item__time"><svg class="icon-sand-clock ">
-                          <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                        </svg>Осталось: <span>3 дня</span></div>
-                      <div class="product-item__details">
-                        <div class="product-item__bids"><span>50</span>ставок</div>
-                        <div class="product-item__price">150 000 руб.</div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
-                  </div>
+            <!--begin teaser-->
+            <section class="teaser">
+              <div class="teaser__inner">
+                <div class="teaser__text">
+                  <div class="teaser__logo logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.3 7.62">
+                      <rect fill="#6ed6d7" x="23.82" y="2.42" width="23.47" height="5.2"></rect>
+                      <path fill="#fff" d="M4,7.22A2.6,2.6,0,1,1,2.6,2.42V3.64A1.39,1.39,0,1,0,4,5H5.2v2.6H4Zm17.84-2.8V5.63h2v2H25v-2h2V4.42H25v-2H23.82v2ZM47.3,5H46.09v2.6H47.3ZM42.1,5a2.59,2.59,0,0,1,2.6-2.59V3.64A1.38,1.38,0,0,0,43.31,5v2.6H42.1V5ZM40,5a2.6,2.6,0,1,1-2.6-2.6V3.64A1.39,1.39,0,1,0,38.81,5Zm-9.7-3.81h1.21V0H30.32Zm1.21,6.41h1.21V6.41H31.53v-4H29.11V3.64h1.21V6.41H29.11V7.62h2.42ZM19.75,5a2.6,2.6,0,1,0-2.6,2.6V6.41A1.39,1.39,0,1,1,18.54,5ZM12.48,5H11.26V2.42h1.22ZM7.28,5a2.59,2.59,0,0,0,2.6,2.6V6.41A1.39,1.39,0,0,1,8.49,5V2.42H7.28V5Z"></path>
+                    </svg></div>
+                  <h3 class="teaser__title title title_md title_white">Доступное искусство со всего мира</h3>
+                  <p class="teaser__descr">Теперь покупать стало проще и безопаснее</p><a class="teaser__link link link_blue" href="#!">Подробнее<div class="link__icon icon-arrow-r-blue"></div></a>
                 </div>
-              </div>
-              <div class="tabs__tab">
-                <div class="category__block">
-                  <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_1.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
-                    </div>
-                    <div class="product-item__details">
-                      <div class="product-item__price">150 000 руб.</div>
-                      <div class="product-item__details-block">
-                        <div class="product-item__details-item">Доставка:<span>DHL</span></div>
-                        <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
-                            <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
-                            <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
-                            <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
-                            <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
-                            <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
-                          </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
-                            <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
-                            <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
-                            <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
-                          </svg></div>
-                        <div class="product-item__time"><svg class="icon-sand-clock ">
-                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                          </svg>Осталось:<span>3 дня</span></div>
-                        <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_vert-sm">
-                      <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a>
-                    </div>
-                  </div>
-                  <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_2.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
-                    </div>
-                    <div class="product-item__details">
-                      <div class="product-item__price">150 000 руб.</div>
-                      <div class="product-item__details-block">
-                        <div class="product-item__details-item">Доставка:<span>DHL</span></div>
-                        <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
-                            <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
-                            <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
-                            <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
-                            <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
-                            <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
-                          </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
-                            <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
-                            <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
-                            <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
-                          </svg></div>
-                        <div class="product-item__time"><svg class="icon-sand-clock ">
-                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                          </svg>Осталось:<span>3 дня</span></div>
-                        <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_vert-sm">
-                      <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a>
-                    </div>
-                  </div>
-                  <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
-                          <use xlink:href="img/sprite.svg#icon-zoom"></use>
-                        </svg></span><img class="product-item__img" src="img/content/products/product_3.jpg" alt="image" title="" /></a>
-                    <div class="product-item__content">
-                      <h5 class="product-item__title title title title_xs">Мишки в лесу</h5>
-                      <div class="product-item__data"><span class="product-item__data-col">(холст, масло)</span><span class="product-item__data-col"><span>Шишкин И.</span><span>(<svg class="icon-star ">
-                              <use xlink:href="img/sprite.svg#icon-star"></use>
-                            </svg>5 347)</span></span></div>
-                      <p class="product-item__descr js-dot">Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности...</p><a class="product-item__read-link link" href="#!">Читать далее<div class="link__icon icon-arrow-r-black"></div></a>
-                    </div>
-                    <div class="product-item__details">
-                      <div class="product-item__price">150 000 руб.</div>
-                      <div class="product-item__details-block">
-                        <div class="product-item__details-item">Доставка:<span>DHL</span></div>
-                        <div class="product-item__details-item">Оплата:<svg class="product-item__details-icon product-item__details-icon_visa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.63 2.97">
-                            <path fill="#1a3680" d="M8.9,2.92l-.09-.43h-1l-.16.43H6.82L8,.29A.38.38,0,0,1,8.39.05H9l.64,2.87ZM8.44.83c0,.11-.1.28-.1.27L8,1.9h.65L8.5,1.07Z"></path>
-                            <path fill="#1a3680" d="M5.51,3a2.59,2.59,0,0,1-.87-.16l.11-.64.1,0a1.59,1.59,0,0,0,.73.15c.23,0,.47-.08.47-.28s-.1-.21-.4-.35S5,1.36,5,1,5.51,0,6.28,0A2,2,0,0,1,7,.12L6.88.74l-.07,0A1.51,1.51,0,0,0,6.22.6c-.3,0-.44.13-.44.25s.16.22.44.35c.45.21.66.46.65.78C6.87,2.58,6.33,3,5.51,3Z"></path>
-                            <polygon fill="#1a3680" points="4.15 2.92 3.37 2.92 3.85 0.05 4.64 0.05 4.15 2.92"></polygon>
-                            <path fill="#1a3680" d="M1.48,2.92.72.2A3.1,3.1,0,0,1,1.8,1.39L1.94,2l.77-2h.83L2.3,2.92Z"></path>
-                            <path fill="#ed9f01" d="M0,0H1.22a.3.3,0,0,1,.34.23l.27,1.27A2.5,2.5,0,0,0,0,.08Z"></path>
-                          </svg><svg class="product-item__details-icon product-item__details-icon_mc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6.43 3.99">
-                            <circle fill="#ea001b" cx="1.99" cy="1.99" r="1.99"></circle>
-                            <circle fill="#ea001b" cx="4.44" cy="1.99" r="1.99"></circle>
-                            <path fill="#ff5f01" d="M3.21,3.57a2,2,0,0,1,0-3.15,2,2,0,0,1,0,3.15Z"></path>
-                          </svg></div>
-                        <div class="product-item__time"><svg class="icon-sand-clock ">
-                            <use xlink:href="img/sprite.svg#icon-sand-clock"></use>
-                          </svg>Осталось:<span>3 дня</span></div>
-                        <div class="product-item__details-item product-item__details-item_bid">Последняя ставка:<span>Headoff</span></div>
-                      </div>
-                    </div>
-                    <div class="control-panel control-panel_vert-sm">
-                      <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
-                          <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                        </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
-                          <use xlink:href="img/sprite.svg#icon-beg"></use>
-                        </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
-                          <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg><span class="control-panel__btn-tip">Подробнее</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pagination pagination_default">
-              <ul>
-                <li><a href="#!">01</a></li>
-                <li><a href="#!">02</a></li>
-                <li><a href="#!"><svg class="icon-expand-button pagination__arr pagination__arr_l">
-                      <use xlink:href="img/sprite.svg#icon-expand-button"></use>
-                    </svg></a></li>
-                <li class="is-active"><a href="#!">03</a></li>
-                <li><a href="#!"><svg class="icon-expand-button pagination__arr pagination__arr_r">
-                      <use xlink:href="img/sprite.svg#icon-expand-button"></use>
-                    </svg></a></li>
-                <li><a href="#!">04</a></li>
-                <li><a href="#!">05</a></li>
-              </ul>
+                <div class="teaser__img-wrap"><img src="img/other/van_right.png" alt="image" title="" /></div>
+              </div><a class="teaser__help-btn help-btn help-btn_yellow" href="#!"><svg class="icon-help ">
+                  <use xlink:href="img/sprite.svg#icon-help"></use>
+                </svg><span class="help-btn__text">Помощь 24/7</span></a>
+            </section>
+            <!--end teaser-->
+            <div class="category__descr">
+              <h2 class="category__descr-title title title_md">Картины Барокко</h2>
+              <p>Искусство (наряду с наукой) — один из способов познания, как в естественнонаучной, так и в религиозной картине восприятия мира. Понятие искусства крайне широко — оно может проявляться как чрезвычайно развитое мастерство в какой-то определённой области. Долгое время искусством считался вид культурной деятельности, удовлетворяющий любовь человека к прекрасному. Вместе с эволюцией социальных эстетических норм и оценок искусством получила право называться любая деятельность, направленная на создание эстетически-выразительных форм.</p>
+              <p>В масштабах всего общества, искусство — особый способ познания и отражения действительности, одна из форм художественной деятельности общественного сознания и часть духовной культуры как человека, так и всего человечества, многообразный результат творческой деятельности всех поколений. В науке искусством называют как собственно творческую художественную деятельность, так и её результат — художественное произведение.</p>
             </div>
           </div>
         </div>
       </div>
+      <!--begin partners-->
+      <section class="partners">
+        <div class="partners__container container">
+          <h2 class="partners__title title title_md">Наши партнеры</h2>
+          <div class="partners__slider slider"><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_1.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_2.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_3.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_4.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_5.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_1.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_2.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_3.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_4.png" alt="image" title="" /></span></a><a class="partners__item" href="#!" target="_blank"><span class="partners__item-inner"><img src="img/content/partners/partners_5.png" alt="image" title="" /></span></a></div>
+        </div>
+      </section>
+      <!--end partners-->
     </main>
     <!--end main-->
     <!--begin footer-->

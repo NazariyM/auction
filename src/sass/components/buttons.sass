@@ -25,6 +25,8 @@
       +f('pt700')
    &_white
       color: $white
+   &_blue
+      color: $color3
    &_decor
       display: inline
       span
@@ -45,13 +47,21 @@
 
 // *** begin help-btn *** //
 .help-btn
+   $parent: &
    +flexCenter
+   position: relative
    width: 44px
    height: 44px
    background-color: #6600cc
    transition: .3s ease-in-out
    &:hover
       background-color: darken(#6600cc, 10)
+   &_yellow
+      width: 100px
+      height: 100px
+      background-color: #ffe987
+      &:hover
+         background-color: #ffe469
    svg
       fill: $white
       font-size: 30px
@@ -64,4 +74,9 @@
       transition: .3s ease-in-out
       &:hover
          color: $color1
+      #{$parent}_yellow &
+         left: calc(100% + 55px)
+         color: $color7
+         &:hover
+            color: $color1
 // end help-btn //
