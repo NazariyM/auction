@@ -6,3 +6,18 @@ PageList:
 
 - file: categories.html
   ready: 100
+
+- file: profile.html
+  ready: 100
+
+- file: my-auctions.html
+  ready: 100
+
+- file: text-page.html
+  ready: 100
+
+- file: cabinet.html
+  ready: 100
+
+- file: product.html
+  ready: 100

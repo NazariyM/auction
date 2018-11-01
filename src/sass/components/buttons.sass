@@ -1,20 +1,3 @@
-// *** begin btn *** //
-.btn
-   position: relative
-   display: inline-block
-   padding: 16px 47px
-   +f('pn700', 18, 28)
-   text-align: center
-   transition: .3s ease-in-out
-   overflow: hidden
-   background-color: $color9
-   color: $color1
-   border-radius: 30px
-   outline: 0
-   cursor: pointer
-
-// end btn //
-
 // *** begin link *** //
 .link
    $parent: &
@@ -80,3 +63,28 @@
          &:hover
             color: $color1
 // end help-btn //
+
+// *** begin add-btn *** //
+.add-btn
+   $parent: &
+   display: flex
+   font-size: 17px
+   border: 1px solid #393f4d
+   &__icon
+      +flexCenter
+      flex: 0 0 70px
+      width: 70px
+      height: 70px
+      border-right: 1px solid #393f4d
+      transition: .3s ease-in-out
+      #{$parent}:hover &
+         background-color: #ffe469
+   &__text
+      +flexCenter
+      flex: 1 1 auto
+      padding: 15px 30px
+      text-align: center
+      transition: .3s ease-in-out
+      #{$parent}:hover &
+         background-color: #ffe469
+// end add-btn //

@@ -1,0 +1,68 @@
+// *** begin profile *** //
+.profile
+   position: relative
+   &__settings-btn
+      position: absolute
+      right: 0
+      top: -50px
+      svg
+         font-size: 21px
+         fill: $color1
+         transition: .3s ease-in-out
+         &:hover
+            fill: $color7
+   &__row
+      display: flex
+   &__col
+      flex: 0 0 250px
+      width: 250px
+      text-align: center
+   &__photo
+      height: 365px
+      margin-bottom: 20px
+      img
+         +cover-img
+   &__link
+      +boldFont
+      transition: .3s ease-in-out
+      &:hover
+         color: $color7
+   &__block
+      display: flex
+      flex-direction: column
+      flex: 1 1 auto
+      padding-left: 65px
+      &-row
+         display: flex
+         align-items: flex-end
+         justify-content: space-between
+         margin-bottom: 20px
+   &__name
+      flex: 1 1 auto
+      padding-right: 30px
+      
+   &__status
+      flex: 0 0 100px
+      font-size: 17px
+      color: $color7
+      text-align: right
+   &__info
+      width: 250px
+      &-row
+         display: flex
+         margin: 0 -10px
+         &:not(:last-child)
+            margin-bottom: 10px
+         &_bold
+            +boldFont
+      &-col
+         flex: 0 1 50%
+         width: 50%
+         padding: 0 10px
+         &:nth-child(1)
+            color: $color7
+   
+   &__add-btn
+      margin-top: auto
+
+// end profile //

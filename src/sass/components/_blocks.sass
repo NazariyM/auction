@@ -2,6 +2,10 @@
 .logo
    flex: 0 0 198px
    width: 198px
+   &_long
+      svg
+         pointer-events: none
+         overflow: visible
    
 // end logo //
 
@@ -111,7 +115,7 @@
 // end dropdown //
 
 .breadcrumbs
-   margin-bottom: 55px
+   margin-bottom: 30px
    ul
       font-size: 0
       li
@@ -177,3 +181,37 @@
          transform: rotate(90deg)
       &_r
          transform: rotate(-90deg)
+
+// *** begin menu *** //
+.menu
+   &__block
+      padding-bottom: 30px
+      border-bottom: 1px solid #e2e1df
+      &-item
+         display: flex
+         align-items: center
+         &:hover
+            svg
+               fill: $color1
+         &:not(:last-child)
+            margin-bottom: 5px
+         svg
+            margin-right: 10px
+            fill: $color7
+            transition: .3s ease-in-out
+   &__list
+      padding-top: 30px
+      li
+         &:not(:last-child)
+            margin-bottom: 5px
+// end menu //
+
+// *** begin list *** //
+.list
+   color: $color7
+   a
+      transition: .3s ease-in-out
+      &:hover
+         color: $color1
+   
+// end list //

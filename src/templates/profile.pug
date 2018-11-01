@@ -1,0 +1,85 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Личный профиль'
+
+block content
+
+	//begin main
+	main.main
+
+		include components/screen
+
+		+b.page
+			+e.head-container.container
+				+breadcrumbs('Главная', 'Личный профиль')
+				+b.H1.title.title._md Личный профиль
+			+e.container.container
+				+e.ASIDE.side
+					+e.side-block
+						+b.menu
+							+e.block
+								+e.A.block-item(href='#!')
+									+i('user')
+									span Мой профиль
+								+e.A.block-item(href='#!')
+									+i('beg')
+									span Мои лоты
+								+e.A.block-item(href='#!')
+									+i('cloud-2')
+									span Сообщения
+								+e.A.block-item(href='#!')
+									+i('ring')
+									span Уведомления
+								+e.A.block-item(href='#!')
+									+i('gear')
+									span Настройки
+
+							+e.UL.list.list
+								-
+									menuList = [
+									'Безопасная сделка',
+									'Доставка',
+									'Условия оплаты',
+									'Частые вопросы',
+									'Реклама',
+									'Полезные ссылки',
+									'Служба поддержки'
+									]
+
+								for text in menuList
+									li: a(href='#!')= text
+
+				+e.content
+
+					+b.profile
+						+e.A.settings-btn(href='#!'): +i('gear')
+						+e.row
+							+e.col
+								+e.photo
+									+e.IMG(src='img/content/user-photo.jpg' alt='image')
+								+e.A.link(href='#!') Редактировать
+							+e.block
+								+e.block-row
+									+e.H5.name.title._sm Шишкин Иван
+									+e.SPAN.status Онлайн
+								+e.info
+									+e.info-row
+										+e.info-col Возраст:
+										+e.info-col 25
+									+e.info-row
+										+e.info-col Пол:
+										+e.info-col Мужской
+									+e.info-row
+										+e.info-col Стиль работы:
+										+e.info-col Живопись
+									+e.info-row._bold
+										+e.info-col Лотов:
+										+e.info-col 100
+
+								+b.A.add-btn.profile__add-btn(href='#!')
+									+e.icon: +i('beg')
+									+e.SPAN.text Добавить новый лот
+
+
+	//end main

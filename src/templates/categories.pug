@@ -8,17 +8,7 @@ block content
 	//begin main
 	main.main
 
-		//begin screen
-		+b.SECTION.screen._small
-			+e.container.container
-				+e.A.logo(href='#!')
-					+e.IMG(src='img/logos/logo-blue.svg' alt='Auction')
-				+e.H2.title.title._lg._gray Доступное искусство со всего мира
-				+e.text-content
-					+e.P.sub-title Теперь покупать стало проще и безопаснее
-					+e.A.link.link(href='#!') Подробнее
-						.link__icon.icon-arrow-r-black
-		//end screen
+		include components/screen
 
 		+b.page.category
 			+e.container.container

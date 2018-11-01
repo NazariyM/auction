@@ -13,8 +13,7 @@ block content
 			+e.inner
 				+e.container.container
 					+e.content
-						+e.A.logo(href='#!')
-							+e.IMG(src='img/logos/logo-blue.svg' alt='Auction')
+						+logo('black-blue', 'screen__logo')(href='#!')
 						+e.H1.title.title._lg._gray Доступное искусство со всего мира
 						+e.P.sub-title Теперь покупать стало проще и безопаснее
 						+e.A.link.link(href='#!') Подробнее
@@ -431,8 +430,7 @@ block content
 
 				+e.block
 					+e.item._1
-						+e.item-logo.logo
-							+e.IMG(src='img/logos/logo-blue.svg' alt='auction')
+						+logo('black-blue-2', 'benefits__item-logo')
 					+e.item._2
 						+e.P Защита покупателей
 
