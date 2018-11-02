@@ -3,12 +3,12 @@ import { css } from '../_helpers';
 
 class Tabs {
   constructor(el) {
-    this.$block = $('.tabs');
-    this.$tabNav = el.find('.tabs__btn');
-    this.$tabItemContainer = el.find('.tabs__for');
-    this.$tabItem = this.$tabItemContainer.find('.tabs__tab');
+    this.$tabs = $(el);
+    this.$tabsNavBtn = this.$tabs.find('.js-tabs-nav').children();
+    this.$tabsItemContainer = this.$tabs.find('.js-tabs-for');
+    this.$tabsItem = this.$tabsItemContainer.children();
 
-    if (this.$block.length) this.init();
+    if (this.$tabs.length) this.init();
   }
 
   init() {
@@ -16,11 +16,11 @@ class Tabs {
   }
 
   bindEvents() {
-    if (!this.$tabNav.hasClass('js-disabled') && this.getActiveIndex() !== 0) {
-      this.$tabItem.hide().eq(this.getActiveIndex()).show();
+    if (!this.$tabsNavBtn.hasClass('js-disabled') && this.getActiveIndex() !== 0) {
+      this.$tabsItem.hide().eq(this.getActiveIndex()).show();
     }
 
-    this.$tabNav.on('click', (ev) => {
+    this.$tabsNavBtn.on('click', (ev) => {
       const currentIndex = this.getActiveIndex();
       const targetIndex = $(ev.currentTarget).index();
 
@@ -31,7 +31,7 @@ class Tabs {
   getActiveIndex() {
     let activeIndex = 0;
 
-    this.$tabNav.each(function () {
+    this.$tabsNavBtn.each(function() {
       if ($(this).hasClass(css.active)) {
         activeIndex = $(this).index();
       }
@@ -43,16 +43,16 @@ class Tabs {
   changeTab(currentIndex, nextIndex) {
     const _this = this;
     const speed = 0.25;
-    const $currentTabNav = this.$tabNav.eq(currentIndex);
-    const $nextTabNav = this.$tabNav.eq(nextIndex);
-    const $currentTab = this.$tabItem.eq(currentIndex);
-    const $nextTab = this.$tabItem.eq(nextIndex);
+    const $currentTabNav = this.$tabsNavBtn.eq(currentIndex);
+    const $nextTabNav = this.$tabsNavBtn.eq(nextIndex);
+    const $currentTab = this.$tabsItem.eq(currentIndex);
+    const $nextTab = this.$tabsItem.eq(nextIndex);
 
     $currentTabNav.removeClass(css.active);
     $nextTabNav.addClass(css.active);
 
-    if (_this.$block.hasClass('is-anim')) {
-      this.animate($currentTab, $nextTab, _this.$tabItemContainer, speed);
+    if (_this.$tabs.hasClass('is-anim')) {
+      this.animate($currentTab, $nextTab, _this.$tabsItemContainer, speed);
     } else {
       $currentTab.hide();
       $nextTab.show();
@@ -86,8 +86,6 @@ class Tabs {
 }
 
 /** tabs init */
-const $tabs = $('.tabs');
-$tabs.each((index, el) => {
-  new Tabs($(el));
-});
+const $tabs = $('.js-tabs');
+$tabs.each((index, el) => new Tabs(el));
 

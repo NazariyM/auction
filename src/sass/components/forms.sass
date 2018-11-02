@@ -116,12 +116,13 @@
 // end custom select //
 
 // *** begin range-slider *** //
-.range-slider-double
+.range-slider
    display: flex
    align-items: center
    &__result
       height: 20px
-      width: 100px
+      flex: 0 0 57px
+      width: 57px
       +f('pt700', 15, 20)
       white-space: nowrap
       color: $color1
@@ -136,7 +137,7 @@
 .irs
    height: 20px
 
-.irs-bar
+.irs-bar, .irs-bar-edge
    top: calc(50% - 2px)
    height: 3px
    background: #6600cc

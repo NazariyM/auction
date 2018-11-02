@@ -1,6 +1,7 @@
 import 'ion-rangeslider';
 import 'select2';
 
+// checkboxes
 class ChecbkoxGroup {
   constructor(el) {
     this.block = (el);
@@ -26,17 +27,25 @@ class ChecbkoxGroup {
 const checkBoxGroups = document.querySelectorAll('.checkbox-group');
 for (const group of checkBoxGroups) new ChecbkoxGroup(group);
 
-class RangeSliderDouble {
-  constructor(el) {
+
+// range slider
+class RangeSlider {
+  constructor(el, defaultRange = false) {
     this.$block = $(el);
-    this.$input = this.$block.find('.range-slider-double__input').find('input');
-    this.$resultFrom = this.$block.find('.range-slider-double__result_from');
-    this.$resultTo = this.$block.find('.range-slider-double__result_to');
+    this.defaultRange = defaultRange;
+
+    this.$input = this.$block.find('.range-slider__input').find('input');
     this.$minVal = this.$input.data('min-value');
     this.$maxVal = this.$input.data('max-value');
-    this.$defaultFrom = this.$input.data('default-val-to');
-    this.$defaultTo = this.$input.data('default-val-from');
+    this.$defaultFrom = this.$input.data('default-val-from');
+
     this.$step = this.$input.data('step');
+
+    if (!this.defaultRange) {
+      this.$resultFrom = this.$block.find('.range-slider__result_from');
+      this.$resultTo = this.$block.find('.range-slider__result_to');
+      this.$defaultTo = this.$input.data('default-val-to');
+    }
 
     if (this.$block.length) this.init();
   }
@@ -47,26 +56,30 @@ class RangeSliderDouble {
 
   createSlider() {
     this.$input.ionRangeSlider({
-      type: 'double',
+      type: this.defaultRange ? 'single' : 'double',
       min: this.$minVal,
       max: this.$maxVal,
       from: this.$defaultFrom,
       to: this.$defaultTo,
       step: this.$step,
       onStart: (data) => {
-        this.$resultFrom.text(data.from_pretty);
-        this.$resultTo.text(data.to_pretty);
+        if (!this.defaultRange) {
+          this.$resultFrom.text(data.from_pretty);
+          this.$resultTo.text(data.to_pretty);
+        }
       },
       onChange: (data) => {
-        this.$resultFrom.text(data.from_pretty);
-        this.$resultTo.text(data.to_pretty);
+        if (!this.defaultRange) {
+          this.$resultFrom.text(data.from_pretty);
+          this.$resultTo.text(data.to_pretty);
+        }
       }
     });
   }
 }
 
-const $rs = $('.range-slider-double');
-$rs.each((i, el) => new RangeSliderDouble(el));
+$('.js-range-slider-default').each((i, el) => new RangeSlider(el, true));
+$('.js-range-slider').each((i, el) => new RangeSlider(el));
 
 // select
 const $select = $('.js-select');

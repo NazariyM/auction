@@ -5,12 +5,14 @@
    transition: border-color .3s ease-in-out
    &:hover
       border-color: #7ae4e6
+      .control-panel_simple,
       .control-panel_horiz-sm,
       .control-panel_horiz-sm .control-panel__btn
          border-color: #7ae4e6
    &_horiz
       display: flex
       min-height: 230px
+      
    &__img
       +cover-img
       &-wrap
@@ -46,6 +48,8 @@
       #{$parent}_horiz &
          flex: 0 1 percentage(350px / 934px)
          padding: 20px
+      //#{$parent}_simple &
+         // here
    &__title
       margin-bottom: 10px
    &__data
@@ -134,6 +138,10 @@
       margin-bottom: 30px
    &__read-link
    
+   &__range
+      .range-slider__input
+         flex: 0 0 120px
+         width: 120px
 // end product-item //
 
 // *** begin control-panel *** //
@@ -155,7 +163,10 @@
       flex-direction: column
       flex: 0 0 56px
       width: 56px
-      
+   &_simple
+      margin-left: auto
+      border-left: 1px solid #e2e1df
+      transition: border-color .3s ease-in-out
    &__btn
       position: relative
       +flexCenter
@@ -192,8 +203,7 @@
          z-index: 1
          top: 50%
          opacity: 0
-         display: flex
-         align-items: center
+         display: table
          min-height: 45px
          min-width: 95px
          padding: 7px 5px 8px 12px
@@ -251,6 +261,9 @@
             top: calc(50% - 8px)
             content: ''
             
+         span
+            display: table-row
+            
       &_view
       &_more
          background-color: #393f4d
@@ -272,6 +285,8 @@
       .icon-hammer
          font-size: 21px
       .icon-beg
+         font-size: 18px
+      .icon-gear
          font-size: 18px
          
    &__bids
@@ -313,12 +328,9 @@
          justify-content: center
          width: 44px
          height: 44px
+         background-color: #f6f6f6
          &.is-active
             background-color: #f0f0f0
-         &_list
-            background-color: #f6f6f6
-         &_cards
-            background-color: #f6f6f6
          &-icon
             fill: #bcbecb
             transition: .3s ease-in-out

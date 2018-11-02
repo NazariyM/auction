@@ -10,6 +10,11 @@
       color: $white
    &_blue
       color: $color3
+   &_black
+      color: $color1
+      transition: .3s ease-in-out
+      &:hover
+         color: $color7
    &_decor
       display: inline
       span
@@ -26,6 +31,12 @@
          margin-left: 11px
       #{$parent}_white &
          fill: $white
+      &.icon-zoom
+         font-size: 12px
+         animation: none!important
+         transition: .3s ease-in-out
+         #{$parent}:hover &
+            fill: $color7
 // end link //
 
 // *** begin help-btn *** //

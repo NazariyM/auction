@@ -123,11 +123,11 @@
             </div>
             <h1 class="category__title title title_md">Картины Барокко</h1>
             <!--убрать класс is-anim, если надо переключение без анимации-->
-            <div class="category__block tabs is-anim">
+            <div class="category__inner js-tabs is-anim">
               <div class="product-filter category__filter">
                 <div class="product-filter__row product-filter__row_top"><span class="product-filter__title">Цена:</span>
-                  <div class="product-filter__price range-slider-double"><span class="range-slider-double__result range-slider-double__result_from"></span>
-                    <div class="range-slider-double__input"><input type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-to="150000" data-default-val-from="200000" data-step="100"></div><span class="range-slider-double__result range-slider-double__result_to"></span>
+                  <div class="product-filter__price range-slider js-range-slider"><span class="range-slider__result range-slider__result_from"></span>
+                    <div class="range-slider__input"><input type="text" name="" data-min-value="10000" data-max-value="300000" data-default-val-from="150000" data-default-val-to="200000" data-step="100"></div><span class="range-slider__result range-slider__result_to"></span>
                   </div>
                   <div class="product-filter__actions">
                     <div class="check-box product-filter__actions-check"><label class="check-box__label"><input class="check-box__input" type="checkbox" name="" checked="checked" /><span class="check-box__square"><svg class="icon-check check-box__icon">
@@ -148,16 +148,16 @@
                       <option>По просмотрам</option>
                     </select></div>
                   <div class="product-filter__view-wrap"><span class="product-filter__title">Вид</span>
-                    <div class="product-filter__view"><button class="product-filter__view-btn product-filter__view-btn_list is-active tabs__btn"><svg class="icon-list product-filter__view-btn-icon">
+                    <div class="product-filter__view js-tabs-nav"><button class="product-filter__view-btn is-active"><svg class="icon-list product-filter__view-btn-icon">
                           <use xlink:href="img/sprite.svg#icon-list"></use>
-                        </svg></button><button class="product-filter__view-btn product-filter__view-btn_cards tabs__btn"><svg class="icon-four-dots product-filter__view-btn-icon">
+                        </svg></button><button class="product-filter__view-btn"><svg class="icon-four-dots product-filter__view-btn-icon">
                           <use xlink:href="img/sprite.svg#icon-four-dots"></use>
                         </svg></button></div>
                   </div>
                 </div>
               </div>
-              <div class="tabs__for">
-                <div class="tabs__tab">
+              <div class="js-tabs-for">
+                <div>
                   <div class="category__row row">
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -177,11 +177,11 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -201,11 +201,11 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -225,11 +225,11 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -249,11 +249,11 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -273,11 +273,11 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                     <div class="product-item col"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-1"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -297,15 +297,15 @@
                       </div>
                       <div class="control-panel control-panel_horiz-sm"><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a></div>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a></div>
                     </div>
                   </div>
                 </div>
-                <div class="tabs__tab">
+                <div>
                   <div class="category__block">
                     <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
                             <use xlink:href="img/sprite.svg#icon-zoom"></use>
@@ -341,11 +341,11 @@
                       <div class="control-panel control-panel_vert-sm">
                         <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a>
                       </div>
                     </div>
                     <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
@@ -382,11 +382,11 @@
                       <div class="control-panel control-panel_vert-sm">
                         <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a>
                       </div>
                     </div>
                     <div class="product-item product-item_horiz block"><a class="product-item__img-wrap" href="img/content/products/product_lg.jpg" data-fancybox="product-item-2"><span class="product-item__img-zoom"><svg class="icon-zoom product-item__img-zoom-icon">
@@ -423,11 +423,11 @@
                       <div class="control-panel control-panel_vert-sm">
                         <div class="control-panel__bids"><span>50</span>ставок</div><a class="control-panel__btn control-panel__btn_bid" href="#!"><svg class="icon-hammer ">
                             <use xlink:href="img/sprite.svg#icon-hammer"></use>
-                          </svg><span class="control-panel__btn-tip">Сделать ставку</span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
+                          </svg><span class="control-panel__btn-tip"><span>Сделать ставку</span></span></a><a class="control-panel__btn control-panel__btn_add" href="#!"><svg class="icon-beg ">
                             <use xlink:href="img/sprite.svg#icon-beg"></use>
-                          </svg><span class="control-panel__btn-tip">Добавить<br />в мои лоты</span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
+                          </svg><span class="control-panel__btn-tip"><span>Добавить<br />в мои лоты</span></span></a><a class="control-panel__btn control-panel__btn_more" href="#!"><svg class="icon-list ">
                             <use xlink:href="img/sprite.svg#icon-list"></use>
-                          </svg><span class="control-panel__btn-tip">Подробнее</span></a>
+                          </svg><span class="control-panel__btn-tip"><span>Подробнее</span></span></a>
                       </div>
                     </div>
                   </div>

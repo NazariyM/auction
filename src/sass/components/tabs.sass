@@ -1,23 +1,44 @@
+.js-tabs
+   &-for
+      position: relative
+      > div
+         display: none
+         &:first-child
+            display: block
+            
+   &-nav
+      +nosel
+   &-nav > button,
+   &-nav > a
+      &.is-active
+         pointer-events: none
+      &.is-disabled
+         pointer-events: none
+         opacity: 0.5
+         background-color: $white
+   
+// *** begin tabs *** //
 .tabs
-	$parent: &
-	&__nav
-	
-	&__for
-		position: relative
-	&__btn
-		position: relative
-		text-align: center
-		white-space: nowrap
-		cursor: pointer
-		&.is-active
-			pointer-events: none
-		&.is-disabled
-			pointer-events: none
-			opacity: 0.5
-			background-color: $white
-	
-	&__tab
-		display: none
-		
-		&:first-child
-			display: block
+   &__nav
+      margin-bottom: 30px
+      &-btn
+         position: relative
+         +f('pt700', 21)
+         color: $color7
+         transition: .3s ease-in-out
+         &:hover
+            color: $color1
+         &:not(:last-child)
+            margin-right: 20px
+            &::after
+               position: absolute
+               right: -11px
+               top: 4px
+               height: 20px
+               width: 2px
+               background-color: $color1
+               content: ''
+         &.is-active
+            color: $color1
+
+// end tabs //
