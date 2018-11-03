@@ -215,3 +215,20 @@
          color: $color1
    
 // end list //
+
+// *** begin user-info *** //
+.user-info
+   display: flex
+   align-items: flex-start
+   font-size: 13px
+   span
+      &:not(:last-child)
+         margin-right: 5px
+      &:nth-child(2)
+         white-space: nowrap
+   svg
+      margin: 0 3px
+      vertical-align: 0
+      fill: $color1
+      font-size: 11px
+// end user-info //

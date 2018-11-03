@@ -1,0 +1,145 @@
+// *** begin interesting *** //
+.interesting
+   &__title
+      margin-bottom: 20px
+   &__link
+      $parent: &
+      display: flex
+      align-items: flex-start
+      font-size: 13px
+      transition: .3s ease-in-out
+      &:hover
+         color: $color7
+      &:not(:last-child)
+         margin-bottom: 15px
+      &-img-wrap
+         flex: 0 0 55px
+         width: 55px
+         height: 55px
+         margin-right: 15px
+         img
+            +cover-img
+      &-text
+         flex: 1 1 auto
+      &-title
+         margin-bottom: 5px
+         transition: .3s ease-in-out
+         #{$parent}:hover &
+            color: $color7
+      &-info
+         margin: 0 0 5px
+         
+      &-price
+         transition: .3s ease-in-out
+         #{$parent}:hover &
+            color: $color7
+// end interesting //
+
+// *** begin bets *** //
+.bets
+   margin-bottom: 90px
+   &__heading
+      margin-bottom: 30px
+   &__title
+      margin-bottom: 20px
+   &__total-title
+      color: $color7
+      font-size: 21px
+      span
+         color: $color1
+   &__tabs
+   &__table
+      &-row
+         display: flex
+         align-items: center
+         padding: 3px 0
+         border-bottom: 1px solid #e2e1df
+         &_title
+            padding-bottom: 10px
+            +boldFont
+            color: $color7
+      &-col
+         &_content
+            flex: 0 1 350px
+         
+         &_amount
+            flex: 0 1 245px
+      
+         &_leader
+            flex: 0 1 125px
+         
+         &_time
+            flex: 0 1 150px
+            
+      &-content
+         display: flex
+         align-items: center
+         &-img
+            flex: 0 0 143px
+            width: 143px
+            margin-right: 28px
+            img
+               +cover
+         &-text
+         &-title
+            margin-bottom: 12px
+            font-size: 17px
+      &-amount
+         display: flex
+         margin-bottom: 10px
+         +boldFont
+         &-col
+            flex: 0 1 50%
+            width: 50%
+            padding: 0 5px
+            &:not(:last-child)
+               position: relative
+               &::after
+                  position: absolute
+                  right: 5px
+                  top: 0
+                  width: 2px
+                  height: 16px
+                  background-color: $color1
+                  content: ''
+            &:nth-child(2)
+               color: $color7
+      &-actions
+         display: flex
+         margin: 0 -3px
+         &-btn
+            flex: 0 0 88px
+            width: 88px
+            height: 30px
+            padding: 0 10px
+            text-align: center
+            +f('pt500', 15, 30)
+            border: 1px solid $color1
+            margin: 0 3px
+            &.is-disabled
+               opacity: .5
+               pointer-events: none
+      &-leader
+         +boldFont
+         font-size: 17px
+      &-time
+         display: flex
+         align-items: center
+         margin: 0 -3px
+         +boldFont
+         font-size: 17px
+         &-count
+            padding: 0 3px
+            &:not(:last-child)
+               position: relative
+               &::after
+                  display: inline
+                  margin-left: 3px
+                  content: ':'
+// end bets //
+
+// *** begin recent *** //
+.recent
+   &__title
+      margin-bottom: 30px
+// end recent //

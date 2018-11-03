@@ -71,10 +71,84 @@
 
 // *** begin lots *** //
 .lots
-   padding: 40px 0 0
+   &_profile
+      padding: 40px 0 0
+   &_default
+   
+   &__heading
+      margin-bottom: 40px
+   &__title
+      margin-bottom: 30px
    &__block
       &:not(:last-child)
          margin-bottom: 30px
       &-title
          margin-bottom: 30px
 // end lots //
+
+// *** begin reviews-block *** //
+.reviews-block
+   &__title
+      margin-bottom: 20px
+   &__item
+      &:not(:last-of-type)
+         margin-bottom: 20px
+      &:last-of-type
+         margin-bottom: 35px
+      &-header
+         display: flex
+         align-items: center
+         margin-bottom: 5px
+      &-img-wrap
+         width: 48px
+         height: 48px
+         margin-right: 15px
+         overflow: hidden
+         border-radius: 50%
+      &-name
+         +boldFont
+      &-rating
+         $parent: &
+         display: flex
+         align-items: center
+         margin-bottom: 10px
+         &-value
+            margin-right: 8px
+            &[data-rating='0'] #{$parent}-icon
+               fill: $color7
+            &[data-rating='1'] #{$parent}-icon:nth-child(1) ~ #{$parent}-icon
+               fill: $color7
+            &[data-rating='2'] #{$parent}-icon:nth-child(2) ~ #{$parent}-icon
+               fill: $color7
+            &[data-rating='3'] #{$parent}-icon:nth-child(3) ~ #{$parent}-icon
+               fill: $color7
+            &[data-rating='4'] #{$parent}-icon:nth-child(4) ~ #{$parent}-icon
+               fill: $color7
+            &[data-rating='5'] #{$parent}-icon:nth-child(5) ~ #{$parent}-icon
+               fill: $color7
+               
+         &-icon
+            font-size: 11px
+            fill: $color1
+            &:not(:last-child)
+               margin-right: 3px
+               
+         &-text
+            font-size: 13px
+      &-title
+         color: $color7
+         font-size: 13px
+// end reviews-block //
+
+// *** begin share *** //
+.share
+   display: block
+   padding: 30px
+   +cover
+   &_md
+      height: 400px
+   &_sm
+      height: 230px
+   &__title
+      margin-bottom: 10px
+// end share //

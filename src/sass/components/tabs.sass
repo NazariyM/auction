@@ -19,6 +19,7 @@
    
 // *** begin tabs *** //
 .tabs
+   $parent: &
    &__nav
       margin-bottom: 30px
       &-btn
@@ -26,6 +27,8 @@
          +f('pt700', 21)
          color: $color7
          transition: .3s ease-in-out
+         #{$parent}_sm &
+            font-size: 15px
          &:hover
             color: $color1
          &:not(:last-child)
@@ -38,6 +41,9 @@
                width: 2px
                background-color: $color1
                content: ''
+               #{$parent}_sm &
+                  top: 3px
+                  height: 15px
          &.is-active
             color: $color1
 

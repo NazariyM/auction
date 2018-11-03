@@ -16,7 +16,7 @@ PageList:
 - file: text-page.html
   ready: 100
 
-- file: cabinet.html
+- file: account.html
   ready: 100
 
 - file: product.html

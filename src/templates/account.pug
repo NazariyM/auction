@@ -1,0 +1,154 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Личный кабинет'
+
+block content
+
+	//begin main
+	main.main
+
+		include components/screen
+
+		+b.page
+			+e.head-container.container
+				+breadcrumbs('Главная', 'Личный кабинет')
+				+b.H1.title.title._md Личный кабинет
+			+e.container.container
+				+e.ASIDE.side
+					+e.side-block
+						+b.menu
+							+e.block
+								+e.A.block-item(href='#!')
+									+i('user')
+									span Мой профиль
+								+e.A.block-item(href='#!')
+									+i('beg')
+									span Мои лоты
+								+e.A.block-item(href='#!')
+									+i('cloud-2')
+									span Сообщения
+								+e.A.block-item(href='#!')
+									+i('ring')
+									span Уведомления
+								+e.A.block-item(href='#!')
+									+i('gear')
+									span Настройки
+
+							+e.UL.list.list
+								-
+									menuList = [
+									'Безопасная сделка',
+									'Доставка',
+									'Условия оплаты',
+									'Частые вопросы',
+									'Реклама',
+									'Полезные ссылки',
+									'Служба поддержки'
+									]
+
+								for text in menuList
+									li: a(href='#!')= text
+
+					+b.interesting.page__side-block
+						+e.H4.title.title._xs Может быть
+							br
+							| интересно
+
+						-i = 0
+						while i < 4
+							+e.A.link(href='#!')
+								+e.link-img-wrap
+									+e.IMG(src='img/content/interesting_img.jpg' alt='image')
+								+e.link-text
+									+e.H6.link-title.title._us Мишки в лесу
+									+e.link-info.user-info
+										span Шишкин И.
+										span
+											| (
+											+i('star')
+											| 5 347)
+									+e.link-price.title._us 150 000 руб.
+							-i++
+
+					+b.A.share._sm(href='#!' style='background-image: url(img/bg/share_bg.jpg)')
+						+e.H6.title.title._xs Акция
+						+e.P вид изобразительного искусства, связанный с передачей...
+
+				+e.content
+					//begin bets
+					+b.SECTION.bets
+						+e.heading
+							+e.H2.title.title._sm Ваши ставки
+							+e.H3.total-title Общая сумма ставок:
+								= ' '
+								span 45 000 руб.
+
+						//убрать класс is-anim, если надо переключение без анимации
+						+e.tabs.tabs._sm.js-tabs.is-anim
+							+b.tabs__nav.js-tabs-nav
+								+b.BUTTON.tabs__nav-btn.is-active Активные
+								+b.BUTTON.tabs__nav-btn Завершенные
+
+							.js-tabs-for
+								div
+									+e.table
+										+e.table-row._title
+											+e.table-col._content Текущий аукцион
+											+e.table-col._amount Сумма
+											+e.table-col._leader Лидер
+											+e.table-col._time Осталось
+
+										-i = 0
+										while i < 3
+											+e.table-row
+												+e.table-col._content
+													+e.table-content
+														+e.table-content-img
+															+e.IMG(src=`img/content/products/product_${i + 1}.jpg`, alt='image', title='')
+														+e.table-content-text
+															+e.H5.table-content-title.title Мишки в лесу
+
+															+e.table-data.user-info
+																+e.SPAN.table-data-col (холст, масло)
+																+e.SPAN.table-data-col
+																	span Шишкин И.
+																	span
+																		| (
+																		+i('star')
+																		| 5 347)
+
+												+e.table-col._amount
+													+e.table-amount
+														+e.table-amount-col 150 000 руб.
+														+e.table-amount-col 39 ставок
+													+e.table-actions
+														+e.table-actions-btn.is-disabled 151 000
+														+e.BUTTON.table-actions-btn Поднять
+
+												+e.table-col._leader
+													+e.table-leader He***off
+
+												+e.table-col._time
+													+e.table-time
+														+e.SPAN.table-time-count 3 дня
+														+e.SPAN.table-time-count 22 ч
+														+e.SPAN.table-time-count 30 м
+
+												+e.BUTTON.table-cancel-btn: +i('close')
+											-i++
+
+					//end bets
+
+					//begin recent
+					+b.SECTION.recent
+						+e.H2.title.title._md Вы смотрели
+						+e.row.row
+							-i = 0
+							while i < 3
+								+productItem('vertical', i + 1, 'col')
+								-i++
+					//end recent
+
+
+		include components/partners

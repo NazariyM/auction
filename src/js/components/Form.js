@@ -63,18 +63,17 @@ class RangeSlider {
       to: this.$defaultTo,
       step: this.$step,
       onStart: (data) => {
-        if (!this.defaultRange) {
-          this.$resultFrom.text(data.from_pretty);
-          this.$resultTo.text(data.to_pretty);
-        }
+        if (!this.defaultRange) this.enableCount(data);
       },
       onChange: (data) => {
-        if (!this.defaultRange) {
-          this.$resultFrom.text(data.from_pretty);
-          this.$resultTo.text(data.to_pretty);
-        }
+        if (!this.defaultRange) this.enableCount(data);
       }
     });
+  }
+
+  enableCount(data) {
+    this.$resultFrom.text(data.from_pretty);
+    this.$resultTo.text(data.to_pretty);
   }
 }
 

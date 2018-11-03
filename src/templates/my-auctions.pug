@@ -1,0 +1,78 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Мои аукционы'
+
+block content
+
+	//begin main
+	main.main
+
+		include components/screen
+
+		+b.page
+			+e.head-container.container
+				+breadcrumbs('Главная', 'Мои аукционы')
+				+b.H1.title.title._md Мои аукционы
+			+e.container.container
+				+e.ASIDE.side
+					+e.side-block
+						+b.menu
+							+e.block
+								+e.A.block-item(href='#!')
+									+i('user')
+									span Мой профиль
+								+e.A.block-item(href='#!')
+									+i('beg')
+									span Мои лоты
+								+e.A.block-item(href='#!')
+									+i('cloud-2')
+									span Сообщения
+								+e.A.block-item(href='#!')
+									+i('ring')
+									span Уведомления
+								+e.A.block-item(href='#!')
+									+i('gear')
+									span Настройки
+
+							+e.UL.list.list
+								-
+									menuList = [
+									'Безопасная сделка',
+									'Доставка',
+									'Условия оплаты',
+									'Частые вопросы',
+									'Реклама',
+									'Полезные ссылки',
+									'Служба поддержки'
+									]
+
+								for text in menuList
+									li: a(href='#!')= text
+
+				+e.content
+					//begin lots
+					+b.SECTION.lots._default
+						+e.heading
+							+e.H2.title.title._sm Мои лоты
+							+b.A.add-btn.lots__add-btn(href='#!')
+								+e.icon: +i('beg')
+								+e.SPAN.text Добавить новый лот
+
+						+b.tabs.js-tabs.is-anim.lots__block
+							+e.nav.js-tabs-nav
+								+e.BUTTON.nav-btn.is-active Активные
+								+e.BUTTON.nav-btn Завершенные
+								+e.BUTTON.nav-btn Отклоненные
+
+							.js-tabs-for
+								div
+									+e.block
+										+productItem('horizontal-simple', 1, '_horiz _simple block')
+										+productItem('horizontal-simple', 2, '_horiz _simple block')
+								div
+									+e.block
+										+productItem('horizontal-simple', 3, '_horiz _simple block')
+										+productItem('horizontal-simple', 4, '_horiz _simple block')
+
+		include components/partners
