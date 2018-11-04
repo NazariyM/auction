@@ -81,8 +81,25 @@ $('.js-range-slider-default').each((i, el) => new RangeSlider(el, true));
 $('.js-range-slider').each((i, el) => new RangeSlider(el));
 
 // select
-const $select = $('.js-select');
-$select.select2({
-  minimumResultsForSearch: -1,
-  width: '218px'
-});
+class Select {
+  constructor(el) {
+    this.$select = $(el);
+
+    if (this.$select.length) this.init();
+  }
+
+  init() {
+    this.initSelect();
+  }
+
+  initSelect() {
+    this.$select.select2({
+      minimumResultsForSearch: -1,
+      width: '100%',
+      placeholder: this.$select.data('placeholder')
+    });
+  }
+}
+
+$('.js-select').each((i, el) => new Select(el));
+

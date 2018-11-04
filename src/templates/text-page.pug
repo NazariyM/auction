@@ -124,15 +124,43 @@ block content
 								+e.item-content
 									+i('paint', 'info__item-icon')
 									+e.H5.item-title.title._xs Живопись
-									+e.P вид изобразительного искусства, связанный с передачей...
+									+b.P.js-dot вид изобразительного искусства, связанный с передачей...
 							+e.item._blue
 								+e.item-img-wrap
 									+e.IMG(src='img/content/info/info-block_2.png' alt='image')
 								+e.item-content
 									+i('pen', 'info__item-icon')
 									+e.H5.item-title.title._xs._white Графика
-									+e.P вид изобразительного искусства, связанный с передачей...
-
+									+b.P.js-dot вид изобразительного искусства, связанный с передачей...
 					//end info
+						
+					//begin contact-block
+					+b.SECTION.contact-block
+						+e.heading
+							+e.H3.title.title._sm Не нашли ответа?
+							+e.P.sub-title Свяжитесь с нами
+						+e.FORM.form(action='#!' method='POST')
+							+e.H4.form-title.title._xs Форма обратной связи для вопросов
+							+e.BUTTON.form-close: +i('close')
+							+e.form-row
+								+b.form-field.contact-block__form-field
+									+b.SELECT.js-select(data-placeholder='Выберите тему')
+										option
+										option Доставка
+										option Покупка
+										option Сотрудничество
+
+								+b.form-field.contact-block__form-field
+									+e.INPUT.input(type='text' name='name' placeholder='Ваше имя*' required)
+								+b.form-field.contact-block__form-field
+									+e.INPUT.input(type='email' name='email' placeholder='Ваш e-mail*' required)
+
+							+b.form-field.contact-block__form-field._message
+								+e.TEXTAREA.textarea(placeholder='Оставьте свой комментарий')
+
+							+e.form-actions
+								+e.BUTTON.form-actions-btn.btn._black._sm Я не робот
+								+e.BUTTON.form-actions-btn.btn._purple._sm(type='submit') Отправить
+					//end contact-block
 
 		include components/partners

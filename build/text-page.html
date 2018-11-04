@@ -222,7 +222,7 @@
                       <use xlink:href="img/sprite.svg#icon-paint"></use>
                     </svg>
                     <h5 class="info__item-title title title_xs">Живопись</h5>
-                    <p>вид изобразительного искусства, связанный с передачей...</p>
+                    <p class="js-dot">вид изобразительного искусства, связанный с передачей...</p>
                   </div>
                 </div>
                 <div class="info__item info__item_blue">
@@ -231,12 +231,37 @@
                       <use xlink:href="img/sprite.svg#icon-pen"></use>
                     </svg>
                     <h5 class="info__item-title title title_xs title_white">Графика</h5>
-                    <p>вид изобразительного искусства, связанный с передачей...</p>
+                    <p class="js-dot">вид изобразительного искусства, связанный с передачей...</p>
                   </div>
                 </div>
               </div>
             </section>
             <!--end info-->
+            <!--begin contact-block-->
+            <section class="contact-block">
+              <div class="contact-block__heading">
+                <h3 class="contact-block__title title title_sm">Не нашли ответа?</h3>
+                <p class="contact-block__sub-title">Свяжитесь с нами</p>
+              </div>
+              <form class="contact-block__form" action="#!" method="POST">
+                <h4 class="contact-block__form-title title title_xs">Форма обратной связи для вопросов</h4><button class="contact-block__form-close"><svg class="icon-close ">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                  </svg></button>
+                <div class="contact-block__form-row">
+                  <div class="form-field contact-block__form-field"><select class="js-select" data-placeholder="Выберите тему">
+                      <option></option>
+                      <option>Доставка</option>
+                      <option>Покупка</option>
+                      <option>Сотрудничество</option>
+                    </select></div>
+                  <div class="form-field contact-block__form-field"><input class="form-field__input" type="text" name="name" placeholder="Ваше имя*" required="required" /></div>
+                  <div class="form-field contact-block__form-field"><input class="form-field__input" type="email" name="email" placeholder="Ваш e-mail*" required="required" /></div>
+                </div>
+                <div class="form-field contact-block__form-field contact-block__form-field_message"><textarea class="form-field__textarea" placeholder="Оставьте свой комментарий"></textarea></div>
+                <div class="contact-block__form-actions"><button class="contact-block__form-actions-btn btn btn_black btn_sm">Я не робот</button><button class="contact-block__form-actions-btn btn btn_purple btn_sm" type="submit">Отправить</button></div>
+              </form>
+            </section>
+            <!--end contact-block-->
           </div>
         </div>
       </div>
@@ -329,8 +354,8 @@
               </div>
               <div class="subscribe footer__subscribe">
                 <form class="subscribe__form" action="#!" method="POST">
-                  <div class="form-field subscribe__form-field"><input class="form-field__input" type="email" name="" placeholder="E-mail" required="required" /></div>
-                  <div class="form-field subscribe__form-field"><button class="subscribe__form-submit-btn" type="submit">Подписаться</button></div>
+                  <div class="form-field subscribe__form-field"><input class="form-field__input" type="email" name="email" placeholder="E-mail" required="required" /></div>
+                  <div class="form-field subscribe__form-field"><button class="subscribe__form-submit-btn btn btn_black" type="submit">Подписаться</button></div>
                 </form>
               </div>
             </div>

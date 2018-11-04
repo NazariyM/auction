@@ -45,6 +45,7 @@
 
 // *** begin info *** //
 .info
+   padding: 30px 0
    &__block
       display: flex
       align-items: center
@@ -90,7 +91,7 @@
          text-align: left
       &-content
          position: relative
-         flex: 0 0 180px
+         flex: 0 0 190px
          margin-left: 20px
          padding-left: 40px
       &-icon
@@ -103,4 +104,50 @@
          
       &-title
          margin-bottom: 10px
+      p
+         max-height: 54px
 // end info //
+
+// *** begin contact-block *** //
+.contact-block
+   padding: 50px 0
+   &__heading
+      margin-bottom: 30px
+   &__title
+      margin-bottom: 15px
+   &__sub-title
+      font-size: 21px
+   &__form
+      position: relative
+      padding: 20px 30px 30px
+      border: 1px solid #e2e1df
+      &-wrap
+      &-title
+         margin-bottom: 20px
+      &-close
+         position: absolute
+         top: 15px
+         right: 15px
+         &:hover
+            svg
+               fill: $color7
+         svg
+            font-size: 12px
+            transition: .3s ease-in-out
+      &-row
+         display: flex
+         margin: 0 -6px 12px
+      &-field
+         flex: 0 1 33.33333%
+         width: 33.33333%
+         padding: 0 6px
+         &_message
+            flex: 1 1 auto
+            width: 100%
+            padding: 0
+            margin-bottom: 12px
+      &-actions
+         &-btn
+            &:not(:last-child)
+               margin-right: 11px
+// end contact-block //

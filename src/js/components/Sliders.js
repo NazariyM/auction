@@ -14,7 +14,7 @@ class Slider {
     this.dotsClass = opts.dotsClass || 'slider-dots';
     this.appendArrows = opts.appendArrows;
     this.appendDots = opts.appendDots;
-    this.speed = opts.speed || 800;
+    this.speed = opts.speed || 600;
     this.ease = opts.ease;
     this.counter = opts.counter || false;
     this.onInit = opts.onInit || false;

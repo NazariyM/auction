@@ -7,34 +7,33 @@
       height: 46px
       padding: 0 16px
       +f('pt400', 15)
+      line-height: 1.2
       background-color: $white
       border-radius: 0
-      border: 2px solid #e4e3e1
+      border: 1px solid #e2e1df
       +placeholder-color($color7)
       color: $color1
       transition: .3s ease-in-out
       +xs
          padding: 0 20px 0 37px
       &:focus
-         border-color: $color1
+         border-color: $color4
    &__textarea
       $parent: &
       display: block
       width: 100%
-      height: 150px
-      padding: 18px 20px 18px 55px
-      border: 2px solid $color4
-      border-radius: 30px
+      height: 156px
+      padding: 16px
+      border: 1px solid #e2e1df
       background-color: $white
-      +f('pn400', 20, 28)
+      +f('pt400', 15)
+      line-height: 1.2
       transition: .3s ease-in-out
-      +placeholder-color($color5)
+      +placeholder-color($color7)
       color: $color1
       resize: none
-      +xs
-         padding: 18px 20px 18px 37px
       &:focus
-         border-color: $color1
+         border-color: $color4
 
 .check-box
    $parent: &
@@ -81,17 +80,17 @@
          
 // *** begin custom select *** //
 .select2-container .select2-selection--single
-   height: 45px
+   height: 46px
    border: 1px solid #e2e1df
    border-radius: 0
    
 .select2-container--default .select2-selection--single .select2-selection__rendered
    padding: 0 15px
-   line-height: 45px
+   line-height: 46px
    color: $color1
    
 .select2-container--default .select2-selection--single .select2-selection__arrow
-   height: 45px
+   height: 46px
    width: 40px
 .select2-container--classic .select2-selection--single .select2-selection__arrow b, .select2-container--default .select2-selection--single .select2-selection__arrow b
    top: calc(50% - 2px)

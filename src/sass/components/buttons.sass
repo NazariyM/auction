@@ -1,3 +1,23 @@
+// *** begin button *** //
+.btn
+   display: inline-flex
+   justify-content: center
+   padding: 13px 15px
+   outline: 0
+   +f('pt400', 15)
+   line-height: 1.2
+   text-align: center
+   &_black
+      color: $color1
+      border: 1px solid currentColor
+   &_purple
+      color: $color4
+      border: 1px solid currentColor
+   &_sm
+      min-width: 135px
+
+// end button //
+
 // *** begin link *** //
 .link
    $parent: &
