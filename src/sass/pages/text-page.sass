@@ -1,0 +1,106 @@
+// *** begin article *** //
+.article
+   margin-bottom: 50px
+   &__title
+      margin-bottom: 40px
+   &__text
+      margin-bottom: 50px
+      p
+         &:not(:last-child)
+            margin-bottom: 20px
+   &__sub-title
+      margin-bottom: 20px
+   &__row
+      display: flex
+      margin: 0 -15px 50px
+   &__list
+      flex: 0 1 33.33333%
+      width: 33.33333%
+      padding: 0 15px
+      
+   &__table
+      border: 1px solid #e2e1df
+      thead
+         border: 1px solid $color4
+         color: $color4
+         +boldFont
+         tr
+            border-bottom: 1px solid $color4
+         td
+            &:not(:last-child)
+               border-right: 1px solid $color4
+               
+      tr
+         border-bottom: 1px solid #e2e1df
+   
+      td
+         padding: 13px 20px
+         &:not(:last-child)
+            border-right: 1px solid #e2e1df
+      &-wrap
+      &-title
+         margin-bottom: 30px
+         
+// end article //
+
+// *** begin info *** //
+.info
+   &__block
+      display: flex
+      align-items: center
+      min-height: 145px
+      margin-bottom: 20px
+      color: $white
+      background-color: #6600cc
+      &-icon-wrap
+         +flexCenter
+         align-self: stretch
+         flex: 0 0 145px
+         width: 145px
+         background-color: #5c00b8
+      &-icon
+         margin-left: 10px
+      &-text
+         flex: 1 1 auto
+         padding: 20px 60px
+      &-title
+         margin-bottom: 20px
+         +boldFont
+         font-size: 38px
+      p
+         font-size: 21px
+   
+   &__row
+      display: flex
+      
+   &__item
+      $parent: &
+      display: flex
+      align-items: center
+      min-height: 145px
+      &_yellow
+         background-color: #ffdf45
+      &_blue
+         background-color: #7ae4e6
+         color: $white
+      &-img-wrap
+         align-self: flex-end
+         flex: 0 0 150px
+         width: 150px
+         text-align: left
+      &-content
+         position: relative
+         flex: 0 0 180px
+         margin-left: 20px
+         padding-left: 40px
+      &-icon
+         position: absolute
+         top: 0
+         left: 0
+         font-size: 28px
+         #{$parent}_blue &
+            fill: $white
+         
+      &-title
+         margin-bottom: 10px
+// end info //

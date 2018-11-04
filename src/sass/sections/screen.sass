@@ -4,6 +4,11 @@
    &_full
       background-color: #edeff1
       height: 492px
+      overflow: hidden
+   &_full-2
+      height: 494px
+      background-color: #aff1f2
+      overflow: hidden
    &_small
       padding: 30px 0
       background-color: #ffe987
@@ -11,17 +16,24 @@
       position: relative
       max-width: 1920px
       margin: 0 auto
+      height: 100%
+      
+   &__top
+      padding: 40px 0
+      background: #fff
    &__container
       position: static
       display: flex
+      align-items: center
+      height: 100%
       #{$parent}_small &
          justify-content: space-between
          padding-right: 60px
    &__content
       flex: 0 0 500px
-      padding: 50px 0 65px
-      #{$parent}_full &
-         position: relative
+      padding: 20px 0
+      #{$parent}_full &,
+      #{$parent}_full-2 &
          z-index: 1
    &__logo
       display: block
@@ -51,8 +63,18 @@
       position: absolute
       top: 0
       right: 0
-      flex: 0 0 907px
-      +r(1599)
-         position: static
+      height: 100%
+      #{$parent}_full &
+         flex: 0 0 907px
+         width: 907px
+         +r(1599)
+            position: static
+      #{$parent}_full-2 &
+         flex: 0 0 758px
+         width: 758px
+         
+      img
+         max-height: 100%
+         +cover-img
    &__text-content
       flex: 0 0 410px

@@ -1,0 +1,138 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Текстовая страница'
+
+block content
+
+	//begin main
+	main.main
+
+		include components/screen
+
+		.container
+			+breadcrumbs('Главная', 'Текстовая страница')(class='_full')
+
+		//begin screen
+		+b.SECTION.screen._full-2
+			+e.inner
+				+e.container.container
+					+e.content
+						+logo('white-purple', 'screen__logo')(href='#!')
+						+e.H2.title.title._lg._white Доступное искусство со всего мира
+						+e.P.sub-title Теперь покупать стало проще и безопаснее
+						+e.A.link.link(href='#!') Подробнее
+							.link__icon.icon-arrow-r-black
+					+e.img-wrap
+						+e.IMG(src='img/bg/screen_bg-2.jpg' alt='image')
+			//end screen
+
+		+b.page
+			+e.container.container
+				+e.ASIDE.side
+					+e.side-block
+						+e.H3.side-title.title._xs Блок Ваших
+							br
+							| вопросов
+						+e.UL.list.list._has-icon
+							-
+								faqList = [
+								'Возврат',
+								'Акции',
+								'Оплата',
+								'Доставка',
+								'Акции',
+								'Оплата',
+								'Доставка'
+								]
+							for text in faqList
+								li: a(href='#!')
+									+i('expand-button')
+									= text
+
+					+e.side-block
+						+e.H3.side-title.title._xs Дополнительные материалы
+						+e.P.side-descr Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности. Картина детально передает состояние природы, увиденное художником на острове Городомля. Показан не глухой дремучий лес, а солнечный свет, пробивающийся сквозь колонны высоких деревьев. Чувствуется глубина оврагов, мощь вековых деревьев, солнечный свет как бы робко заглядывает в этот дремучий лес. Чувствуют приближение утра резвящиеся медвежата.
+
+					+e.side-block
+						+e.H3.side-title.title._xs Дополнительные материалы
+						+e.P.side-descr Картина пользуется популярностью благодаря композиционному включению в пейзажное полотно элементов анималистической сюжетности. Картина детально передает состояние природы, увиденное художником на острове Городомля. Показан не глухой дремучий лес, а солнечный свет, пробивающийся сквозь колонны высоких деревьев. Чувствуется глубина оврагов, мощь вековых деревьев, солнечный свет как бы робко заглядывает в этот дремучий лес. Чувствуют приближение утра резвящиеся медвежата.
+						+b.A.link(href='#!') Подробнее
+							.link__icon.icon-arrow-r-black
+
+					+b.share._md(href='#!' style='background-image: url(img/bg/share_bg.jpg)')
+						+e.H6.title.title._xs Акция
+						+e.P вид изобразительного искусства, связанный с передачей...
+
+				+e.content
+					//begin article
+					+b.ARTICLE.article
+						+e.container.container
+							+e.H1.title.title._md Заголовок статьи
+							+e.text
+								p Искусство (наряду с наукой) — один из способов познания, как в естественнонаучной, так и в религиозной картине восприятия мира. Понятие искусства крайне широко — оно может проявляться как чрезвычайно развитое мастерство в какой-то определённой области. Долгое время искусством считался вид культурной деятельности, удовлетворяющий любовь человека к прекрасному. Вместе с эволюцией социальных эстетических норм и оценок искусством получила право называться любая деятельность, направленная на создание эстетически-выразительных форм.
+								p В масштабах всего общества, искусство — особый способ познания и отражения действительности, одна из форм художественной деятельности общественного сознания и часть духовной культуры как человека, так и всего человечества, многообразный результат творческой деятельности всех поколений. В науке искусством называют как собственно творческую художественную деятельность, так и её результат — художественное произведение.
+
+							+e.H4.sub-title.title._xs Подзаголовок статьи
+							+e.row
+								-i = 0
+								while i < 3
+									+e.UL.list
+										li 1. Первый пункт этого раздела
+										li 2. Первый пункт этого раздела
+										li 3. Первый пункт этого раздела
+										li 4. Первый пункт этого раздела
+										li 5. Первый пункт этого раздела
+									-i++
+
+							+e.table-wrap
+								+e.H3.table-title.title._sm Заголовок таблицы
+								+e.TABLE.table
+									+e.THEAD
+										+e.TR
+											+e.TD Head 1
+											+e.TD Head 2
+											+e.TD Head 3
+									+e.TBODY
+										+e.TR
+											+e.TD Cell 1
+											+e.TD Cell 2
+											+e.TD Cell 3
+										+e.TR
+											+e.TD Cell 4
+											+e.TD Cell 5
+											+e.TD Cell 6
+										+e.TR
+											+e.TD Cell 7
+											+e.TD Cell 8
+											+e.TD Cell 9
+					//end article
+
+					//begin info
+					+b.SECTION.info
+						+e.block
+							+e.block-icon-wrap
+								+e.block-icon.icon-darts
+							+e.block-text
+								+e.H2.block-title.title._white Блок с очень важной информацией
+								+e.P Теперь покупать стало проще и безопаснее
+
+						+e.row
+							+e.item._yellow
+								+e.item-img-wrap
+									+e.IMG(src='img/content/info/info-block_1.png' alt='image')
+								+e.item-content
+									+i('paint', 'info__item-icon')
+									+e.H5.item-title.title._xs Живопись
+									+e.P вид изобразительного искусства, связанный с передачей...
+							+e.item._blue
+								+e.item-img-wrap
+									+e.IMG(src='img/content/info/info-block_2.png' alt='image')
+								+e.item-content
+									+i('pen', 'info__item-icon')
+									+e.H5.item-title.title._xs._white Графика
+									+e.P вид изобразительного искусства, связанный с передачей...
+
+					//end info
+
+		include components/partners
