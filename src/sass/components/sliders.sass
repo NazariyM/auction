@@ -32,7 +32,7 @@
          
 .slider-btn
    position: absolute
-   top: calc(50% - 6px)
+   top: calc(50% - 2px)
    transition: .3s ease-in-out
    &::after
       position: absolute
@@ -43,6 +43,9 @@
       background-color: transparent
       transition: .3s ease-in-out
       content: ''
+      +md
+         height: 70px
+         width: 70px
    &:hover
       &::after
          background-color: #ffe469
@@ -57,3 +60,51 @@
    .icon
       position: relative
       z-index: 1
+      +sm
+         width: 32px
+      &.icon-sld-arr-r
+         +sm
+            background-position: -84px -22px
+
+// *** begin view *** //
+.view
+   +sm
+      display: flex
+      flex-direction: column
+   &__nav
+      float: left
+      width: 103px
+      +sm
+         order: 1
+         float: none
+         width: 100%
+      &-item
+         margin-top: -2px
+         cursor: pointer
+         height: 104px !important
+         +sm
+            position: relative
+            height: auto!important
+            padding-top: 6.3%
+         img
+            +cover-img
+            +sm
+               +coverdiv
+            
+   &__block
+      float: left
+      width: calc(100% - 103px)
+      padding-left: 7px
+      +sm
+         float: none
+         width: 100%
+         padding-left: 0
+      &-item
+         width: 510px
+         height: 510px
+         +sm
+            height: auto
+         img
+            +cover-img
+   
+// end view //

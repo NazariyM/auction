@@ -27,7 +27,7 @@ block content
 						+e.IMG(src='img/bg/screen_bg-2.jpg' alt='image')
 			//end screen
 
-		+b.page
+		+b.page._text
 			+e.container.container
 				+e.ASIDE.side
 					+e.side-block
@@ -87,25 +87,26 @@ block content
 
 							+e.table-wrap
 								+e.H3.table-title.title._sm Заголовок таблицы
-								+e.TABLE.table
-									+e.THEAD
-										+e.TR
-											+e.TD Head 1
-											+e.TD Head 2
-											+e.TD Head 3
-									+e.TBODY
-										+e.TR
-											+e.TD Cell 1
-											+e.TD Cell 2
-											+e.TD Cell 3
-										+e.TR
-											+e.TD Cell 4
-											+e.TD Cell 5
-											+e.TD Cell 6
-										+e.TR
-											+e.TD Cell 7
-											+e.TD Cell 8
-											+e.TD Cell 9
+								+e.table-inner
+									+e.TABLE.table
+										+e.THEAD
+											+e.TR
+												+e.TD Head 1
+												+e.TD Head 2
+												+e.TD Head 3
+										+e.TBODY
+											+e.TR
+												+e.TD Cell 1
+												+e.TD Cell 2
+												+e.TD Cell 3
+											+e.TR
+												+e.TD Cell 4
+												+e.TD Cell 5
+												+e.TD Cell 6
+											+e.TR
+												+e.TD Cell 7
+												+e.TD Cell 8
+												+e.TD Cell 9
 					//end article
 
 					//begin info
@@ -141,7 +142,7 @@ block content
 							+e.P.sub-title Свяжитесь с нами
 						+e.FORM.form(action='#!' method='POST')
 							+e.H4.form-title.title._xs Форма обратной связи для вопросов
-							+e.BUTTON.form-close: +i('close')
+							+e.BUTTON.form-close(type='button'): +i('close')
 							+e.form-row
 								+b.form-field.contact-block__form-field
 									+b.SELECT.js-select(data-placeholder='Выберите тему')
@@ -159,7 +160,7 @@ block content
 								+e.TEXTAREA.textarea(placeholder='Оставьте свой комментарий')
 
 							+e.form-actions
-								+e.BUTTON.form-actions-btn.btn._black._sm Я не робот
+								+e.BUTTON.form-actions-btn.btn._black._sm(type='button') Я не робот
 								+e.BUTTON.form-actions-btn.btn._purple._sm(type='submit') Отправить
 					//end contact-block
 

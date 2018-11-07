@@ -68,7 +68,7 @@ const infoBlockSld = new Slider({
     {
       breakpoint: 767,
       settings: {
-        speed: 800
+        slidesToShow: 1
       }
     }
   ]
@@ -82,11 +82,64 @@ const partnersSld = new Slider({
   infinite: true,
   responsive: [
     {
+      breakpoint: 1250,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
       breakpoint: 767,
       settings: {
-        speed: 800
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 424,
+      settings: {
+        slidesToShow: 1
       }
     }
   ]
 });
 
+class View {
+  constructor(el) {
+    this.$container = $(el);
+    this.$nav = $(this.$container.children()[0]);
+    this.$block = $(this.$container.children()[1]);
+
+    if (this.$container.length) this.init();
+  }
+
+  init() {
+    this.createSliders();
+  }
+
+  createSliders() {
+    this.$nav.slick({
+      asNavFor: this.$block,
+      speed: 400,
+      slidesToShow: 5,
+      rows: 0,
+      arrows: false,
+      focusOnSelect: true,
+      vertical: true,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 4,
+            vertical: false
+          }
+        }
+      ]
+    });
+
+    this.$block.slick({
+      asNavFor: this.$nav,
+      rows: 0,
+      arrows: false,
+      speed: 400
+    });
+  }
+}
+
+$('.view').each((i, el) => new View(el));

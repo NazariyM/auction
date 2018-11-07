@@ -2,7 +2,7 @@
 .btn
    display: inline-flex
    justify-content: center
-   padding: 13px 15px
+   padding: 13px 10px
    outline: 0
    +f('pt400', 15)
    line-height: 1.2
@@ -10,11 +10,39 @@
    &_black
       color: $color1
       border: 1px solid currentColor
+      transition: .3s ease-in-out
+      &:hover
+         color: $color4
    &_purple
       color: $color4
       border: 1px solid currentColor
    &_sm
       min-width: 135px
+   &_md
+      min-width: 174px
+   &_gray
+      color: $color7
+      border: 1px solid #e2e1df
+      
+   &.is-disabled
+      opacity: .3
+      pointer-events: none
+   &_has-icon
+      position: relative
+      padding: 13px 5px 13px 45px
+      svg
+         fill: $color7
+      .icon-hammer
+         font-size: 22px
+   &__icon
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 45px
+      flex: 0 0 45px
+      +flexCenter
+      border-right: 1px solid #e2e1df
 
 // end button //
 
@@ -86,11 +114,15 @@
       +f('pt700', 21)
       color: $color9
       transition: .3s ease-in-out
+      +sm
+         left: calc(100% + 20px)
       &:hover
          color: $color1
       #{$parent}_yellow &
          left: calc(100% + 55px)
          color: $color7
+         +sm
+            left: calc(100% + 20px)
          &:hover
             color: $color1
 // end help-btn //
@@ -108,6 +140,9 @@
       height: 70px
       border-right: 1px solid #393f4d
       transition: .3s ease-in-out
+      +sm
+         width: 50px
+         height: 50px
       #{$parent}:hover &
          background-color: #ffe469
    &__text

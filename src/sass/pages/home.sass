@@ -2,15 +2,41 @@
 .info-block
    &_home
       margin: -93px 0 73px
+      +r(1023)
+         margin: 0
+         padding: 40px 0
    &__slider
       padding: 0 170px
+      +md
+         max-width: 830px
+         margin: 0 auto
+         padding: 0 90px
+      +r(1023)
+         padding: 0 48px
+         max-width: 738px
+      +sm
+         max-width: 290px
+         padding: 0 30px
       .slider-btn
+         top: calc(50% + 16px)
+         
          &::after
             width: 120px
             height: 120px
+            +r(1023)
+               display: none
+         &_prev
+            +r(1023)
+               left: -8px
+         &_next
+            +r(1023)
+               right: -8px
    &__item
       $parent: &
       margin: 0 10px
+      +md
+         margin: 0 2px
+      +sm
       &_1
          background-color: #7ae4e6
       &_2
@@ -44,8 +70,7 @@
          padding: 20px 14px 20px 27px
          height: 100%
          p
-            // TODO: enable dots.js
-            height: 52px
+            height: 55px
          &-img
             position: absolute
             top: -40px
@@ -61,7 +86,7 @@
          &-text
             position: relative
             z-index: 1
-            margin-bottom: 38px
+            margin-bottom: 35px
          &-title
             margin-bottom: 3px
             font-size: 25px
@@ -74,24 +99,48 @@
       right: 0
       bottom: 0
       z-index: 1
+      +md
+         right: 20px
+      +r(1023)
+         right: 10px
+      +sm
+         right: 3px
+         bottom: -5px
+         transform: scale(.7)
 // end info-block //
 
 // *** begin benefits *** //
 .benefits
-   padding: 197px 0 40px
+   padding: 197px 0 80px
+   +sm
+      padding: 0 0 90px
    &__container
       max-width: 974px
       display: flex
       justify-content: center
+      +md
+         padding: 0
+      +sm
+         flex-direction: column
    &__help-btn
       position: absolute
-      left: 0
+      left: -100px
       bottom: 0
+      +md
+         left: 15px
+      +sm
+         bottom: 0
+         top: calc(100% + 25px)
+         left: 25px
    &__block
       &:not(:first-of-type)
          margin-top: 194px
+         +sm
+            margin-top: 0
       &:nth-of-type(3)
          margin-left: auto
+         +sm
+            margin-left: 0
    &__item
       position: relative
       display: flex
@@ -99,8 +148,12 @@
       justify-content: flex-start
       width: 194px
       height: 194px
-      padding: 30px
+      padding: 28px
       +cover
+      +sm
+         width: 100%
+         height: auto
+         padding: 35px 25px
       &_1
          background-color: #aff1f2
       &_2
@@ -118,10 +171,19 @@
       &-logo
          flex: 0 0 198px
          width: 198px
-         margin-left: -150px
+         margin: -8px 0 0 -130px
+         +md
+            margin: -8px 0 0
       &-bg
          +coverdiv
          opacity: .15
+      &-img
+         margin-left: -18px
+         flex-shrink: 0
+         +sm
+            margin-left: -15px
+         +xs
+            margin-left: -45px
       p
          position: relative
          z-index: 1
@@ -131,13 +193,19 @@
 
 // *** begin partners *** //
 .partners
-   padding: 50px 0
+   padding: 50px 0 40px
+   +sm
+      padding: 20px 0 10px
    &__container
       max-width: 1218px
    &__title
-      margin-bottom: 40px
+      margin: 0 0 40px -18px
+      +md
+         margin: 0 0 40px
    &__slider
       padding: 0 124px
+      +md
+         padding: 0 74px
    &__item
       transition: .3s ease-in-out
       &:hover
@@ -145,4 +213,6 @@
       &-inner
          +flexCenter
          height: 194px
+         +md
+            height: 148px
 // end partners //

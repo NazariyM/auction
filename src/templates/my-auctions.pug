@@ -13,7 +13,7 @@ block content
 		+b.page
 			+e.head-container.container
 				+breadcrumbs('Главная', 'Мои аукционы')
-				+b.H1.title.title._md Мои аукционы
+				+e.H1.title._auctions.title._md Мои аукционы
 			+e.container.container
 				+e.ASIDE.side
 					+e.side-block
@@ -74,5 +74,11 @@ block content
 									+e.block
 										+productItem('horizontal-simple', 3, '_horiz _simple block')
 										+productItem('horizontal-simple', 4, '_horiz _simple block')
+								div
+									+e.block
+										+productItem('horizontal-simple', 5, '_horiz _simple block')
+										+productItem('horizontal-simple', 6, '_horiz _simple block')
+										+productItem('horizontal-simple', 1, '_horiz _simple block')
+
 
 		include components/partners

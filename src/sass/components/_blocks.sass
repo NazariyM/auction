@@ -2,6 +2,7 @@
 .logo
    flex: 0 0 198px
    width: 198px
+   height: 36px
    &_long
       svg
          pointer-events: none
@@ -29,7 +30,8 @@
    a
       display: flex
       align-items: center
-      margin-left: 17px
+      &:not(:last-child)
+         margin-right: 23px
       &:hover
          svg
             fill: $color1
@@ -52,13 +54,10 @@
          flex: 1 1 50%
          width: 50%
          padding: 0 1px
-         input
-            border: 2px solid $color1
-            
+         
       &-submit-btn
          width: 100%
-         padding: 11px 15px 12px
-         border: 2px solid $color1
+         padding: 13px 15px
 // end subscribe //
 
 // *** begin dropdown *** //
@@ -74,8 +73,11 @@
          pointer-events: auto
          opacity: 1
          transform: scaleY(1)
-      &:hover #{$parent}__icon
-         animation: smallMoveDown .5s ease
+      &:hover
+         #{$parent}__icon
+            fill: $color1
+         #{$parent}__icon-arr
+            animation: smallMoveDown .5s ease
       > li > a
          position: relative
          z-index: 1
@@ -98,18 +100,22 @@
          pointer-events: none
          position: absolute
          top: -15px
-         left: -33px
+         left: -20px
          right: 0
          transform-origin: 0 0
          opacity: 0
          transform: scaleY(0)
          display: table
-         padding: 40px 15px 10px 33px
+         padding: 42px 15px 10px 44px
          min-width: 130px
          background-color: #f6f6f6
          transition: .3s ease-in-out
    
    &__icon
+      margin-right: 5px
+      font-size: 28px
+      transition: .3s ease-in-out
+   &__icon-arr
       margin: 3px 0 0 6px
       font-size: 9px
 // end dropdown //
@@ -119,6 +125,8 @@
       margin-bottom: 30px
    &_full
       padding: 50px 0
+      +md
+         padding: 25px 0
    ul
       font-size: 0
       li
@@ -126,11 +134,11 @@
          vertical-align: middle
          line-height: 22px
          &:not(:last-child)
-            margin-right: 10px
+            margin-right: 3px
          &:not(:last-child)::after
             display: inline-block
             vertical-align: middle
-            margin-left: 8px
+            margin-left: 5px
             pointer-events: none
             font-size: 15px
             content: '/'
@@ -150,7 +158,9 @@
    text-align: center
    &_default
       margin: 50px 0 0
-      
+      +sm
+         margin: 30px 0 0
+   
    ul
       margin-bottom: 13px
       font-size: 0
@@ -193,20 +203,31 @@
       &-item
          display: flex
          align-items: center
+         height: 22px
          &:hover
             svg
                fill: $color1
          &:not(:last-child)
-            margin-bottom: 5px
+            margin-bottom: 11px
          svg
-            margin-right: 10px
+            margin-right: 6px
+            width: 30px
             fill: $color7
+            font-size: 20px
             transition: .3s ease-in-out
+            
+         .icon-user
+            font-size: 22px
+         .icon-ring
+            font-size: 22px
+         .icon-cloud-2
+            font-size: 17px
+   
    &__list
       padding-top: 30px
       li
          &:not(:last-child)
-            margin-bottom: 5px
+            margin-bottom: 7px!important
 // end menu //
 
 // *** begin list *** //
@@ -215,7 +236,7 @@
    color: $color7
    li
       &:not(:last-child)
-         margin-bottom: 10px
+         margin-bottom: 1px
    a
       transition: .3s ease-in-out
       
@@ -231,6 +252,9 @@
          transition: .3s ease-in-out
          
    &_has-icon
+      li
+         &:not(:last-child)
+            margin-bottom: 7px
       a
          position: relative
          display: inline-block

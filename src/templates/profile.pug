@@ -12,8 +12,8 @@ block content
 
 		+b.page
 			+e.head-container.container
-				+breadcrumbs('Главная', 'Личный профиль')
-				+b.H1.title.title._md Личный профиль
+				+breadcrumbs('Главная', 'Личный профиль')(class='page__breadcrumbs')
+				+e.H1.title.title._md Личный профиль
 			+e.container.container
 				+e.ASIDE.side
 					+e.side-block
@@ -51,7 +51,7 @@ block content
 									li: a(href='#!')= text
 
 					+b.reviews-block.page__side-block
-						+e.H4.title.title._xs Отзывы
+						+e.H4.title.title._xs.page__side-title Отзывы
 						+e.item
 							+e.item-header
 								+e.item-img-wrap

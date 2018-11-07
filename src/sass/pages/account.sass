@@ -37,32 +37,45 @@
 
 // *** begin bets *** //
 .bets
-   margin-bottom: 90px
+   margin: -10px 0 90px
+   +sm
+      margin: -10px 0 40px
    &__heading
-      margin-bottom: 30px
+      margin-bottom: 27px
    &__title
-      margin-bottom: 20px
+      margin-bottom: 13px
    &__total-title
       color: $color7
       font-size: 21px
+      +xs
+         font-size: 17px
       span
          color: $color1
    &__tabs
+      .js-tabs-for
+         +sm
+            overflow-x: auto
    &__table
+      min-width: 738px
       &-row
+         position: relative
          display: flex
          align-items: center
          padding: 3px 0
          border-bottom: 1px solid #e2e1df
+         
          &_title
-            padding-bottom: 10px
+            padding-bottom: 5px
             +boldFont
             color: $color7
       &-col
          &_content
             flex: 0 1 350px
+            +r(1023)
+               flex: 0 1 370px
          
          &_amount
+            padding-top: 10px
             flex: 0 1 245px
       
          &_leader
@@ -78,6 +91,8 @@
             flex: 0 0 143px
             width: 143px
             margin-right: 28px
+            +r(1023)
+               margin-right: 15px
             img
                +cover
          &-text
@@ -86,17 +101,15 @@
             font-size: 17px
       &-amount
          display: flex
-         margin-bottom: 10px
+         margin: 0 -5px 10px
          +boldFont
          &-col
-            flex: 0 1 50%
-            width: 50%
-            padding: 0 5px
             &:not(:last-child)
                position: relative
+               padding-right: 15px
                &::after
                   position: absolute
-                  right: 5px
+                  right: 6px
                   top: 0
                   width: 2px
                   height: 16px
@@ -108,38 +121,67 @@
          display: flex
          margin: 0 -3px
          &-btn
-            flex: 0 0 88px
-            width: 88px
+            min-width: 88px
             height: 30px
             padding: 0 10px
             text-align: center
-            +f('pt500', 15, 30)
+            +f('pt400', 15, 30)
             border: 1px solid $color1
             margin: 0 3px
+            &:hover
+               border-color: $color4
             &.is-disabled
-               opacity: .5
+               opacity: .35
                pointer-events: none
       &-leader
          +boldFont
          font-size: 17px
+         +r(1023)
+            font-size: 15px
       &-time
-         display: flex
-         align-items: center
-         margin: 0 -3px
-         +boldFont
-         font-size: 17px
-         &-count
-            padding: 0 3px
-            &:not(:last-child)
-               position: relative
-               &::after
-                  display: inline
-                  margin-left: 3px
-                  content: ':'
+         +r(1023)
+            font-size: 14px
+      &-cancel-btn
+         position: absolute
+         top: calc(50% - 8px)
+         right: 30px
+         +r(1023)
+            top: 15px
+            right: 15px
+         &:hover
+            svg
+               fill: $color7
+            .bets__table-cancel-tip
+               opacity: 1
+               transform: translate3d(-50%, 0 ,0)
+         svg
+            fill: $color1
+            font-size: 16px
+            transition: .3s ease-in-out
+            
+      &-cancel-tip
+         @extend .control-panel__btn-tip
+         top: auto
+         bottom: calc(100% + 10px)
+         left: 50%
+         width: 100%
+         transform: translate3d(-50%, -15px ,0)
+         padding: 5px 10px
+         justify-content: center
+         text-align: center
+         min-height: 30px
+         +f('pt400')
+         &::before
+            top: 100%
+            left: calc(50% - 8px)
+            +arr(16, 6, #f6f6f6, b)
+            
 // end bets //
 
 // *** begin recent *** //
 .recent
    &__title
       margin-bottom: 30px
+      +sm
+         margin-bottom: 15px
 // end recent //

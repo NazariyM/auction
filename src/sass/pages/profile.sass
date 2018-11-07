@@ -1,12 +1,14 @@
 // *** begin profile *** //
 .profile
    position: relative
-   padding-bottom: 80px
+   padding-bottom: 35px
    border-bottom: 1px solid #e2e1df
    &__settings-btn
       position: absolute
       right: 0
-      top: -50px
+      top: -70px
+      +md
+         top: -56px
       svg
          font-size: 21px
          fill: $color1
@@ -15,13 +17,19 @@
             fill: $color7
    &__row
       display: flex
+      +sm
+         flex-direction: column
    &__col
       flex: 0 0 250px
       width: 250px
       text-align: center
+      +sm
+         max-width: 290px
+         flex: 0 1 auto
+         width: 100%
    &__photo
       height: 365px
-      margin-bottom: 20px
+      margin-bottom: 27px
       img
          +cover-img
    &__link
@@ -34,27 +42,43 @@
       flex-direction: column
       flex: 1 1 auto
       padding-left: 65px
+      +md
+         padding-left: 20px
+      +sm
+         padding: 45px 0 0
+   
       &-row
          display: flex
          align-items: flex-end
          justify-content: space-between
-         margin-bottom: 20px
+         margin: -7px 0 30px
+         +sm
+            position: relative
+            margin: -7px 0 15px
    &__name
       flex: 1 1 auto
       padding-right: 30px
+      +sm
+         padding-right: 0
       
    &__status
       flex: 0 0 100px
+      margin-bottom: 3px
       font-size: 17px
       color: $color7
       text-align: right
+      +sm
+         position: absolute
+         bottom: 100%
+         left: 0
    &__info
       width: 250px
+      margin-bottom: 30px
       &-row
          display: flex
          margin: 0 -10px
          &:not(:last-child)
-            margin-bottom: 10px
+            margin-bottom: 16px
          &_bold
             +boldFont
       &-col
@@ -65,23 +89,29 @@
             color: $color7
    
    &__add-btn
-      margin-top: auto
+      margin: auto 0 43px
+      +sm
+         margin: 0 auto
 
 // end profile //
 
 // *** begin lots *** //
 .lots
    &_profile
-      padding: 40px 0 0
+      padding: 35px 0 0
    &_default
    
    &__heading
       margin-bottom: 40px
+      +sm
+         margin-bottom: 25px
    &__title
       margin-bottom: 30px
+      +sm
+         margin-bottom: 20px
    &__block
       &:not(:last-child)
-         margin-bottom: 30px
+         margin-bottom: 45px
       &-title
          margin-bottom: 30px
 // end lots //
@@ -92,9 +122,11 @@
       margin-bottom: 20px
    &__item
       &:not(:last-of-type)
-         margin-bottom: 20px
+         margin-bottom: 30px
       &:last-of-type
-         margin-bottom: 35px
+         margin-bottom: 45px
+         +md
+            margin-bottom: 25px
       &-header
          display: flex
          align-items: center
@@ -145,6 +177,8 @@
    display: block
    padding: 30px
    +cover
+   +md
+      display: none
    &_md
       height: 400px
    &_sm

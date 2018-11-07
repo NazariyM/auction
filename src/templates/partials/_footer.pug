@@ -19,13 +19,13 @@
 							span Войти/Регистрация
 					+e.menu-item._has-select
 						+e.P Доставка в
-							+i('location')
-						.dropdown(onclick='')
-							ul
+						.dropdown
+							ul(onclick='')
 								li
 									a(href='#!')
+										+i('location', 'dropdown__icon')
 										span Самару
-										+i('expand-button', 'dropdown__icon')
+										+i('expand-button', 'dropdown__icon-arr')
 									ul
 										li: a(href='#!') Москву
 										li: a(href='#!') Кемерово
@@ -60,7 +60,7 @@
 						li: a(href='#!') Защита сделок
 				+e.block-col
 					+e.H4.title.title._xs Верни часть средств*
-					+e.block-row
+					+e.block-row._social
 						+b.socials.footer__socials
 							-
 								socList = [

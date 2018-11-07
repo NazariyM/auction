@@ -1,42 +1,125 @@
 .footer
    padding: 50px 0
    color: $color7
+   +sm
+      padding: 25px 0 35px
    &__container
       display: flex
    &__block
       flex: 1 1 auto
-      margin-right: 60px
+      padding-right: 58px
+      +md
+         padding-right: 0
       &-line
          display: flex
          margin-bottom: 50px
+         +r(1023)
+            flex-direction: column
+            margin-bottom: 20px
       &-row
          display: flex
          justify-content: space-between
-         
+         margin: 0 -25px
+         +md
+            margin: 0 -15px
+         +sm
+            flex-direction: column
+         &_social
+            margin: -7px 0 0
+            padding-right: 28px
+            +md
+               margin: 0
+            +r(1023)
+               padding: 0 30px
+            +sm
+               flex-direction: row
+               margin-bottom: 20px
+               
       &-col
+         padding: 0 25px
+         flex: 0 1 percentage(250 / 955)
+         width: percentage(250 / 955)
+         +md
+            padding: 0 15px
+         &:nth-child(1)
+            flex: 0 0 percentage(250 / 955)
+            width: percentage(250 / 955)
+            +r(1023)
+               flex: 0 0 30%
+               width: 30%
+            +sm
+               order: 1
+               flex: 0 1 auto
+               width: 100%
+               margin-top: 20px
+               text-align: center
+            .is-ie &
+               flex: 0 1 33%
+            
+         &:nth-child(2),
+         &:nth-child(3)
+            +r(1023)
+               display: none
+            
+         &:nth-child(4)
+            display: flex
+            flex-direction: column
+            flex: 0 0 percentage(324 / 955)
+            width: percentage(324 / 955)
+            +r(1023)
+               flex: 0 1 70%
+               width: 70%
+            +sm
+               flex: 0 1 auto
+               width: 100%
+      
    &__logo
-      margin-right: 30px
+      margin-right: 65px
+      +r(1023)
+         margin-right: 0
+         flex: 0 1 auto
+      +sm
+         margin: 0 auto
       
    &__rights
+      padding-top: 10px
       font-size: 14px
       &-text
-         margin-bottom: 50px
+         margin-bottom: 88px
+         +r(1023)
+            margin-bottom: 55px
+         +sm
+            margin-bottom: 15px
       &-links
          display: flex
          flex-direction: column
          align-items: flex-start
+         +sm
+            align-items: center
          a
             color: $color1
             &:not(:last-child)
-               margin-bottom: 10px
+               margin-bottom: 16px
                
    &__menu
       display: flex
       align-items: center
-      margin-top: auto
+      margin-top: 13px
+      +r(1023)
+         justify-content: center
+         margin-top: 20px
+      +sm
+         flex-direction: column
+         align-items: flex-start
+         margin: 20px auto 0
+         
       &-item
          &:not(:last-child)
-            margin-right: 30px
+            margin-right: 36px
+            +r(1023)
+               margin-right: 30px
+            +sm
+               margin: 0 0 15px
          &_has-select
             display: flex
             align-items: center
@@ -45,26 +128,43 @@
             p
                display: flex
                align-items: center
+               margin-right: 5px
                svg
                   font-size: 28px
                   margin: 0 7px
                   z-index: 1
       &-link
+         display: flex
+         align-items: flex-end
          color: $color1
+         &:hover
+            svg
+               fill: $color1
          span
-            margin-left: 15px
+            margin-left: 12px
+         svg
+            fill: $color7
+            font-size: 20px
+            transition: .3s ease-in-out
+            +sm
+               width: 30px
+         .icon-hammer
+            font-size: 20px
+         .icon-beg
       &-select
       
    &__title
-      margin-bottom: 40px
-      
+      margin-bottom: 44px
+      +r(1023)
+         margin-bottom: 25px
+      +sm
+         text-align: center
    &__list
-      li
-         &:not(:last-child)
-            margin-bottom: 4px
    &__subscribe
-      margin-top: 40px
+      margin-top: auto
 
    &__social-block
-      flex: 0 0 265px
-      // TODO: how many place this block will take?
+      padding: 10px 0 0
+      flex: 0 0 263px
+      +md
+         display: none

@@ -1,20 +1,32 @@
 // *** begin category *** //
 .category
+   .page__content
+      +md
+         display: flex
+         flex-direction: column
    &__breadcrumbs
-      margin-bottom: 55px
+      margin: -5px 0 45px
+      +md
+         margin: -5px 0 20px
    &__title
-      margin-bottom: 45px
+      margin-bottom: 43px
+      +md
+         margin-bottom: 30px
    &__filter
       margin-bottom: 22px
    &__checkbox-group
       &:not(:last-child)
-         margin-bottom: 10px
+         margin-bottom: 25px
    &__row
    &__inner
       margin-bottom: 50px
    &__descr
+      padding: 80px 0 0
+      +md
+         padding: 0 0 50px
       &-title
          margin-bottom: 30px
+         
       p
          &:not(:last-child)
             margin-bottom: 20px
@@ -23,32 +35,48 @@
 
 // *** begin teaser *** //
 .teaser
+   position: relative
+   +md
+      order: 1
+   &__bg
+      pointer-events: none
+      +coverdiv
+      +cover
+      +r(1023)
+         background-position: 75% 50%
+      +sm
+         background-size: contain
+         background-position: 100% 100%
    &__inner
       position: relative
       display: flex
       align-items: center
-      padding: 50px 0 23px 60px
+      padding: 45px 40px 40px 65px
       background-color: #6600cc
+      +r(1023)
+         padding: 45px 30px 40px 30px
+      +sm
+         padding: 30px 20px 40px
    &__text
       flex: 0 0 390px
       color: #fff
       z-index: 2
+      +r(1023)
+         flex: 0 0 300px
+      +sm
+         flex: 0 0 200px
    &__logo
       margin-bottom: 30px
    &__title
-      margin-bottom: 30px
+      margin-bottom: 27px
    &__descr
+      max-width: 340px
       margin-bottom: 30px
       font-size: 25px
    &__link
       font-size: 17px
-   &__img-wrap
-      position: absolute
-      right: 0
-      top: calc(50% + 20px)
-      transform: translateY(-50%)
-      z-index: 1
-      width: percentage(546 / 936)
    &__help-btn
       margin-left: -100px
+      +md
+         margin: 15px 0 0
 // end teaser //

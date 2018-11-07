@@ -2,7 +2,8 @@ import {
   throttle,
   detectIE,
   css,
-  Resp
+  Resp,
+  getSiblings
 } from '../_helpers';
 
 class Header {
@@ -25,13 +26,10 @@ class Header {
   bindEvents() {
     if (!Resp.isDesk) this.navBtn.addEventListener('click', () => this.toggleMenu());
 
-    if (Resp.isDesk) {
-      this.highlight($(this.nav).find('.nav__list'));
-      this.highlight($(this.controls));
-    }
-
+    this.highlight($(this.nav).find('.nav__list'));
+    this.highlight($(this.controls));
     this.controlsEvents();
-	 this.onResize();
+    this.onResize();
   }
 
   onResize() {
@@ -96,8 +94,11 @@ class Header {
         e.preventDefault();
 
         const item = btn.parentNode;
+        const siblingItems = getSiblings(item);
 
         item.classList.contains(css.active) ? item.classList.remove(css.active) : item.classList.add(css.active);
+
+        for (const sibling of siblingItems) sibling.classList.remove(css.active);
       });
     }
   }

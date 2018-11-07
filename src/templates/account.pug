@@ -12,7 +12,7 @@ block content
 
 		+b.page
 			+e.head-container.container
-				+breadcrumbs('Главная', 'Личный кабинет')
+				+breadcrumbs('Главная', 'Личный кабинет')(class='page__breadcrumbs')
 				+b.H1.title.title._md Личный кабинет
 			+e.container.container
 				+e.ASIDE.side
@@ -110,13 +110,11 @@ block content
 															+e.H5.table-content-title.title Мишки в лесу
 
 															+e.table-data.user-info
-																+e.SPAN.table-data-col (холст, масло)
-																+e.SPAN.table-data-col
-																	span Шишкин И.
-																	span
-																		| (
-																		+i('star')
-																		| 5 347)
+																span Шишкин И.
+																span
+																	| (
+																	+i('star')
+																	| 5 347)
 
 												+e.table-col._amount
 													+e.table-amount
@@ -124,18 +122,67 @@ block content
 														+e.table-amount-col 39 ставок
 													+e.table-actions
 														+e.table-actions-btn.is-disabled 151 000
-														+e.BUTTON.table-actions-btn Поднять
+														+e.BUTTON.table-actions-btn.btn._black Поднять
 
 												+e.table-col._leader
 													+e.table-leader He***off
 
 												+e.table-col._time
-													+e.table-time
-														+e.SPAN.table-time-count 3 дня
-														+e.SPAN.table-time-count 22 ч
-														+e.SPAN.table-time-count 30 м
+													+b.bid-time.js-timer.bets__table-time(data-date='Nov 12, 2018 15:37:25')
+														+e.SPAN.count
+														+e.SPAN.count
+														+e.SPAN.count
 
-												+e.BUTTON.table-cancel-btn: +i('close')
+												+e.BUTTON.table-cancel-btn
+													+i('close')
+													+e.SPAN.table-cancel-tip Отказаться
+											-i++
+
+								div
+									+e.table
+										+e.table-row._title
+											+e.table-col._content Текущий аукцион
+											+e.table-col._amount Сумма
+											+e.table-col._leader Лидер
+											+e.table-col._time Осталось
+
+										-i = 0
+										while i < 3
+											+e.table-row
+												+e.table-col._content
+													+e.table-content
+														+e.table-content-img
+															+e.IMG(src=`img/content/products/product_${i + 1}.jpg`, alt='image', title='')
+														+e.table-content-text
+															+e.H5.table-content-title.title Мишки в лесу
+
+															+e.table-data.user-info
+																span Шишкин И.
+																span
+																	| (
+																	+i('star')
+																	| 5 347)
+
+												+e.table-col._amount
+													+e.table-amount
+														+e.table-amount-col 150 000 руб.
+														+e.table-amount-col 39 ставок
+													+e.table-actions
+														+e.table-actions-btn.is-disabled 151 000
+														+e.BUTTON.table-actions-btn.btn._black Поднять
+
+												+e.table-col._leader
+													+e.table-leader He***off
+
+												+e.table-col._time
+													+b.bid-time.js-timer.bets__table-time(data-date='Nov 12, 2018 15:37:25')
+														+e.SPAN.count
+														+e.SPAN.count
+														+e.SPAN.count
+
+												+e.BUTTON.table-cancel-btn
+													+i('close')
+													+e.SPAN.table-cancel-tip Отказаться
 											-i++
 
 					//end bets

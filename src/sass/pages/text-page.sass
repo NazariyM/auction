@@ -1,8 +1,13 @@
 // *** begin article *** //
 .article
-   margin-bottom: 50px
+   padding-bottom: 45px
+   +md
+      padding-bottom: 20px
+   &__container
+      +md
+         padding: 0
    &__title
-      margin-bottom: 40px
+      margin: -10px 0 30px
    &__text
       margin-bottom: 50px
       p
@@ -12,14 +17,28 @@
       margin-bottom: 20px
    &__row
       display: flex
-      margin: 0 -15px 50px
+      margin: 0 -15px 80px
+      +md
+         margin: 0 -15px 50px
+      +sm
+         flex-direction: column
+         margin: 0 0 30px
    &__list
       flex: 0 1 33.33333%
       width: 33.33333%
       padding: 0 15px
+      +sm
+         padding: 0
+         width: 100%
+         flex: 1 1 auto
+      &:not(:last-child)
+         +sm
+            margin-bottom: 20px
       
    &__table
       border: 1px solid #e2e1df
+      +sm
+         min-width: 738px
       thead
          border: 1px solid $color4
          color: $color4
@@ -37,15 +56,21 @@
          padding: 13px 20px
          &:not(:last-child)
             border-right: 1px solid #e2e1df
-      &-wrap
+            
+      &-inner
+         +sm
+            overflow-x: auto
+            
       &-title
-         margin-bottom: 30px
+         margin-bottom: 38px
          
 // end article //
 
 // *** begin info *** //
 .info
    padding: 30px 0
+   +sm
+      padding: 15px 0
    &__block
       display: flex
       align-items: center
@@ -53,32 +78,62 @@
       margin-bottom: 20px
       color: $white
       background-color: #6600cc
+      +sm
+         flex-direction: column
       &-icon-wrap
          +flexCenter
          align-self: stretch
          flex: 0 0 145px
          width: 145px
          background-color: #5c00b8
+         +sm
+            flex: 1 1 auto
+            width: 100%
+            padding: 30px
       &-icon
-         margin-left: 10px
+         margin-left: 20px
+         margin-top: -10px
       &-text
          flex: 1 1 auto
          padding: 20px 60px
+         +md
+            padding: 20px 40px
+         +sm
+            padding: 20px
+         
       &-title
-         margin-bottom: 20px
+         margin: -15px 0 15px
          +boldFont
          font-size: 38px
+         +md
+            font-size: 32px
+         +sm
+            font-size: 27px
       p
          font-size: 21px
+         +sm
+            font-size: 18px
    
    &__row
       display: flex
+      +sm
+         flex-direction: column
       
    &__item
       $parent: &
       display: flex
+      flex: 0 1 50%
+      width: 50%
       align-items: center
       min-height: 145px
+      +sm
+         width: 100%
+         flex: 1 1 auto
+         flex-direction: column
+         padding: 25px 20px 40px
+         max-width: 345px
+         margin: 0 auto
+   
       &_yellow
          background-color: #ffdf45
       &_blue
@@ -86,14 +141,22 @@
          color: $white
       &-img-wrap
          align-self: flex-end
-         flex: 0 0 150px
-         width: 150px
+         flex: 0 0 160px
+         width: 160px
          text-align: left
+         +sm
+            flex: 0 1 auto
+            align-self: flex-start
       &-content
          position: relative
          flex: 0 0 190px
          margin-left: 20px
          padding-left: 40px
+         +md
+            margin-left: 0
+         +sm
+            flex: 0 1 auto
+            width: 250px
       &-icon
          position: absolute
          top: 0
@@ -110,9 +173,13 @@
 
 // *** begin contact-block *** //
 .contact-block
-   padding: 50px 0
+   padding: 60px 0 0
+   +md
+      padding: 20px 0 0
    &__heading
-      margin-bottom: 30px
+      margin-bottom: 40px
+      +md
+         margin-bottom: 20px
    &__title
       margin-bottom: 15px
    &__sub-title
@@ -121,9 +188,12 @@
       position: relative
       padding: 20px 30px 30px
       border: 1px solid #e2e1df
+      +sm
+         padding: 15px 15px 20px
       &-wrap
       &-title
          margin-bottom: 20px
+         padding-right: 30px
       &-close
          position: absolute
          top: 15px
@@ -137,10 +207,18 @@
       &-row
          display: flex
          margin: 0 -6px 12px
+         +sm
+            flex-direction: column
       &-field
          flex: 0 1 33.33333%
          width: 33.33333%
          padding: 0 6px
+         +sm
+            flex: 0 1 auto
+            width: 100%
+         &:not(:last-child)
+            +sm
+               margin-bottom: 10px
          &_message
             flex: 1 1 auto
             width: 100%
@@ -148,6 +226,11 @@
             margin-bottom: 12px
       &-actions
          &-btn
+            +sm
+               width: 100%
+            
             &:not(:last-child)
                margin-right: 11px
+               +sm
+                  margin: 0 0 10px
 // end contact-block //

@@ -2,11 +2,18 @@
    $parent: &
    &__container
       +clr
-      
+      +md
+         padding: 0 55px
+      +sm
+         padding: 0
+         display: flex
+         flex-direction: column
    &__item
       $parent: &
       position: relative
       float: right
+      +sm
+         float: none
       
       &-content
          position: absolute
@@ -14,14 +21,32 @@
          left: 58px
          right: 58px
          bottom: 50px
+         +md
+            top: 30px
+            left: 30px
+            right: 30px
+            bottom: 30px
+         +sm
+            top: 15px
+            left: 15px
+            right: 55px
+            bottom: 15px
          #{$parent}_section &
             top: 50px
+            +md
+               top: 30px
+            +sm
+               position: static
+               top: auto
+   
       &-img
          +cover-img
          +coverdiv
          
       &-info
          margin-bottom: 30px
+         +md
+            margin-bottom: 10px
          
       &-title
          margin-bottom: 14px
@@ -30,8 +55,16 @@
       &-data
          display: flex
          margin-bottom: 5px
+         +sm
+            flex-direction: column
+            margin-bottom: 15px
          &-descr
             margin-right: 30px
+            +md
+               margin-right: 15px
+            +sm
+               margin-right: 0
+               margin-bottom: 5px
          &-user
             display: flex
             align-items: center
@@ -59,6 +92,9 @@
       &-price
          margin-bottom: 42px
          +f('pt700', 25)
+         +md
+            margin-bottom: 20px
+            font-size: 23px
          
       &-bids
          width: 90px
@@ -68,6 +104,9 @@
          flex-direction: column
          justify-content: center
          color: $color1
+         +md
+            width: 60px
+            height: 60px
          span
             display: block
             +f('pt700', 17)
@@ -89,22 +128,44 @@
             color: #fff
             
       &-icon-arr
+         margin-top: 37px
          #{$parent}:hover &
             animation: mdMoveRight .3s ease-in-out
    
       &_sm
          width: 50%
          padding-top: percentage(390 / 1028)
+         +sm
+            width: 100%
+            padding-top: 100%
          
       &_md
          width: 50%
          margin-left: -0.06%
          padding-top: percentage(780 / 1028)
+         +sm
+            width: 100%
+            margin-left: 0
+            padding-top: 100%
          
       &_lg
          clear: both
          width: 100%
          padding-top: percentage(390 / 1028)
+         +sm
+            width: 100%
+            padding-top: 100%
+            
+      &_section
+         +sm
+            display: block
+            padding: 40px 15px
+         &:nth-of-type(1)
+            +sm
+               order: -1
+         &:nth-of-type(2)
+            +sm
+               order: 1
          
       &_color-1
          background-color: #ffe469
@@ -146,9 +207,13 @@
          background-color: #f0f0f0
       &-descr
          max-width: 250px
+         +md
+            max-width: 200px
       &-title
          margin-bottom: 25px
          #{$parent}_text-white &
             color: $white
       &-sub-title
          font-size: 21px
+         +md
+            font-size: 18px

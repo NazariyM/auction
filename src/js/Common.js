@@ -1,13 +1,13 @@
 import objectFitImages from 'object-fit-images';
 import '@fancyapps/fancybox';
-import { $body, detectIE, $scrolledElements } from './_helpers';
+import {$body, detectIE, css, Resp} from './_helpers';
 
 import './components/Header';
-import './components/Popups';
 import './components/Form';
-import './sections/Contacts';
 import './components/Sliders';
 import './components/Tabs';
+import './components/Timer';
+import './components/TextCrop';
 
 export class Common {
   constructor() {
@@ -17,23 +17,37 @@ export class Common {
   init() {
     objectFitImages();
     this.addClassIE();
-    this.scrollBtn();
+    if (!Resp.isDesk) {
+      this.showToolTipByFirstClick();
+      this.appendFilterInCategory();
+    }
   }
 
   addClassIE() {
     if (detectIE()) $body.addClass('is-ie');
   }
 
-  scrollBtn() {
-    const $btn = $('.js-scroll-to');
-    const $destination = $('.js-scroll-dest');
+  showToolTipByFirstClick() {
+    const toolTips = document.querySelectorAll('.js-mob-tooltips');
 
-    $btn.on('click', (e) => {
-      e.preventDefault();
-      $scrolledElements.animate({
-        scrollTop: $destination.offset().top
-      }, 1500);
-    });
+    for (const toolTip of toolTips) {
+      const links = toolTip.children;
+
+      for (const link of links) link.addEventListener('click', function(e) {
+        if (this.classList.contains(css.active)) {
+          return true;
+        } else {
+          e.preventDefault();
+          this.classList.add(css.active);
+        }
+      });
+    }
+  }
+
+  appendFilterInCategory() {
+    const $filter = $('.page__side_category');
+
+    $filter.prependTo('.category__inner');
   }
 }
 

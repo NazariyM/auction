@@ -17,6 +17,8 @@ body
    position: relative
    max-width: 1246px
    margin: 0 auto
+   +md
+      padding: 0 15px
    &_md
       max-width: 1028px
    
@@ -29,9 +31,24 @@ body
    flex: 0 1 calc(33.33333% - 10px)
    width: calc(33.33333% - 10px)
    margin: 0 5px
+   +md
+      flex: 0 1 calc(50% - 10px)
+      width: calc(50% - 10px)
+   +r(649)
+      flex: 0 1 calc(100% - 10px)
+      width: calc(100% - 10px)
+   &:nth-child(1) ~ &
+      +r(649)
+         margin-top: 10px
+   &:nth-child(2) ~ &
+      +md
+         margin-top: 10px
    &:nth-child(3) ~ &
       margin-top: 10px
       
+   .is-ie &
+      flex-basis: calc(33.33333% - 12px)
+
 .block
    display: block
    &:not(:last-child)
@@ -41,6 +58,8 @@ body
    display: block
    overflow: hidden
    padding-top: 60px
+   +sm
+      padding-top: 50px
    
 .title
    color: $color1
@@ -52,10 +71,14 @@ body
       
    &_md
       font-size: 42px
+      +md
+         font-size: 32px
       
    &_sm
       font-size: 33px
-      
+      +sm
+         font-size: 30px
+   
    &_xs
       font-size: 21px
       
@@ -67,3 +90,10 @@ body
       
    &_white
       color: $white
+      
+.icon-visa
+   width: 41px
+   height: 13px
+.icon-mc
+   width: 27px
+   height: 17px

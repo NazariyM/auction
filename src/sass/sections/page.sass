@@ -1,24 +1,59 @@
 .page
-   padding: 53px 0
+   padding: 53px 0 30px
+   +md
+      padding: 30px 0
+   &_text
+      padding: 75px 0 30px
    &__container
       display: flex
       align-items: flex-start
+      +md
+         flex-direction: column
+         
    &__head-container
       margin-bottom: 50px
-      
+      +md
+         margin-bottom: 30px
+         
+   &__title
+      padding-right: 30px
+      &_auctions
+         +md
+            display: none
+   &__breadcrumbs
+      margin-bottom: 32px
    &__side
       flex: 0 0 270px
       width: 270px
+      +md
+         flex: 1 1 auto
+         width: 100%
+         margin-top: 30px
+      &_category
+         +md
+            margin: 0 0 15px
       &-block
-         padding: 25px
+         padding: 28px 26px
          border: 1px solid #e2e1df
+         +md
+            padding: 20px
          &:not(:last-child)
-            margin-bottom: 30px
+            margin-bottom: 40px
+            +md
+               margin-bottom: 20px
       &-title
-         margin-bottom: 20px
+         margin: -8px 0 20px
       &-descr
          &:not(:last-child)
             margin-bottom: 25px
+            
    &__content
       flex: 1 1 auto
       padding-left: 40px
+      +md
+         order: -1
+         width: 100%
+         padding: 0
+         
+      .is-ie &
+         max-width: 946px

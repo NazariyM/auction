@@ -12,10 +12,10 @@ block content
 
 		+b.page.category
 			+e.container.container
-				+e.ASIDE.side
+				+e.ASIDE.side._category
 					+e.side-block
 						-i = 0
-						while i < 3
+						while i < 4
 							+b.category__checkbox-group.checkbox-group
 								+checkBox('checkbox-group__check checkbox-group__check_all', 'Check all the things!')(class='js-checkbox-all' checked)
 								+checkBox('checkbox-group__check', 'Check me once!')(class='js-checkbox')
@@ -30,12 +30,13 @@ block content
 					.category__inner.js-tabs.is-anim
 						+b.product-filter.category__filter
 							+e.row._top
-								+e.SPAN.title Цена:
-								+e.price.range-slider.js-range-slider
-									+b.SPAN.range-slider__result._from
-									+b.range-slider__input
-										input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-from='150000' data-default-val-to='200000' data-step='100')
-									+b.SPAN.range-slider__result._to
+								+e.price-wrap
+									+e.SPAN.title Цена:
+									+e.price.range-slider.js-range-slider
+										+b.SPAN.range-slider__result._from
+										+b.range-slider__input
+											input(type='text' name='' data-min-value='10000' data-max-value='300000' data-default-val-from='150000' data-default-val-to='200000' data-step='100')
+										+b.SPAN.range-slider__result._to
 
 								+e.actions
 									+checkBox('product-filter__actions-check', 'Бесплатная доставка')(checked)
@@ -83,13 +84,12 @@ block content
 					+b.SECTION.teaser
 						+e.inner
 							+e.text
-								+logo('white-blue')
+								+logo('white-blue', 'teaser__logo')
 								+e.H3.title.title._md._white Доступное искусство со всего мира
 								+e.P.descr Теперь покупать стало проще и безопаснее
 								+e.A.link.link._blue(href='#!') Подробнее
 									.link__icon.icon-arrow-r-blue
-							+e.img-wrap
-								+e.IMG(src='img/other/van_right.png' alt='image')
+							+e.bg(style='background-image: url(img/bg/teaser_bg.jpg)')
 
 						+e.A.help-btn.help-btn._yellow(href='#!')
 							+i('help')

@@ -57,6 +57,16 @@ class Tabs {
       $currentTab.hide();
       $nextTab.show();
     }
+
+    const dot = $nextTab.find('.js-dot');
+    if (dot.length) {
+      const data = dot.data('dotdotdot');
+
+      data.restore();
+      setTimeout(() => {
+        dot.dotdotdot();
+      }, 300);
+    }
   }
 
   animate($currentTab, $nextTab, container, speed) {

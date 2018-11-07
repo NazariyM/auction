@@ -37,7 +37,7 @@ block content
 									+e.IMG(src='img/content/info/info-block_1.png' alt='image')
 								+e.item-content-text
 									+e.H4.item-content-title.title Это
-									+e.P вид изобразительного искусства, связанный
+									p.js-dot вид изобразительного искусства, связанный
 										br
 										| с передачей...
 								+e.A.item-link.link._bold(href='#!') Подробнее
@@ -52,7 +52,7 @@ block content
 									+e.IMG(src='img/content/info/info-block_2.png' alt='image')
 								+e.item-content-text
 									+e.H4.item-content-title.title._white Это
-									+e.P вид изобразительного искусства, использующий в качестве основных...
+									p.js-dot вид изобразительного искусства, использующий в качестве основных...
 								+e.A.item-link.link._bold._white(href='#!') Подробнее
 									.link__icon.icon-arrow-r-white
 
@@ -65,7 +65,7 @@ block content
 									+e.IMG(src='img/content/info/info-block_3.png' alt='image')
 								+e.item-content-text
 									+e.H4.item-content-title.title Это
-									+e.P вид изобразительного искусства, произведения которого имеют...
+									p.js-dot вид изобразительного искусства, произведения которого имеют...
 								+e.A.item-link.link._bold(href='#!') Подробнее
 									.link__icon.icon-arrow-r-black
 						-i++
@@ -79,7 +79,7 @@ block content
 			+e.section
 				+e.container.container._md
 					+e.item._md._color-1
-						+b.control-panel._vertical._vertical-r
+						+b.control-panel._vertical._vertical-r.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -129,7 +129,7 @@ block content
 								+e.P.section-sub-title Какое-то более детальное описание раздела
 
 					+e.item._sm._color-2._text-white
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -172,7 +172,7 @@ block content
 								| ставок
 
 					+e.item._lg._color-3
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -214,14 +214,14 @@ block content
 								span 50
 								| ставок
 
-					+e.A.item._sm._color-3(href='#!')
+					+e.A.item._section._sm._color-3(href='#!')
 						+e.DIV.item-content
 							+e.DIV.section-descr
 								+e.H2.section-title.title._md Смотреть дальше
 								+e.item-icon-arr.icon-arr-r-long-black
 
 					+e.item._sm._color-4._text-white
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -267,7 +267,7 @@ block content
 				+e.container.container._md
 
 					+e.item._md._color-5
-						+b.control-panel._vertical._vertical-r
+						+b.control-panel._vertical._vertical-r.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -309,7 +309,7 @@ block content
 								span 50
 								| ставок
 
-					+e.A.item._sm._color-5(href='#!')
+					+e.A.item._section._sm._color-5(href='#!')
 						+e.DIV.item-content
 							+e.DIV.section-descr
 								+e.H2.section-title.title._md Новинки
@@ -318,7 +318,7 @@ block content
 									| Вам
 
 					+e.item._sm._color-3._text-white
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -361,7 +361,7 @@ block content
 								| ставок
 
 					+e.item._lg._color-1._text-white
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -403,14 +403,14 @@ block content
 								span 50
 								| ставок
 
-					+e.A.item._sm._color-7._text-white(href='#!')
+					+e.A.item._section._sm._color-7._text-white(href='#!')
 						+e.DIV.item-content
 							+e.DIV.section-descr
 								+e.H2.section-title.title._md Смотреть дальше
 								+e.item-icon-arr.icon-arr-r-long-white
 
 					+e.item._sm._color-6._text-white
-						+b.control-panel._vertical._vertical-l
+						+b.control-panel._vertical._vertical-l.js-mob-tooltips
 							+e.A.btn._view(href='#!')
 								+i('view')
 								+e.btn-tip
@@ -474,10 +474,10 @@ block content
 
 				+e.block
 					+e.item._4
-						+e.P Защита покупателей
+						+e.P Оплата любым способом
 					+e.item._5
 						+e.item-bg(style='background-image: url(img/bg/benefits_item-bg.jpg)')
-						+e.P Защита покупателей
+						+e.P Искусство из первых рук
 		//end benefits
 
 		include components/partners
